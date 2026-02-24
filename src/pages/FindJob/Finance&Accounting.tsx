@@ -18,41 +18,7 @@ import {
 } from 'lucide-react';
 
 const Header = () => (
-  <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-      <div className="flex items-center gap-8">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#001a3d] rounded-sm flex items-center justify-center">
-             <span className="text-white font-bold text-xl">r</span>
-          </div>
-          <span className="text-[#001a3d] font-bold text-2xl tracking-tighter">randstad</span>
-        </div>
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-600">
-          <a href="#" className="hover:text-[#2175d9] transition-colors">find a job</a>
-          <a href="#" className="hover:text-[#2175d9] transition-colors">for talent</a>
-          <a href="#" className="hover:text-[#2175d9] transition-colors">for employer</a>
-          <a href="#" className="hover:text-[#2175d9] transition-colors">resources</a>
-          <a href="#" className="hover:text-[#2175d9] transition-colors">about us</a>
-        </nav>
-      </div>
-      <div className="flex items-center gap-6 text-sm">
-        <a href="#" className="text-gray-500 hover:underline hidden sm:block">contact us</a>
-        <div className="flex items-center gap-4">
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors relative">
-            <Heart size={20} className="text-gray-600" />
-            <span className="absolute top-1 right-1 w-4 h-4 bg-white border border-gray-200 rounded-full flex items-center justify-center text-[10px] font-bold">0</span>
-          </button>
-          <button className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-full transition-colors">
-            <User size={20} className="text-gray-600" />
-            <span className="font-medium text-gray-700 hidden sm:block">my randstad</span>
-          </button>
-          <button className="lg:hidden p-2">
-            <Menu size={24} />
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
+  <></>
 );
 
 const SearchBar = () => (
@@ -213,98 +179,7 @@ const Accordion = ({ title, children }: { title: string, children: React.ReactNo
 };
 
 const Footer = () => (
-  <footer className="bg-[#001a3d] text-white pt-16 pb-8">
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        <div>
-          <h4 className="text-lg font-bold mb-6">find a job</h4>
-          <ul className="flex flex-col gap-3 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">explore all jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">submit your cv</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">join our team</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">refer a friend</a></li>
-          </ul>
-          <h4 className="text-lg font-bold mt-12 mb-6">for talents</h4>
-          <ul className="flex flex-col gap-3 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">specialisms</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">testimonials</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">career advice</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">beware of job scams</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-6">for employers</h4>
-          <ul className="flex flex-col gap-3 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">submit a vacancy</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">request a callback</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">our services</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">specialisms</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">case studies</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">testimonials</a></li>
-          </ul>
-          <h4 className="text-lg font-bold mt-12 mb-6">resources</h4>
-          <ul className="flex flex-col gap-3 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">case studies</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">press room</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">blogs</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-6">workforce insights</h4>
-          <ul className="flex flex-col gap-3 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">talent insights reports</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">employer brand research reports</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">salary trends reports</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">ed&i reports</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">workmonitor reports</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">startup hiring trends</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">talent pulse surveys</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-6">jobs</h4>
-          <ul className="flex flex-col gap-3 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">engineering jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">cxo jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">manufacturing jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">supply chain & logistics jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">education jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">finance & accounting jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">healthcare jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">hr & admin support jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">ites/gcc jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">legal & compliance jobs</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">sales & marketing jobs</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-800 pt-12">
-        <div className="flex items-center gap-4 mb-8">
-          <a href="#" className="p-2 bg-gray-800 rounded-sm hover:bg-gray-700 transition-colors">
-            <Linkedin size={20} />
-          </a>
-        </div>
-        <div className="text-[10px] text-gray-500 flex flex-col gap-4 max-w-4xl">
-          <p>registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-          <p>RANDSTAD, <span className="text-gray-400 font-bold">r</span>, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</p>
-          <div className="mt-4 space-y-4">
-            <p>Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-gray-400 hover:underline">Click here to know more</a></p>
-            <p>EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="text-gray-400 hover:underline">click here</a></p>
-          </div>
-        </div>
-        <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 text-xs text-gray-400">
-          <a href="#" className="hover:text-white transition-colors">terms & conditions</a>
-          <a href="#" className="hover:text-white transition-colors">cookies</a>
-          <a href="#" className="hover:text-white transition-colors">misconduct reporting procedure</a>
-          <a href="#" className="hover:text-white transition-colors">accessibility</a>
-          <a href="#" className="hover:text-white transition-colors">be aware</a>
-          <a href="#" className="hover:text-white transition-colors">sitemap</a>
-          <a href="#" className="hover:text-white transition-colors">privacy statement</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <></>
 );
 
 export default function FinanceAccounting() {

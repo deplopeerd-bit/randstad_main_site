@@ -1,4 +1,4 @@
-import { ChevronDown, Heart, User, X } from "lucide-react";
+import { ChevronDown, Heart, Menu, User, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -209,10 +209,13 @@ const MENU_DATA = {
 
 export function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
     setActiveMenu(null);
+    setIsMobileMenuOpen(false);
   }, [location]);
 
   const toggleMenu = (menu: string) => {
@@ -233,42 +236,49 @@ export function Header() {
                 <span className="text-[#2175e3]">r</span>randstad
               </span>
             </Link>
+            
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
               {Object.keys(MENU_DATA).map((item) => (
-                <Link
+                <button
                   key={item}
-                  to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toggleMenu(item);
-                  }}
+                  onClick={() => toggleMenu(item)}
                   className={`text-sm font-medium flex items-center gap-1 transition-colors hover:text-[#2175e3] ${
                     activeMenu === item ? "text-[#2175e3]" : "text-gray-600"
                   }`}
                 >
                   {item} <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === item ? "rotate-180" : ""}`} />
-                </Link>
+                </button>
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-6">
-            <Link to="/contact" className="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-[#2175e3]">
+
+          <div className="flex items-center gap-4 md:gap-6">
+            <Link to="/contact" className="hidden sm:block text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-[#2175e3]">
               contact us
             </Link>
-            <div className="flex items-center gap-4 border-l pl-6 border-gray-200">
+            <div className="flex items-center gap-4 border-l pl-4 md:pl-6 border-gray-200">
               <button className="text-gray-600 hover:text-[#2175e3]">
                 <Heart size={20} />
               </button>
-              <Link to="/login" className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#2175e3]">
+              <Link to="/login" className="hidden sm:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#2175e3]">
                 <User size={20} />
                 <span>my randstad</span>
               </Link>
+              
+              {/* Mobile Menu Button */}
+              <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden text-gray-600 hover:text-[#2175e3] p-2"
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mega Menu */}
+      {/* Desktop Mega Menu */}
       <AnimatePresence>
         {activeMenu && (
           <>
@@ -277,14 +287,14 @@ export function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setActiveMenu(null)}
-              className="fixed inset-0 bg-black/5 backdrop-blur-[1px] top-20 z-40"
+              className="hidden md:block fixed inset-0 bg-black/5 backdrop-blur-[1px] top-20 z-40"
             />
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 overflow-hidden"
+              className="hidden md:block absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 overflow-hidden"
             >
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
                 <button 
@@ -318,6 +328,75 @@ export function Header() {
               </div>
             </motion.div>
           </>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Menu Drawer */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="md:hidden fixed inset-0 top-20 bg-white z-50 overflow-y-auto"
+          >
+            <div className="flex flex-col p-4 gap-2">
+              {Object.keys(MENU_DATA).map((item) => (
+                <div key={item} className="border-b border-gray-50">
+                  <button
+                    onClick={() => setExpandedMobileSection(expandedMobileSection === item ? null : item)}
+                    className="w-full flex justify-between items-center py-4 text-gray-700 font-medium"
+                  >
+                    <span className="capitalize">{item}</span>
+                    <ChevronDown 
+                      size={18} 
+                      className={`transition-transform duration-300 ${expandedMobileSection === item ? "rotate-180" : ""}`} 
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {expandedMobileSection === item && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden bg-gray-50/50 px-4 pb-4"
+                      >
+                        {MENU_DATA[item as keyof typeof MENU_DATA].map((section, sIdx) => (
+                          <div key={sIdx} className="mt-4">
+                            <h4 className="text-[#2175e3] text-xs font-semibold uppercase tracking-wider mb-2">
+                              {section.title}
+                            </h4>
+                            <ul className="flex flex-col gap-2">
+                              {section.links.map((link, lIdx) => (
+                                <li key={lIdx}>
+                                  <Link
+                                    to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                                    className="text-sm text-gray-600 block py-1"
+                                  >
+                                    {link}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+              <div className="mt-6 flex flex-col gap-4">
+                <Link to="/contact" className="text-sm font-medium text-gray-600 py-2 border-b border-gray-50">
+                  Contact Us
+                </Link>
+                <Link to="/login" className="flex items-center gap-2 text-sm font-medium text-[#2175e3] py-2">
+                  <User size={20} />
+                  <span>My Randstad</span>
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </header>

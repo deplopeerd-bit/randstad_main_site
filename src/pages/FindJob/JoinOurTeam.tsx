@@ -33,36 +33,7 @@ const JoinOurTeam: React.FC = () => {
       </div>
 
       {/* Header */}
-      <header className="bg-white sticky top-0 z-50 border-b border-gray-100 px-4 md:px-12 py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-12">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 flex flex-col justify-center space-y-1">
-              <div className="h-1 w-full bg-[#2196f3] rounded-full"></div>
-              <div className="h-1 w-3/4 bg-[#2196f3] rounded-full"></div>
-            </div>
-            <span className="text-2xl font-bold tracking-tighter text-[#001941]">randstad</span>
-          </div>
-          
-          <nav className="hidden lg:flex space-x-8 text-sm font-medium">
-            {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-              <a key={item} href="#" className="flex items-center hover:text-[#2196f3] transition-colors">
-                {item} <ChevronDown className="ml-1 w-4 h-4" />
-              </a>
-            ))}
-          </nav>
-        </div>
-
-        <div className="flex items-center space-x-6 text-sm font-medium">
-          <div className="flex items-center space-x-1 cursor-pointer hover:text-[#2196f3]">
-            <Heart className="w-5 h-5" />
-            <span>0</span>
-          </div>
-          <div className="flex items-center space-x-1 cursor-pointer hover:text-[#2196f3]">
-            <User className="w-5 h-5" />
-            <span>my randstad</span>
-          </div>
-        </div>
-      </header>
+      
 
       {/* Hero Section */}
       <section className="bg-[#001941] text-white py-20 px-4 md:px-12 overflow-hidden relative">
@@ -357,102 +328,6 @@ const JoinOurTeam: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#001941] text-white pt-20 pb-12 px-4 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-20">
-            <div>
-              <h4 className="text-xl font-medium mb-8">find a job</h4>
-              <ul className="space-y-4 text-sm opacity-70 font-light">
-                {['explore all jobs', 'submit your cv', 'join our team', 'refer a friend'].map(item => (
-                  <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-medium mb-8">for employers</h4>
-              <ul className="space-y-4 text-sm opacity-70 font-light">
-                {['submit a vacancy', 'request a callback', 'our services', 'specialisms', 'case studies', 'testimonials'].map(item => (
-                  <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-medium mb-8">workforce insights</h4>
-              <ul className="space-y-4 text-sm opacity-70 font-light">
-                {['talent insights reports', 'employer brand research reports', 'salary trends reports', 'ed&i reports', 'workmonitor reports', 'startup hiring trends', 'talent pulse surveys'].map(item => (
-                  <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-medium mb-8">jobs</h4>
-              <ul className="space-y-4 text-sm opacity-70 font-light">
-                {['engineering jobs', 'cxo jobs', 'manufacturing jobs', 'supply chain & logistics jobs', 'education jobs', 'finance & accounting jobs', 'healthcare jobs', 'hr & admin support jobs', 'ites/gcc jobs', 'legal & compliance jobs', 'sales & marketing jobs'].map(item => (
-                  <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-medium mb-8">for talents</h4>
-              <ul className="space-y-4 text-sm opacity-70 font-light">
-                {['specialisms', 'testimonials', 'career advice', 'beware of job scams'].map(item => (
-                  <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-medium mb-8">resources</h4>
-              <ul className="space-y-4 text-sm opacity-70 font-light">
-                {['case studies', 'press room', 'blogs'].map(item => (
-                  <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-12">
-            <div className="flex flex-wrap justify-between items-center gap-8 mb-12">
-              <div className="flex space-x-6">
-                <Linkedin className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer" />
-                <Twitter className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer" />
-                <Facebook className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer" />
-                <Youtube className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer" />
-                <Instagram className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer" />
-              </div>
-              <p className="text-xs opacity-40 font-light">
-                registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-              </p>
-            </div>
-
-            <div className="flex items-center space-x-4 mb-12">
-              <div className="w-12 h-12 flex flex-col justify-center space-y-1">
-                <div className="h-1 w-full bg-[#2196f3] rounded-full"></div>
-                <div className="h-1 w-3/4 bg-[#2196f3] rounded-full"></div>
-              </div>
-              <span className="text-xs opacity-60 font-light uppercase tracking-widest">
-                RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V. 2023
-              </span>
-            </div>
-
-            <div className="space-y-6 text-sm opacity-70 font-light mb-12">
-              <p>
-                Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a>
-              </p>
-              <p>
-                EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a>
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm opacity-60 font-light">
-              {['terms & conditions', 'cookies', 'misconduct reporting procedure', 'accessibility', 'be aware', 'sitemap', 'privacy statement'].map(item => (
-                <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
 
       {/* Floating Cookie Icon */}
       <div className="fixed bottom-6 left-6 w-10 h-10 bg-[#2196f3] rounded-full flex items-center justify-center text-white shadow-lg cursor-pointer hover:scale-110 transition-transform z-[60]">
