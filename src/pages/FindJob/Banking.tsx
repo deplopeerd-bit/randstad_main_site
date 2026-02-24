@@ -21,46 +21,6 @@ import {
 export default function App() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      {/* Top Header */}
-      <header className="border-b border-gray-200">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.5 8C12.5 3.58172 16.0817 0 20.5 0H28.5V8H20.5C20.5 8 20.5 8 20.5 8V24C20.5 28.4183 16.9183 32 12.5 32H4.5V24H12.5V8Z" fill="#2175D9"/>
-                <path d="M36.5 0H44.5V32H36.5V0Z" fill="#2175D9"/>
-                <path d="M52.5 8C52.5 3.58172 56.0817 0 60.5 0H68.5V8H60.5V24C60.5 28.4183 56.9183 32 52.5 32H44.5V24H52.5V8Z" fill="#2175D9"/>
-                <text x="75" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="#051937">randstad</text>
-              </svg>
-            </div>
-
-            {/* Nav Links */}
-            <nav className="hidden lg:flex items-center gap-6">
-              <a href="#" className="text-[15px] font-medium text-randstad-navy flex items-center gap-1">find a job <ChevronDown size={14} /></a>
-              <a href="#" className="text-[15px] font-medium text-randstad-navy flex items-center gap-1">for talent <ChevronDown size={14} /></a>
-              <a href="#" className="text-[15px] font-medium text-randstad-navy flex items-center gap-1">for employer <ChevronDown size={14} /></a>
-              <a href="#" className="text-[15px] font-medium text-randstad-navy flex items-center gap-1">resources <ChevronDown size={14} /></a>
-              <a href="#" className="text-[15px] font-medium text-randstad-navy flex items-center gap-1">about us <ChevronDown size={14} /></a>
-            </nav>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-[13px] text-randstad-navy underline">contact us</a>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-1 cursor-pointer">
-                <Heart size={20} className="text-randstad-navy" />
-                <span className="text-[15px] font-medium text-randstad-navy">0</span>
-              </div>
-              <div className="flex items-center gap-1 cursor-pointer">
-                <User size={20} className="text-randstad-navy" />
-                <span className="text-[15px] font-medium text-randstad-navy">my randstad</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Breadcrumbs & Search Section */}
       <section className="bg-randstad-navy text-white pt-6 pb-12">
         <div className="max-w-[1280px] mx-auto px-4 md:px-8">

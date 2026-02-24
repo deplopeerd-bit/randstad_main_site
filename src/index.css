@@ -3,10 +3,22 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Randstad Brand Colors */
+  --color-randstad-blue: #0077cc;
+  --color-randstad-navy: #001c46;
+  --color-randstad-yellow: #ffcc00;
+  --color-randstad-light-blue: #3399ff;
 }
 
 @layer base {
   body {
     @apply font-sans text-gray-900 bg-white;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }

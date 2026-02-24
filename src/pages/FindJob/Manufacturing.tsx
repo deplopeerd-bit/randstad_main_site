@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { 
-  Search, 
   MapPin, 
   ChevronDown, 
-  Heart, 
-  User, 
   Check, 
   Mail, 
-  Linkedin, 
-  Globe,
-  Menu,
-  X
+  Linkedin,
+  Heart,
+  User
 } from 'lucide-react';
 
 const AccordionItem = ({ title, children }: { title: string, children: React.ReactNode }) => {
@@ -45,47 +41,8 @@ const AccordionItem = ({ title, children }: { title: string, children: React.Rea
 };
 
 export default function Manufacturing() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="container-custom flex h-20 items-center justify-between">
-          <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 bg-randstad-blue rounded-sm flex items-center justify-center">
-                <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full rotate-45"></div>
-              </div>
-              <span className="text-2xl font-bold tracking-tight text-randstad-navy">randstad</span>
-            </div>
-            <nav className="hidden lg:flex items-center gap-6">
-              {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-                <a key={item} href="#" className="flex items-center gap-1 text-[15px] font-medium hover:text-randstad-blue transition-colors">
-                  {item} <ChevronDown className="h-4 w-4" />
-                </a>
-              ))}
-            </nav>
-          </div>
-          <div className="flex items-center gap-6">
-            <a href="#" className="hidden sm:block text-[14px] font-medium text-gray-500 hover:text-randstad-blue">contact us</a>
-            <div className="flex items-center gap-4">
-              <button className="p-2 hover:bg-gray-100 rounded-full relative">
-                <Heart className="h-6 w-6" />
-                <span className="absolute top-1 right-1 h-4 w-4 bg-white border border-gray-200 rounded-full text-[10px] flex items-center justify-center font-bold">0</span>
-              </button>
-              <button className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-full">
-                <User className="h-6 w-6" />
-                <span className="hidden md:block text-[14px] font-medium">my randstad</span>
-              </button>
-              <button className="lg:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <main>
         {/* Search Section */}
         <section className="bg-randstad-navy text-white pt-8 pb-12">
