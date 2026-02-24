@@ -1,0 +1,325 @@
+import { ChevronDown, Heart, User, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+const MENU_DATA = {
+  "find a job": [
+    {
+      title: "job search",
+      links: [
+        "submit your cv",
+        "contract roles",
+        "current job openings",
+        "cxo roles",
+        "job fairs",
+        "permanent roles",
+      ],
+    },
+    {
+      title: "operational jobs",
+      links: ["engineering", "manufacturing", "supply chain & logistics"],
+    },
+    {
+      title: "professional jobs",
+      links: [
+        "banking sales",
+        "education",
+        "finance & accounting",
+        "healthcare",
+        "hr & admin support",
+        "ites/gcc",
+        "legal & compliance",
+        "sales & marketing",
+      ],
+    },
+    {
+      title: "work with randstad",
+      links: ["join our team", "my randstad", "refer a friend"],
+    },
+    {
+      title: "ongoing hiring drives",
+      links: ["banking finance and sales jobs", "financial product sales jobs"],
+    },
+  ],
+  "for talent": [
+    {
+      title: "operational",
+      links: ["engineering", "manufacturing", "supply chain & logistics"],
+    },
+    {
+      title: "professional",
+      links: [
+        "banking finance sales",
+        "finance & accounting",
+        "hr & support",
+        "ites/gcc",
+        "legal & compliance",
+        "pharma, healthcare & lifesciences",
+        "sales & trade marketing",
+        "wholesale & retail",
+      ],
+    },
+    {
+      title: "executive (cxo roles)",
+      links: ["faqs", "join talent pool", "latest jobs"],
+    },
+    {
+      title: "digital",
+      links: [
+        "cloud & infrastructure",
+        "customer experience",
+        "data & analytics",
+        "digital product & engineering",
+      ],
+    },
+    {
+      title: "career advice",
+      links: [
+        "beware of job scams",
+        "career tests",
+        "career tips",
+        "interview tips",
+        "job profiles",
+        "job search advice",
+        "job seeker toolkit",
+        "resume tips",
+      ],
+    },
+    {
+      title: "randstad bridging futures program",
+      links: ["join our talent community", "register your institute"],
+    },
+  ],
+  "for employer": [
+    {
+      title: "submit a vacancy",
+      links: ["request a callback"],
+    },
+    {
+      title: "operational",
+      links: ["engineering", "manufacturing", "supply chain & logistics"],
+    },
+    {
+      title: "professional",
+      links: [
+        "banking finance sales",
+        "finance & accounting",
+        "hr & support",
+        "ites/gcc",
+        "legal & compliance",
+        "pharma, healthcare & lifesciences",
+        "sales & trade marketing",
+        "wholesale & retail",
+      ],
+    },
+    {
+      title: "digital",
+      links: ["global talent centers", "managed solutions", "talent services"],
+    },
+    {
+      title: "enterprise",
+      links: [
+        "advisory",
+        "talent acquisition",
+        "talent development",
+        "talent transition",
+      ],
+    },
+    {
+      title: "our services",
+      links: [
+        "executive search",
+        "hire-to-retire",
+        "managed services",
+        "payroll",
+        "perm recruitment",
+        "talent acquisition",
+        "talent export",
+        "temp recruitment",
+        "workforce advisory",
+      ],
+    },
+  ],
+  resources: [
+    {
+      title: "workforce insights",
+      links: [
+        "ed&i",
+        "employer brand research",
+        "salary trends",
+        "startup hiring",
+        "talent insights",
+        "talent pulse surveys",
+        "workmonitor",
+      ],
+    },
+    {
+      title: "testimonials",
+      links: ["for employer", "for talent"],
+    },
+    {
+      title: "audio library",
+      links: ["diversity series", "mind matters series"],
+    },
+    {
+      title: "blogs",
+      links: ["employer branding", "hr trends", "workforce management"],
+    },
+    {
+      title: "press room",
+      links: ["industry insights", "randstad in the news"],
+    },
+    {
+      title: "case studies",
+      links: [],
+    },
+  ],
+  "about us": [
+    {
+      title: "our history",
+      links: [],
+    },
+    {
+      title: "ed&i",
+      links: [],
+    },
+    {
+      title: "our sponsorships",
+      links: [],
+    },
+    {
+      title: "sustainability",
+      links: [],
+    },
+    {
+      title: "offices",
+      links: [
+        "bengaluru",
+        "chennai",
+        "hyderabad",
+        "kolkata",
+        "mumbai",
+        "new delhi",
+        "view all",
+      ],
+    },
+  ],
+};
+
+export function Header() {
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setActiveMenu(null);
+  }, [location]);
+
+  const toggleMenu = (menu: string) => {
+    if (activeMenu === menu) {
+      setActiveMenu(null);
+    } else {
+      setActiveMenu(menu);
+    }
+  };
+
+  return (
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center gap-8">
+            <Link to="/" className="flex items-center">
+              <span className="text-2xl font-bold text-[#00214c] flex items-center gap-1">
+                <span className="text-[#2175e3]">r</span>randstad
+              </span>
+            </Link>
+            <nav className="hidden md:flex items-center gap-6">
+              {Object.keys(MENU_DATA).map((item) => (
+                <Link
+                  key={item}
+                  to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleMenu(item);
+                  }}
+                  className={`text-sm font-medium flex items-center gap-1 transition-colors hover:text-[#2175e3] ${
+                    activeMenu === item ? "text-[#2175e3]" : "text-gray-600"
+                  }`}
+                >
+                  {item} <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === item ? "rotate-180" : ""}`} />
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link to="/contact" className="text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-[#2175e3]">
+              contact us
+            </Link>
+            <div className="flex items-center gap-4 border-l pl-6 border-gray-200">
+              <button className="text-gray-600 hover:text-[#2175e3]">
+                <Heart size={20} />
+              </button>
+              <Link to="/login" className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#2175e3]">
+                <User size={20} />
+                <span>my randstad</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mega Menu */}
+      <AnimatePresence>
+        {activeMenu && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveMenu(null)}
+              className="fixed inset-0 bg-black/5 backdrop-blur-[1px] top-20 z-40"
+            />
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 overflow-hidden"
+            >
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+                <button 
+                  onClick={() => setActiveMenu(null)}
+                  className="absolute top-8 right-8 text-gray-400 hover:text-[#2175e3] transition-colors"
+                >
+                  <X size={24} />
+                </button>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                  {MENU_DATA[activeMenu as keyof typeof MENU_DATA].map((section, idx) => (
+                    <div key={idx} className="flex flex-col gap-4">
+                      <h3 className="text-[#2175e3] text-sm font-light border-b border-gray-100 pb-2">
+                        {section.title}
+                      </h3>
+                      <ul className="flex flex-col gap-3">
+                        {section.links.map((link, lIdx) => (
+                          <li key={lIdx}>
+                            <Link
+                              to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                              className="text-sm text-gray-600 hover:text-[#2175e3] transition-colors font-light"
+                            >
+                              {link}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}

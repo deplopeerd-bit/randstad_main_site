@@ -1,0 +1,5 @@
+{
+  "name": "Randstad Clone",
+  "description": "A professional job portal and talent solutions platform inspired by Randstad.",
+  "requestFramePermissions": ["geolocation"]
+}
