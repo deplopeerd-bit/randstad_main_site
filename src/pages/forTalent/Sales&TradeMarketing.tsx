@@ -18,46 +18,7 @@ import {
   X
 } from 'lucide-react';
 
-const Navbar = () => {
-  return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
-          <div className="flex items-center gap-8">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold text-[#2175d9] flex items-center">
-                <span className="text-[#2175d9] mr-1">r</span>
-                <span className="text-[#2175d9]">randstad</span>
-              </span>
-            </div>
-            <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
-              <button className="flex items-center hover:text-gray-900">find a job <ChevronDown size={14} className="ml-1" /></button>
-              <button className="flex items-center hover:text-gray-900">for talent <ChevronDown size={14} className="ml-1" /></button>
-              <button className="flex items-center hover:text-gray-900">for employer <ChevronDown size={14} className="ml-1" /></button>
-              <button className="flex items-center hover:text-gray-900">resources <ChevronDown size={14} className="ml-1" /></button>
-              <button className="flex items-center hover:text-gray-900">about us <ChevronDown size={14} className="ml-1" /></button>
-            </div>
-          </div>
-          <div className="flex items-center space-x-6">
-            <div className="hidden sm:flex items-center space-x-4 text-sm text-gray-600">
-              <button className="hover:text-gray-900">contact us</button>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button className="p-2 text-gray-600 hover:text-gray-900 relative">
-                <Heart size={20} />
-                <span className="absolute top-1 right-1 bg-gray-200 text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
-              </button>
-              <button className="flex items-center space-x-2 text-sm font-medium text-gray-600 hover:text-gray-900">
-                <User size={20} />
-                <span className="hidden sm:inline">my randstad</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
+
 
 const Hero = () => {
   return (
@@ -371,77 +332,11 @@ const BranchFinder = () => {
   );
 };
 
-const Footer = () => {
-  const columns = [
-    { title: "find a job", links: ["explore all jobs", "submit your cv", "join our team", "refer a friend"] },
-    { title: "for talents", links: ["specialisms", "testimonials", "career advice", "beware of job scams"] },
-    { title: "for employers", links: ["submit a vacancy", "request a callback", "our services", "specialisms", "case studies", "testimonials"] },
-    { title: "resources", links: ["case studies", "press room", "blogs"] },
-    { title: "workforce insights", links: ["talent insights reports", "employer brand research reports", "salary trends reports", "ed&i reports", "workmonitor reports", "startup hiring trends", "talent pulse surveys"] },
-    { title: "jobs", links: ["engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"] },
-  ];
 
-  return (
-    <footer className="bg-[#0a1a3c] text-white pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {columns.map((col, i) => (
-            <div key={i}>
-              <h4 className="text-lg font-medium mb-6">{col.title}</h4>
-              <ul className="space-y-3">
-                {col.links.map((link, j) => (
-                  <li key={j}>
-                    <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className="border-t border-gray-800 pt-10 mb-10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><X size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Facebook size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Youtube size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram size={24} /></a>
-            </div>
-            <div className="text-xs text-gray-500 text-center md:text-right">
-              <p className="mb-2">registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-              <p>RANDSTAD, r, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-[#08142b] p-8 rounded-sm mb-10 text-sm text-gray-400 leading-relaxed">
-          <p className="mb-4">
-            Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-white hover:underline">Click here to know more</a>
-          </p>
-          <p>
-            EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-white hover:underline">click here</a>
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs text-gray-500">
-          <a href="#" className="hover:text-white">terms & conditions</a>
-          <a href="#" className="hover:text-white">cookies</a>
-          <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-          <a href="#" className="hover:text-white">accessibility</a>
-          <a href="#" className="hover:text-white">be aware</a>
-          <a href="#" className="hover:text-white">sitemap</a>
-          <a href="#" className="hover:text-white">privacy statement</a>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default function RandstadPage() {
+export default function ForTalentSalesAndTradeMarketing() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-purple-200 selection:text-purple-900">
-      <Navbar />
       <Hero />
       <SplitSection 
         title="what we do."
@@ -468,7 +363,7 @@ export default function RandstadPage() {
       <LatestUpdates />
       <FAQ />
       <BranchFinder />
-      <Footer />
+
     </div>
   );
 }

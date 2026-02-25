@@ -17,7 +17,7 @@ import {
   Instagram
 } from 'lucide-react';
 
-const RandstadPage = () => {
+const FortalentLatestJob = () => {
   const navItems = [
     { name: 'find a job', hasDropdown: true },
     { name: 'for talent', hasDropdown: true },
@@ -91,37 +91,7 @@ const RandstadPage = () => {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm px-4 md:px-12 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
-            <svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 5C8.35786 5 5 8.35786 5 12.5C5 16.6421 8.35786 20 12.5 20H20V25H12.5C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0H25V5H12.5Z" fill="#00d1ff"/>
-              <path d="M30 0H35V25H30V0Z" fill="#0a1931"/>
-              <text x="40" y="22" fontFamily="Arial" fontSize="20" fontWeight="bold" fill="#0a1931">randstad</text>
-            </svg>
-          </div>
-          <nav className="hidden lg:flex items-center gap-6">
-            {navItems.map((item) => (
-              <button key={item.name} className="flex items-center gap-1 text-sm font-medium hover:text-[#00d1ff] transition-colors">
-                {item.name}
-                {item.hasDropdown && <ChevronDown size={14} />}
-              </button>
-            ))}
-          </nav>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-              <Heart size={20} />
-              <span className="absolute -top-1 -right-1 bg-[#00d1ff] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
-            </button>
-            <button className="flex items-center gap-2 text-sm font-medium hover:text-[#00d1ff] transition-colors">
-              <User size={20} />
-              <span className="hidden md:inline">my randstad</span>
-            </button>
-          </div>
-        </div>
-      </header>
+      
 
       {/* Hero Section */}
       <section className="bg-[#0a1931] text-white py-20 px-4 md:px-12 relative overflow-hidden">
@@ -345,63 +315,7 @@ const RandstadPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a1931] text-white pt-20 pb-10 px-4 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-8 mb-20">
-            {Object.entries(footerLinks).map(([title, links]) => (
-              <div key={title}>
-                <h4 className="text-xl font-medium mb-6">{title}</h4>
-                <ul className="space-y-4">
-                  {links.map(link => (
-                    <li key={link}>
-                      <a href="#" className="text-sm opacity-60 hover:opacity-100 hover:text-[#00d1ff] transition-all">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="border-t border-white/10 pt-12">
-            <div className="flex flex-wrap gap-6 mb-12">
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-[#00d1ff] transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-[#00d1ff] transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-[#00d1ff] transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-[#00d1ff] transition-colors"><Youtube size={20} /></a>
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-[#00d1ff] transition-colors"><Instagram size={20} /></a>
-            </div>
-
-            <div className="space-y-6 opacity-60 text-xs leading-relaxed max-w-5xl">
-              <p>registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-              <div className="flex items-center gap-4">
-                <svg width="80" height="20" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5 5C8.35786 5 5 8.35786 5 12.5C5 16.6421 8.35786 20 12.5 20H20V25H12.5C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0H25V5H12.5Z" fill="#00d1ff"/>
-                  <text x="40" y="22" fontFamily="Arial" fontSize="20" fontWeight="bold" fill="white">randstad</text>
-                </svg>
-                <p>RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</p>
-              </div>
-              <p>
-                Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a>
-              </p>
-              <p>
-                EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a>
-              </p>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-4 text-sm opacity-80">
-              <a href="#" className="hover:text-[#00d1ff]">terms & conditions</a>
-              <a href="#" className="hover:text-[#00d1ff]">cookies</a>
-              <a href="#" className="hover:text-[#00d1ff]">misconduct reporting procedure</a>
-              <a href="#" className="hover:text-[#00d1ff]">accessibility</a>
-              <a href="#" className="hover:text-[#00d1ff]">be aware</a>
-              <a href="#" className="hover:text-[#00d1ff]">sitemap</a>
-              <a href="#" className="hover:text-[#00d1ff]">privacy statement</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">
@@ -422,4 +336,4 @@ const RandstadPage = () => {
   );
 };
 
-export default RandstadPage;
+export default FortalentLatestJob;

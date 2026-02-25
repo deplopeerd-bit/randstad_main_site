@@ -36,7 +36,7 @@ const AccordionItem = ({ title, index }: { title: string; index: number }) => {
   );
 };
 
-const RandstadClone: React.FC = () => {
+const ForTalentJobSearchAdvice: React.FC = () => {
   return (
     <div className="font-sans text-[#051937] bg-white">
       {/* Top Bar */}
@@ -45,34 +45,7 @@ const RandstadClone: React.FC = () => {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-4 md:px-8 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
-            <svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 5C10 5 15 5 15 10C15 15 10 15 10 15H5V25H0V5H10ZM5 10V11H10C10 11 11 11 11 10C11 9 10 9 10 9H5V10Z" fill="#2175d9"/>
-              <text x="20" y="22" fontFamily="sans-serif" fontWeight="bold" fontSize="20" fill="#051937">randstad</text>
-            </svg>
-          </div>
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
-            <a href="#" className="flex items-center gap-1 hover:text-[#2175d9]">find a job <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 hover:text-[#2175d9]">for talent <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 hover:text-[#2175d9]">for employer <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 hover:text-[#2175d9]">resources <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 hover:text-[#2175d9]">about us <ChevronDown size={14} /></a>
-          </nav>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-1 cursor-pointer hover:text-[#2175d9]">
-            <Heart size={20} />
-            <span className="text-sm font-medium">0</span>
-          </div>
-          <div className="flex items-center gap-2 cursor-pointer hover:text-[#2175d9]">
-            <User size={20} />
-            <span className="text-sm font-medium hidden sm:inline">my randstad</span>
-          </div>
-          <Search size={20} className="cursor-pointer hover:text-[#2175d9]" />
-        </div>
-      </header>
+      
 
       {/* Breadcrumbs */}
       <div className="px-4 md:px-8 py-4 text-xs text-gray-500 bg-[#051937] text-white/70">
@@ -282,102 +255,7 @@ const RandstadClone: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#051937] text-white pt-16 pb-8 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
-            <div>
-              <h4 className="text-lg font-medium mb-6">find a job</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">explore all jobs</a></li>
-                <li><a href="#" className="hover:text-white">submit your cv</a></li>
-                <li><a href="#" className="hover:text-white">join our team</a></li>
-                <li><a href="#" className="hover:text-white">refer a friend</a></li>
-              </ul>
-              <h4 className="text-lg font-medium mt-12 mb-6">for talents</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">specialisms</a></li>
-                <li><a href="#" className="hover:text-white">testimonials</a></li>
-                <li><a href="#" className="hover:text-white">career advice</a></li>
-                <li><a href="#" className="hover:text-white">beware of job scams</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-medium mb-6">for employers</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">submit a vacancy</a></li>
-                <li><a href="#" className="hover:text-white">request a callback</a></li>
-                <li><a href="#" className="hover:text-white">our services</a></li>
-                <li><a href="#" className="hover:text-white">specialisms</a></li>
-                <li><a href="#" className="hover:text-white">case studies</a></li>
-                <li><a href="#" className="hover:text-white">testimonials</a></li>
-              </ul>
-              <h4 className="text-lg font-medium mt-12 mb-6">resources</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">case studies</a></li>
-                <li><a href="#" className="hover:text-white">press room</a></li>
-                <li><a href="#" className="hover:text-white">blogs</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-medium mb-6">workforce insights</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">talent insights reports</a></li>
-                <li><a href="#" className="hover:text-white">employer brand research reports</a></li>
-                <li><a href="#" className="hover:text-white">salary trends reports</a></li>
-                <li><a href="#" className="hover:text-white">ed&i reports</a></li>
-                <li><a href="#" className="hover:text-white">workmonitor reports</a></li>
-                <li><a href="#" className="hover:text-white">startup hiring trends</a></li>
-                <li><a href="#" className="hover:text-white">talent pulse surveys</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-medium mb-6">jobs</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">engineering jobs</a></li>
-                <li><a href="#" className="hover:text-white">cxo jobs</a></li>
-                <li><a href="#" className="hover:text-white">manufacturing jobs</a></li>
-                <li><a href="#" className="hover:text-white">supply chain & logistics jobs</a></li>
-                <li><a href="#" className="hover:text-white">education jobs</a></li>
-                <li><a href="#" className="hover:text-white">finance & accounting jobs</a></li>
-                <li><a href="#" className="hover:text-white">healthcare jobs</a></li>
-                <li><a href="#" className="hover:text-white">hr & admin support jobs</a></li>
-                <li><a href="#" className="hover:text-white">ites/gcc jobs</a></li>
-                <li><a href="#" className="hover:text-white">legal & compliance jobs</a></li>
-                <li><a href="#" className="hover:text-white">sales & marketing jobs</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Linkedin size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Twitter size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Facebook size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Youtube size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Instagram size={18} /></a>
-            </div>
-            <div className="text-xs text-white/50 text-center md:text-right">
-              <p className="mb-2">registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-              <p>RANDSTAD, [Logo], HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</p>
-            </div>
-          </div>
-
-          <div className="mt-12 text-sm text-white/70 leading-relaxed max-w-5xl">
-            <p className="mb-4">Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-white underline">Click here to know more</a></p>
-            <p>EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="text-white underline">click here</a></p>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-4 text-xs text-white/50">
-            <a href="#" className="hover:text-white">terms & conditions</a>
-            <a href="#" className="hover:text-white">cookies</a>
-            <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-            <a href="#" className="hover:text-white">accessibility</a>
-            <a href="#" className="hover:text-white">be aware</a>
-            <a href="#" className="hover:text-white">sitemap</a>
-            <a href="#" className="hover:text-white">privacy statement</a>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">
@@ -403,4 +281,4 @@ const RandstadClone: React.FC = () => {
   );
 };
 
-export default RandstadClone;
+export default ForTalentJobSearchAdvice;

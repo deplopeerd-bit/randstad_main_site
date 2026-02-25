@@ -10,62 +10,7 @@ import {
   X as CloseIcon
 } from 'lucide-react';
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <nav className="bg-[#0a1128] text-white sticky top-0 z-50 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center">
-            <div className="text-2xl font-bold flex items-center gap-2">
-              <span className="text-3xl">r</span>
-              <span className="tracking-tighter">randstad digital</span>
-            </div>
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <a href="#" className="hover:text-blue-400 transition-colors border-b-2 border-white pb-1">expertise</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">approach</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">industries</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">about</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">insights</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">careers</a>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-4 text-xs uppercase tracking-widest">
-            <a href="#" className="hover:text-blue-400 transition-colors">contact us</a>
-            <div className="flex space-x-2 border-l border-white/20 pl-4">
-              <span className="font-bold">EN</span>
-              <span className="opacity-50">FR</span>
-              <span className="opacity-50">DE</span>
-            </div>
-          </div>
-
-          <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <CloseIcon size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Subnav for Expertise */}
-      <div className="hidden md:block bg-[#0a1128] border-t border-white/5 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-6 text-xs text-gray-400 overflow-x-auto whitespace-nowrap">
-            <a href="#" className="hover:text-white transition-colors">consulting services</a>
-            <a href="#" className="hover:text-white transition-colors">cloud & infrastructure</a>
-            <a href="#" className="hover:text-white transition-colors">creative & marketing</a>
-            <a href="#" className="hover:text-white transition-colors">customer experience</a>
-            <a href="#" className="hover:text-white transition-colors font-bold text-white">data & analytics</a>
-            <a href="#" className="hover:text-white transition-colors">digital & product engineering</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 const AccordionItem = ({ title, content }: { title: string; content: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,10 +48,10 @@ const AccordionItem = ({ title, content }: { title: string; content: string }) =
   );
 };
 
-const RandstadPage = () => {
+const ForTalentDataAndAnalytics = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-[#0a1128]">
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center bg-[#0a1128] overflow-hidden">
@@ -349,72 +294,9 @@ const RandstadPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a1128] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-widest mb-6">careers</h4>
-              <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">working at randstad digital</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">current opportunities</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-widest mb-6">expertise</h4>
-              <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">customer experience</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">digital & product engineering</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">data & analytics</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">cloud & infrastructure</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">creative & marketing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">consulting services</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-widest mb-6">about randstad digital</h4>
-              <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">experience</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">leadership</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">partnerships</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">locations</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-widest mb-6">contact us</h4>
-              <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">get in touch</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">about our team</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/10">
-            <div className="flex space-x-6 mb-8 md:mb-0">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Youtube size={20} /></a>
-            </div>
-            <div className="text-[10px] text-gray-500 text-center md:text-right">
-              Randstad Digital B.V. (91235944), Diemermere 25, 1112 TC, Diemen, The Netherlands.
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-8 text-[10px] text-gray-400 uppercase tracking-widest">
-            <a href="#" className="hover:text-white transition-colors">terms & conditions</a>
-            <a href="#" className="hover:text-white transition-colors">cookie policy</a>
-            <a href="#" className="hover:text-white transition-colors bg-blue-600/20 px-2 py-1 rounded">customize</a>
-            <a href="#" className="hover:text-white transition-colors">legal information</a>
-            <a href="#" className="hover:text-white transition-colors">privacy policy</a>
-            <a href="#" className="hover:text-white transition-colors">misconduct reporting procedure</a>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };
 
-export default RandstadPage;
+export default ForTalentDataAndAnalytics;

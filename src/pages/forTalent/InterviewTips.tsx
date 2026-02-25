@@ -49,7 +49,7 @@ const AccordionItem = ({ title }: { title: string }) => (
   </div>
 );
 
-export default function RandstadPage() {
+export default function ForTalentInterviewTips() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#141414]">
       {/* Top Bar */}
@@ -68,23 +68,7 @@ export default function RandstadPage() {
       </div>
 
       {/* Main Navigation */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm px-6 py-4 flex justify-between items-center border-b border-gray-100">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#2175d9] rounded-sm flex items-center justify-center">
-              <div className="w-4 h-4 border-t-2 border-l-2 border-white rotate-45 translate-x-1 translate-y-1"></div>
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-[#2175d9]">randstad</span>
-          </div>
-          <nav className="hidden lg:flex items-center gap-8">
-            <NavItem label="find a job" hasDropdown />
-            <NavItem label="for talent" hasDropdown />
-            <NavItem label="for employer" hasDropdown />
-            <NavItem label="resources" hasDropdown />
-            <NavItem label="about us" hasDropdown />
-          </nav>
-        </div>
-      </header>
+      
 
       {/* Breadcrumbs */}
       <div className="px-6 py-4 bg-[#0a1432] text-white/60 text-xs flex gap-2 items-center">
@@ -237,130 +221,7 @@ export default function RandstadPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a1432] text-white px-6 pt-24 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-            <div className="flex flex-col gap-6">
-              <h4 className="font-bold text-lg">find a job</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">explore all jobs</a></li>
-                <li><a href="#" className="hover:text-white">submit your cv</a></li>
-                <li><a href="#" className="hover:text-white">join our team</a></li>
-                <li><a href="#" className="hover:text-white">refer a friend</a></li>
-              </ul>
-              
-              <h4 className="font-bold text-lg mt-8">for talents</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">specialisms</a></li>
-                <li><a href="#" className="hover:text-white">testimonials</a></li>
-                <li><a href="#" className="hover:text-white">career advice</a></li>
-                <li><a href="#" className="hover:text-white">beware of job scams</a></li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <h4 className="font-bold text-lg">for employers</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">submit a vacancy</a></li>
-                <li><a href="#" className="hover:text-white">request a callback</a></li>
-                <li><a href="#" className="hover:text-white">our services</a></li>
-                <li><a href="#" className="hover:text-white">specialisms</a></li>
-                <li><a href="#" className="hover:text-white">case studies</a></li>
-                <li><a href="#" className="hover:text-white">testimonials</a></li>
-              </ul>
-              
-              <h4 className="font-bold text-lg mt-8">resources</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">case studies</a></li>
-                <li><a href="#" className="hover:text-white">press room</a></li>
-                <li><a href="#" className="hover:text-white">blogs</a></li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <h4 className="font-bold text-lg">workforce insights</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">talent insights reports</a></li>
-                <li><a href="#" className="hover:text-white">employer brand research reports</a></li>
-                <li><a href="#" className="hover:text-white">salary trends reports</a></li>
-                <li><a href="#" className="hover:text-white">ed&i reports</a></li>
-                <li><a href="#" className="hover:text-white">workmonitor reports</a></li>
-                <li><a href="#" className="hover:text-white">startup hiring trends</a></li>
-                <li><a href="#" className="hover:text-white">talent pulse surveys</a></li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <h4 className="font-bold text-lg">jobs</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">engineering jobs</a></li>
-                <li><a href="#" className="hover:text-white">cxo jobs</a></li>
-                <li><a href="#" className="hover:text-white">manufacturing jobs</a></li>
-                <li><a href="#" className="hover:text-white">supply chain & logistics jobs</a></li>
-                <li><a href="#" className="hover:text-white">education jobs</a></li>
-                <li><a href="#" className="hover:text-white">finance & accounting jobs</a></li>
-                <li><a href="#" className="hover:text-white">healthcare jobs</a></li>
-                <li><a href="#" className="hover:text-white">hr & admin support jobs</a></li>
-                <li><a href="#" className="hover:text-white">ites/gcc jobs</a></li>
-                <li><a href="#" className="hover:text-white">legal & compliance jobs</a></li>
-                <li><a href="#" className="hover:text-white">sales & marketing jobs</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                <Youtube size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                <Instagram size={18} />
-              </a>
-            </div>
-            
-            <div className="text-[10px] text-white/40 max-w-2xl">
-              registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-            </div>
-          </div>
-
-          <div className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-blue-500 rounded-sm flex items-center justify-center">
-                <div className="w-3 h-3 border-t-2 border-l-2 border-white rotate-45 translate-x-0.5 translate-y-0.5"></div>
-              </div>
-              <span className="text-xs font-bold tracking-tight">RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-            </div>
-          </div>
-
-          <div className="mt-12 text-xs text-white/60 flex flex-col gap-4">
-            <p>
-              Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a>
-            </p>
-            <p>
-              EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a>
-            </p>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-4 text-xs text-white/60">
-            <a href="#" className="hover:text-white">terms & conditions</a>
-            <a href="#" className="hover:text-white">cookies</a>
-            <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-            <a href="#" className="hover:text-white">accessibility</a>
-            <a href="#" className="hover:text-white">be aware</a>
-            <a href="#" className="hover:text-white">sitemap</a>
-            <a href="#" className="hover:text-white">privacy statement</a>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Cookie Icon */}
       <div className="fixed bottom-6 left-6 w-12 h-12 bg-[#2175d9] rounded-full flex items-center justify-center text-white shadow-lg cursor-pointer hover:scale-110 transition-transform">

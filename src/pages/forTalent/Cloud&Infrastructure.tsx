@@ -15,71 +15,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-randstad-navy text-white border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-12">
-          {/* Logo Placeholder */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 flex flex-col gap-1">
-              <div className="h-1.5 w-full bg-white rounded-full"></div>
-              <div className="h-1.5 w-2/3 bg-white rounded-full"></div>
-            </div>
-            <span className="text-xl font-bold tracking-tight">randstad <span className="font-light">digital</span></span>
-          </div>
-
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium opacity-80">
-            <a href="#" className="hover:text-randstad-light-blue transition-colors border-b-2 border-randstad-light-blue pb-1">expertise</a>
-            <a href="#" className="hover:text-randstad-light-blue transition-colors">approach</a>
-            <a href="#" className="hover:text-randstad-light-blue transition-colors">industries</a>
-            <a href="#" className="hover:text-randstad-light-blue transition-colors">about</a>
-            <a href="#" className="hover:text-randstad-light-blue transition-colors">insights</a>
-            <a href="#" className="hover:text-randstad-light-blue transition-colors">careers</a>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-4 text-xs font-bold uppercase tracking-widest opacity-60">
-            <span>EN</span>
-            <span>FR</span>
-            <span>DE</span>
-          </div>
-          <button className="hidden md:block px-6 py-2 border border-randstad-light-blue text-randstad-light-blue text-sm font-bold hover:bg-randstad-light-blue hover:text-white transition-all">
-            get in touch
-          </button>
-          <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X /> : <Menu />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden bg-randstad-navy border-t border-white/10 p-6 flex flex-col gap-4"
-          >
-            <a href="#" className="text-lg font-medium">expertise</a>
-            <a href="#" className="text-lg font-medium">approach</a>
-            <a href="#" className="text-lg font-medium">industries</a>
-            <a href="#" className="text-lg font-medium">about</a>
-            <a href="#" className="text-lg font-medium">insights</a>
-            <a href="#" className="text-lg font-medium">careers</a>
-            <button className="mt-4 px-6 py-3 bg-randstad-light-blue text-white font-bold">
-              get in touch
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-};
 
 const Hero = () => (
   <section className="pt-32 pb-20 bg-randstad-navy text-white overflow-hidden">
@@ -374,77 +310,12 @@ const ContactForm = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-randstad-navy text-white pt-24 pb-12">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-        <div className="space-y-6">
-          <h4 className="text-lg font-bold">careers</h4>
-          <ul className="space-y-4 opacity-70">
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">working at randstad digital</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">current opportunities</a></li>
-          </ul>
-        </div>
-        <div className="space-y-6">
-          <h4 className="text-lg font-bold">expertise</h4>
-          <ul className="space-y-4 opacity-70">
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">customer experience</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">digital & product engineering</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">data & analytics</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">cloud & infrastructure</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">creative & marketing</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">consulting services</a></li>
-          </ul>
-          <div className="pt-8 space-y-6">
-            <h4 className="text-lg font-bold">solutions</h4>
-            <ul className="space-y-4 opacity-70">
-              <li><a href="#" className="hover:text-randstad-light-blue transition-colors">ServiceNow</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="space-y-6">
-          <h4 className="text-lg font-bold">about randstad digital</h4>
-          <ul className="space-y-4 opacity-70">
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">experience</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">leadership</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">partnerships</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">locations</a></li>
-          </ul>
-        </div>
-        <div className="space-y-6">
-          <h4 className="text-lg font-bold">contact us</h4>
-          <ul className="space-y-4 opacity-70">
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">get in touch</a></li>
-            <li><a href="#" className="hover:text-randstad-light-blue transition-colors">about our team</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-6">
-          <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-randstad-light-blue transition-colors"><Linkedin size={20} /></a>
-          <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-randstad-light-blue transition-colors"><Twitter size={20} /></a>
-          <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-randstad-light-blue transition-colors"><Youtube size={20} /></a>
-        </div>
-        <p className="text-sm opacity-50">Randstad Digital B.V (91235944), Diemermere 25, 1112 TC, Diemen, The Netherlands.</p>
-      </div>
-
-      <div className="mt-12 flex flex-wrap justify-center md:justify-start gap-8 text-sm opacity-70">
-        <a href="#" className="hover:text-randstad-light-blue transition-colors">terms & conditions</a>
-        <a href="#" className="hover:text-randstad-light-blue transition-colors">cookie policy</a>
-        <button className="px-6 py-1 bg-randstad-blue text-white rounded hover:bg-randstad-light-blue transition-colors">customize</button>
-        <a href="#" className="hover:text-randstad-light-blue transition-colors">legal information</a>
-        <a href="#" className="hover:text-randstad-light-blue transition-colors">privacy policy</a>
-        <a href="#" className="hover:text-randstad-light-blue transition-colors">misconduct reporting procedure</a>
-      </div>
-    </div>
-  </footer>
-);
 
 const App = () => {
   return (
     <div className="min-h-screen bg-white selection:bg-randstad-light-blue selection:text-white">
-      <Navbar />
+      
       <main>
         <Hero />
         <ExpertiseSection />
@@ -453,7 +324,7 @@ const App = () => {
         <TalentCenters />
         <ContactForm />
       </main>
-      <Footer />
+   
       
       {/* Floating Action Buttons */}
       <div className="fixed bottom-6 left-6 z-40">

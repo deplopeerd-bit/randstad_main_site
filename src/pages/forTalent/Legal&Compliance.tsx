@@ -20,83 +20,7 @@ import {
 
 // --- Components ---
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 px-4 py-3 md:px-12">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-8">
-          {/* Logo Placeholder */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#2175d9] rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-xl">r</span>
-            </div>
-            <span className="text-[#2175d9] font-bold text-2xl tracking-tight">randstad</span>
-          </div>
-
-          <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-600">
-            <a href="#" className="hover:text-[#2175d9] flex items-center gap-1">find a job <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-[#2175d9] flex items-center gap-1">for talent <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-[#2175d9] flex items-center gap-1">for employer <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-[#2175d9] flex items-center gap-1">resources <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-[#2175d9] flex items-center gap-1">about us <ChevronDown size={14} /></a>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-4 text-sm font-medium text-gray-600">
-            <a href="#" className="text-xs uppercase tracking-widest hover:underline">contact us</a>
-            <div className="flex items-center gap-2 hover:text-[#2175d9] cursor-pointer">
-              <Heart size={18} />
-              <span>0</span>
-            </div>
-            <div className="flex items-center gap-2 hover:text-[#2175d9] cursor-pointer">
-              <User size={18} />
-              <span>my randstad</span>
-            </div>
-          </div>
-          <button 
-            className="lg:hidden text-gray-600"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
-          >
-            <div className="flex flex-col p-4 gap-4 text-gray-600 font-medium">
-              <a href="#" className="py-2 border-bottom border-gray-50">find a job</a>
-              <a href="#" className="py-2 border-bottom border-gray-50">for talent</a>
-              <a href="#" className="py-2 border-bottom border-gray-50">for employer</a>
-              <a href="#" className="py-2 border-bottom border-gray-50">resources</a>
-              <a href="#" className="py-2 border-bottom border-gray-50">about us</a>
-              <div className="flex flex-col gap-4 pt-4 border-t border-gray-100">
-                <div className="flex items-center gap-2">
-                  <Heart size={18} />
-                  <span>0 favorites</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <User size={18} />
-                  <span>my randstad</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -357,107 +281,12 @@ const BranchFinder = () => {
   );
 };
 
-const Footer = () => {
-  const footerLinks = [
-    {
-      title: "find a job",
-      links: ["explore all jobs", "submit your cv", "join our team", "refer a friend"]
-    },
-    {
-      title: "for employers",
-      links: ["submit a vacancy", "request a callback", "our services", "specialisms", "case studies", "testimonials"]
-    },
-    {
-      title: "workforce insights",
-      links: ["talent insights reports", "employer brand research reports", "salary trends reports", "ed&i reports", "workmonitor reports", "startup hiring trends", "talent pulse surveys"]
-    },
-    {
-      title: "jobs",
-      links: ["engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"]
-    },
-    {
-      title: "for talents",
-      links: ["specialisms", "testimonials", "career advice", "beware of job scams"]
-    },
-    {
-      title: "resources",
-      links: ["case studies", "press room", "blogs"]
-    }
-  ];
-
-  return (
-    <footer className="bg-[#0a1931] text-white pt-24 pb-12 px-4 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-20">
-          {footerLinks.map((section, idx) => (
-            <div key={idx}>
-              <h4 className="text-xl font-medium mb-6">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link, lIdx) => (
-                  <li key={lIdx}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-t border-gray-800 pt-12 mb-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Linkedin size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Twitter size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Facebook size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Youtube size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#2175d9] transition-colors"><Instagram size={18} /></a>
-            </div>
-            <div className="text-xs text-gray-500 text-center md:text-right max-w-2xl">
-              <p className="mb-2">registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-              <p>RANDSTAD, r, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V. 2023</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-[#0d2142] p-8 rounded-lg mb-12">
-          <p className="text-sm text-gray-400 leading-relaxed">
-            <span className="text-white font-medium">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-[#2175d9] hover:underline">Click here to know more</a>
-          </p>
-          <p className="text-sm text-gray-400 leading-relaxed mt-4">
-            <span className="text-white font-medium">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-[#2175d9] hover:underline">click here</a>
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-400 uppercase tracking-widest">
-          <a href="#" className="hover:text-white">terms & conditions</a>
-          <a href="#" className="hover:text-white">cookies</a>
-          <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-          <a href="#" className="hover:text-white">accessibility</a>
-          <a href="#" className="hover:text-white">be aware</a>
-          <a href="#" className="hover:text-white">sitemap</a>
-          <a href="#" className="hover:text-white">privacy statement</a>
-        </div>
-      </div>
-      
-      {/* Feedback Tab */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 bg-[#2175d9] text-white py-3 px-1 rounded-l-md cursor-pointer hover:bg-[#1a5eb0] transition-colors z-50">
-        <span className="writing-mode-vertical-rl rotate-180 text-xs font-bold tracking-widest uppercase">feedback</span>
-      </div>
-
-      {/* Cookie Icon */}
-      <div className="fixed bottom-6 left-6 w-12 h-12 bg-[#2175d9] text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform z-50">
-        <MessageSquare size={24} />
-      </div>
-    </footer>
-  );
-};
-
 // --- Main Page Component ---
 
-export default function RandstadPage() {
+export default function ForTalentLegalAndCompliance() {
   return (
     <div className="min-h-screen font-sans selection:bg-[#2175d9] selection:text-white">
-      <Navbar />
+
       <main>
         <Hero />
         
@@ -502,7 +331,7 @@ export default function RandstadPage() {
         <FAQSection />
         <BranchFinder />
       </main>
-      <Footer />
+    
     </div>
   );
 }

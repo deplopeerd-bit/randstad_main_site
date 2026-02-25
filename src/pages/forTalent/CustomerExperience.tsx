@@ -13,92 +13,7 @@ import {
 
 // --- Components ---
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1931] text-white border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-8">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold tracking-tighter flex items-center">
-                <svg width="40" height="40" viewBox="0 0 100 100" className="mr-2">
-                  <path d="M20 20 L40 20 L60 80 L80 80" stroke="currentColor" strokeWidth="8" fill="none" />
-                  <path d="M20 80 L40 80 L60 20 L80 20" stroke="currentColor" strokeWidth="8" fill="none" />
-                </svg>
-                randstad <span className="font-light ml-1 text-blue-400">digital</span>
-              </span>
-            </div>
-            <div className="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
-              <a href="#" className="hover:text-blue-400 transition-colors border-b-2 border-blue-400 pb-1">expertise</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">approach</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">industries</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">about</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">insights</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">careers</a>
-            </div>
-          </div>
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex space-x-2 text-xs font-bold opacity-60">
-              <span className="text-white">EN</span>
-              <span>FR</span>
-              <span>DE</span>
-            </div>
-            <button className="border border-blue-400 text-blue-400 px-6 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white transition-all">
-              get in touch
-            </button>
-          </div>
-          <div className="lg:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2">
-              {isOpen ? <X /> : <Menu />}
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Sub-nav for expertise */}
-      <div className="hidden lg:block bg-[#0a1931] border-t border-white/5 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold opacity-70">
-            <a href="#" className="hover:text-white">consulting services</a>
-            <a href="#" className="hover:text-white">cloud & infrastructure</a>
-            <a href="#" className="hover:text-white">creative & marketing</a>
-            <a href="#" className="text-white border-b border-white">customer experience</a>
-            <a href="#" className="hover:text-white">data & analytics</a>
-            <a href="#" className="hover:text-white">digital & product engineering</a>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#0a1931] border-t border-white/10 overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              <a href="#" className="block px-3 py-4 text-base font-medium border-b border-white/5">expertise</a>
-              <a href="#" className="block px-3 py-4 text-base font-medium border-b border-white/5">approach</a>
-              <a href="#" className="block px-3 py-4 text-base font-medium border-b border-white/5">industries</a>
-              <a href="#" className="block px-3 py-4 text-base font-medium border-b border-white/5">about</a>
-              <a href="#" className="block px-3 py-4 text-base font-medium border-b border-white/5">insights</a>
-              <a href="#" className="block px-3 py-4 text-base font-medium border-b border-white/5">careers</a>
-              <div className="pt-4 flex justify-center">
-                <button className="w-full border border-blue-400 text-blue-400 px-6 py-3 text-sm font-medium">
-                  get in touch
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -596,81 +511,14 @@ const ContactForm = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="bg-[#0a1931] text-white pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
-          <div>
-            <h4 className="text-xl font-bold mb-8">careers</h4>
-            <ul className="space-y-4 opacity-60">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">working at randstad digital</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">current opportunities</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xl font-bold mb-8">expertise</h4>
-            <ul className="space-y-4 opacity-60">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">customer experience</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">digital & product engineering</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">data & analytics</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">cloud & infrastructure</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">creative & marketing</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">consulting services</a></li>
-            </ul>
-            <h4 className="text-xl font-bold mt-12 mb-8">solutions</h4>
-            <ul className="space-y-4 opacity-60">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">ServiceNow</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xl font-bold mb-8">about randstad digital</h4>
-            <ul className="space-y-4 opacity-60">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">experience</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">leadership</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">partnerships</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">locations</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xl font-bold mb-8">contact us</h4>
-            <ul className="space-y-4 opacity-60">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">get in touch</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">about our team</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="flex flex-wrap items-center gap-6 mb-12">
-          <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"><Linkedin size={20} /></a>
-          <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"><Twitter size={20} /></a>
-          <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"><Youtube size={20} /></a>
-        </div>
-        
-        <div className="border-t border-white/10 pt-12">
-          <p className="text-xs opacity-40 mb-8">
-            Randstad Digital B.V (91235944), Diemermere 25, 1112 TC, Diemen, The Netherlands.
-          </p>
-          <div className="flex flex-wrap gap-8 text-sm opacity-60">
-            <a href="#" className="hover:text-white">terms & conditions</a>
-            <a href="#" className="hover:text-white">cookie policy</a>
-            <button className="bg-blue-600 text-white px-4 py-1 rounded-sm text-xs">customize</button>
-            <a href="#" className="hover:text-white">legal information</a>
-            <a href="#" className="hover:text-white">privacy policy</a>
-            <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+
 
 // --- Main Page ---
 
-export default function RandstadPage() {
+export default function ForTalentCustomerExperience() {
   return (
     <div className="font-sans text-[#0a1931] selection:bg-blue-200">
-      <Navbar />
+      
       <main>
         <Hero />
         <SectionDifferentiator />
@@ -685,7 +533,7 @@ export default function RandstadPage() {
         <CXAdvantageSection />
         <ContactForm />
       </main>
-      <Footer />
+      
       
       {/* Floating accessibility button */}
       <div className="fixed bottom-6 right-6 z-50">

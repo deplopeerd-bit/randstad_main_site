@@ -14,93 +14,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <nav className="bg-[#001135] text-white sticky top-0 z-50 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
-          <div className="flex items-center gap-8">
-            <div className="flex-shrink-0 flex items-center gap-2">
-              <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-[#001135] rounded-full"></div>
-              </div>
-              <span className="text-xl font-bold tracking-tighter">randstad <span className="font-light">digital</span></span>
-            </div>
-            
-            <div className="hidden lg:flex items-center space-x-8 text-sm font-medium">
-              <a href="#" className="hover:text-blue-400 transition-colors border-b-2 border-blue-400 pb-1">expertise</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">approach</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">industries</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">about</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">insights</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">careers</a>
-            </div>
-          </div>
-
-          <div className="hidden lg:flex items-center space-x-6 text-xs uppercase tracking-widest">
-            <div className="flex items-center space-x-3">
-              <a href="#" className="hover:text-blue-400">EN</a>
-              <span className="opacity-30">|</span>
-              <a href="#" className="hover:text-blue-400">FR</a>
-              <span className="opacity-30">|</span>
-              <a href="#" className="hover:text-blue-400">DE</a>
-            </div>
-            <a href="#" className="border border-blue-400 px-4 py-2 hover:bg-blue-400 hover:text-white transition-all">get in touch</a>
-          </div>
-
-          <div className="lg:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#001135] border-t border-white/10"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-4">
-              <a href="#" className="block text-lg font-medium">expertise</a>
-              <a href="#" className="block text-lg font-medium">approach</a>
-              <a href="#" className="block text-lg font-medium">industries</a>
-              <a href="#" className="block text-lg font-medium">about</a>
-              <a href="#" className="block text-lg font-medium">insights</a>
-              <a href="#" className="block text-lg font-medium">careers</a>
-              <div className="pt-4 flex space-x-4 text-sm">
-                <a href="#">EN</a>
-                <a href="#">FR</a>
-                <a href="#">DE</a>
-              </div>
-              <a href="#" className="block text-center border border-blue-400 py-3 mt-4">get in touch</a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Sub-nav */}
-      <div className="hidden lg:block bg-[#001135] border-t border-white/5 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-8 text-xs text-gray-400 uppercase tracking-wider overflow-x-auto whitespace-nowrap scrollbar-hide">
-            <a href="#" className="hover:text-white">consulting services</a>
-            <a href="#" className="hover:text-white">cloud & infrastructure</a>
-            <a href="#" className="hover:text-white">creative & marketing</a>
-            <a href="#" className="hover:text-white">customer experience</a>
-            <a href="#" className="hover:text-white">data & analytics</a>
-            <a href="#" className="hover:text-white text-white font-bold">digital & product engineering</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -368,87 +282,11 @@ const ContactForm = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="bg-[#001135] text-white pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold">careers</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">working at randstad digital</a></li>
-              <li><a href="#" className="hover:text-white">current opportunities</a></li>
-            </ul>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold">expertise</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">customer experience</a></li>
-              <li><a href="#" className="hover:text-white">digital & product engineering</a></li>
-              <li><a href="#" className="hover:text-white">data & analytics</a></li>
-              <li><a href="#" className="hover:text-white">cloud & infrastructure</a></li>
-              <li><a href="#" className="hover:text-white">creative & marketing</a></li>
-              <li><a href="#" className="hover:text-white">consulting services</a></li>
-            </ul>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold">about randstad digital</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">experience</a></li>
-              <li><a href="#" className="hover:text-white">leadership</a></li>
-              <li><a href="#" className="hover:text-white">partnerships</a></li>
-              <li><a href="#" className="hover:text-white">locations</a></li>
-            </ul>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold">solutions</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">ServiceNow</a></li>
-            </ul>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold">contact us</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">get in touch</a></li>
-              <li><a href="#" className="hover:text-white">about our team</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/10 gap-8">
-          <div className="flex space-x-6">
-            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-              <Youtube size={20} />
-            </a>
-          </div>
-          <div className="text-xs text-gray-500">
-            Randstad Digital B.V (91235944), Diemermere 25, 1112 TC, Diemen, The Netherlands.
-          </div>
-        </div>
-
-        <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-10 text-xs text-gray-400 uppercase tracking-widest">
-          <a href="#" className="hover:text-white">terms & conditions</a>
-          <a href="#" className="hover:text-white">cookie policy</a>
-          <button className="bg-blue-600 text-white px-4 py-1 rounded-sm hover:bg-blue-700">customize</button>
-          <a href="#" className="hover:text-white">legal information</a>
-          <a href="#" className="hover:text-white">privacy policy</a>
-          <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-        </div>
-      </div>
-    </footer>
-  );
-};
 
 const LandingPage = () => {
   return (
     <div className="font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
-      <Navbar />
+
       <Hero />
       
       <FeatureSection 
@@ -534,7 +372,6 @@ const LandingPage = () => {
       />
 
       <ContactForm />
-      <Footer />
       
       {/* Accessibility Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">

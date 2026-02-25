@@ -1,6 +1,7 @@
 import ApplicationForm from "./pages/FindJob/SubmitYourCv";
 import Banking from "./pages/FindJob/Banking";
 import BankingFinanceAndSalesJob from "./pages/FindJob/BankingFinanceAndSalesJob";
+import CareerTestsPage from "./pages/forTalent/CareerTest";
 import ContractRoles from "./pages/FindJob/ContractRoles";
 import Education from "./pages/FindJob/Education";
 import Engineering from "./pages/FindJob/Engineering";
@@ -8,11 +9,26 @@ import EngineeringJobs from "./pages/forTalent/Engineering";
 import FinanceAccounting from "./pages/FindJob/Finance&Accounting";
 import FinancialProductAndSaleJob from "./pages/FindJob/FinancialProduct&SaleJob";
 import ForTalentBankingFinanceAndSalesJob from "./pages/forTalent/BankingFincaceSales";
+import ForTalentCareerTips from "./pages/forTalent/CareerTips";
+import ForTalentCustomerExperience from "./pages/forTalent/CustomerExperience";
+import ForTalentDataAndAnalytics from "./pages/forTalent/Data&Analytics";
 import ForTalentFinanceAndAccounting from "./pages/forTalent/FinanceAndAccounting";
 import ForTalentHrAndSupport from "./pages/forTalent/Hr&Support";
+import ForTalentInterviewTips from "./pages/forTalent/InterviewTips";
+import ForTalentItesGcc from "./pages/forTalent/Ites&Gcc";
+import ForTalentJobProfiles from "./pages/forTalent/JobProfiles";
+import ForTalentJobScamsPage from "./pages/forTalent/BewareofJobScam";
+import ForTalentJobSearchAdvice from "./pages/forTalent/JobSearchAdvice";
+import ForTalentJoinTalentPool from "./pages/forTalent/JoinTalentPool";
+import ForTalentLegalAndCompliance from "./pages/forTalent/Legal&Compliance";
+import ForTalentPharmaHelath from "./pages/forTalent/PharmaHealthCare&LifeSciences";
+import ForTalentSalesAndTradeMarketing from "./pages/forTalent/Sales&TradeMarketing";
+import ForTalentfaqs from "./pages/forTalent/faqs";
+import FortalentLatestJob from "./pages/forTalent/LatestJob";
 import HrAdminSupport from "./pages/FindJob/HR";
 import ItesGcc from "./pages/FindJob/ItesGcc";
 import JoinOurTeam from "./pages/FindJob/JoinOurTeam";
+import LandingPage from "./pages/forTalent/DigitalProduct&Engineering";
 import LegalAndCompilance from "./pages/FindJob/LegalAndCompilance";
 import Manufacturing from "./pages/FindJob/Manufacturing";
 import PermanentRoles from "./pages/FindJob/PermanentRoles";
@@ -22,6 +38,7 @@ import SalesAndMarketing from "./pages/FindJob/SalesAndMarketing";
 import SupplyChainAndLogistic from "./pages/forTalent/SupplyChain&Logistic";
 import SupplyChainLogistic from "./pages/FindJob/SupplyChainLogistics";
 import TalentManufacturing from "./pages/forTalent/Manufacturing";
+import WholesaleRetailPage from "./pages/forTalent/WholeSale&Retail";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
@@ -103,6 +120,27 @@ function AppContent() {
  <Route path={`${forTalent}/banking-finance-sales`} element={< ForTalentBankingFinanceAndSalesJob/>} />
 <Route path={`${forTalent}/finance-&-accounting`} element={<ForTalentFinanceAndAccounting />} />
 <Route path={`${forTalent}/hr-&-support`} element={<ForTalentHrAndSupport />} />
+<Route path={`${forTalent}/ites/gcc`} element={<ForTalentItesGcc />} />
+<Route path={`${forTalent}/legal-&-compliance`} element={<ForTalentLegalAndCompliance />} />
+<Route path={`${forTalent}/pharma,-healthcare-&-lifesciences`} element={< ForTalentPharmaHelath/>} />
+<Route path={`${forTalent}/sales-&-trade-marketing`} element={<ForTalentSalesAndTradeMarketing />} />
+<Route path={`${forTalent}/wholesale-&-retail`} element={< WholesaleRetailPage/>} />
+
+<Route path={`${forTalent}/faqs`} element={<ForTalentfaqs />} />
+<Route path={`${forTalent}/join-talent-pool`} element={<ForTalentJoinTalentPool />} />
+
+<Route path={`${forTalent}/latest-jobs`} element={<FortalentLatestJob />} />
+<Route path={`${forTalent}/customer-experience`} element={<ForTalentCustomerExperience />} />
+<Route path={`${forTalent}/data-&-analytics`} element={<ForTalentDataAndAnalytics />} />
+<Route path={`${forTalent}/digital-product-&-engineering`} element={< LandingPage/>} />
+<Route path={`${forTalent}/beware-of-job-scams`} element={<ForTalentJobScamsPage />} />
+<Route path={`${forTalent}/career-tests`} element={<CareerTestsPage />} />
+<Route path={`${forTalent}/career-tips`} element={<ForTalentCareerTips />} />
+<Route path={`${forTalent}/interview-tips`} element={<ForTalentInterviewTips />} />
+
+<Route path={`${forTalent}/job-profiles`} element={<ForTalentJobProfiles />} />
+
+<Route path={`${forTalent}/job-search-advice`} element={<ForTalentJobSearchAdvice />} />
 
         </Routes>
       </main>
