@@ -7,6 +7,7 @@ import AboutKolkata from "./pages/aboutUs/Kolkata";
 import AboutMumbai from "./pages/aboutUs/Mumbai";
 import AboutRandViewAll from "./pages/aboutUs/ViewAll";
 import AboutSustain from "./pages/aboutUs/Sustainability";
+import AboutUs from "./pages/aboutUs/AboutUs";
 import ApplicationForm from "./pages/FindJob/SubmitYourCv";
 import Banking from "./pages/FindJob/Banking";
 import BankingFinanceAndSalesJob from "./pages/FindJob/BankingFinanceAndSalesJob";
@@ -262,8 +263,7 @@ function AppContent() {
 <Route path={`${forAbout}/mumbai`} element={< AboutMumbai/>} />
 <Route path={`${forAbout}/new-delhi`} element={< AboutDelhi/>} />
 <Route path={`${forAbout}/view-all`} element={< AboutRandViewAll/>} />
-
-
+<Route path={`${forAbout}/our-history`} element={< AboutUs/>} />
         </Routes>
       </main>
 
