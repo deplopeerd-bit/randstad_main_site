@@ -7,150 +7,9 @@ import { motion } from "motion/react";
  */
 
 
-const Navbar = () => (
-  <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-      <div className="flex justify-between items-center h-20">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center">
-            <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.5 0C6.5 0 0 6.5 0 14.5V32H5.5V14.5C5.5 9.5 9.5 5.5 14.5 5.5H32V0H14.5Z" fill="#2175d9"/>
-              <path d="M125.5 0C133.5 0 140 6.5 140 14.5V32H134.5V14.5C134.5 9.5 130.5 5.5 125.5 5.5H108V0H125.5Z" fill="#2175d9"/>
-              <text x="40" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="#051937">randstad</text>
-            </svg>
-          </div>
-          <div className="hidden lg:flex items-center gap-8">
-            {["find a job", "for talent", "for employer", "resources", "about us"].map((item) => (
-              <button key={item} className="flex items-center gap-1 text-[15px] font-medium text-randstad-navy hover:text-randstad-blue transition-colors">
-                {item} <ChevronDown size={14} />
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 text-randstad-navy">
-            <Heart size={20} />
-            <span className="text-[15px] font-medium">0</span>
-          </div>
-          <div className="flex items-center gap-2 text-randstad-navy">
-            <User size={20} className="border border-randstad-navy rounded-full p-0.5" />
-            <span className="text-[15px] font-medium">my randstad</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-);
 
-const Footer = () => (
-  <footer className="bg-randstad-navy text-white pt-20 pb-10">
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-        <div>
-          <h4 className="text-lg font-bold mb-6">find a job</h4>
-          <ul className="space-y-4 text-gray-400 text-[15px]">
-            <li>explore all jobs</li>
-            <li>submit your cv</li>
-            <li>join our team</li>
-            <li>refer a friend</li>
-          </ul>
-          <h4 className="text-lg font-bold mt-12 mb-6">for talents</h4>
-          <ul className="space-y-4 text-gray-400 text-[15px]">
-            <li>specialisms</li>
-            <li>testimonials</li>
-            <li>career advice</li>
-            <li>beware of job scams</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-6">for employers</h4>
-          <ul className="space-y-4 text-gray-400 text-[15px]">
-            <li>submit a vacancy</li>
-            <li>request a callback</li>
-            <li>our services</li>
-            <li>specialisms</li>
-            <li>case studies</li>
-            <li>testimonials</li>
-          </ul>
-          <h4 className="text-lg font-bold mt-12 mb-6">resources</h4>
-          <ul className="space-y-4 text-gray-400 text-[15px]">
-            <li>case studies</li>
-            <li>press room</li>
-            <li>blogs</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-6">workforce insights</h4>
-          <ul className="space-y-4 text-gray-400 text-[15px]">
-            <li>talent insights reports</li>
-            <li>employer brand research reports</li>
-            <li>salary trends reports</li>
-            <li>ed&i reports</li>
-            <li>workmonitor reports</li>
-            <li>startup hiring trends</li>
-            <li>talent pulse surveys</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-6">jobs</h4>
-          <ul className="space-y-4 text-gray-400 text-[15px]">
-            <li>engineering jobs</li>
-            <li>cxo jobs</li>
-            <li>manufacturing jobs</li>
-            <li>supply chain & logistics jobs</li>
-            <li>education jobs</li>
-            <li>finance & accounting jobs</li>
-            <li>healthcare jobs</li>
-            <li>hr & admin support jobs</li>
-            <li>ites/gcc jobs</li>
-            <li>legal & compliance jobs</li>
-            <li>sales & marketing jobs</li>
-          </ul>
-        </div>
-      </div>
 
-      <div className="border-t border-gray-800 pt-12">
-        <div className="flex flex-wrap gap-6 mb-12">
-          {[Linkedin, Twitter, Facebook, Youtube, Instagram].map((Icon, i) => (
-            <div key={i} className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center cursor-pointer hover:bg-randstad-blue transition-colors">
-              <Icon size={20} />
-            </div>
-          ))}
-        </div>
-        
-        <p className="text-xs text-gray-500 mb-8">
-          registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-        </p>
-        
-        <div className="flex items-center gap-4 mb-12">
-          <span className="text-xs font-bold">RANDSTAD,</span>
-          <div className="flex items-center gap-2">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4C2 4 0 6 0 8V24H2V8C2 7 3 6 4 6H12V4H4Z" fill="#2175d9"/>
-              <path d="M20 4C22 4 24 6 24 8V24H22V8C22 7 21 6 20 6H12V4H20Z" fill="#2175d9"/>
-            </svg>
-            <span className="text-[10px] text-gray-400 uppercase tracking-widest">human forward and shaping the world of work are registered trademarks of © Randstad N.V.2023</span>
-          </div>
-        </div>
 
-        <div className="space-y-6 text-[13px] text-gray-400 leading-relaxed max-w-5xl">
-          <p>
-            <span className="font-bold text-white">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <span className="text-randstad-blue cursor-pointer">Click here to know more</span>
-          </p>
-          <p>
-            <span className="font-bold text-white">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <span className="text-randstad-blue cursor-pointer">click here</span>
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-x-8 gap-y-4 mt-12 text-xs text-gray-400">
-          {["terms & conditions", "cookies", "misconduct reporting procedure", "accessibility", "be aware", "sitemap", "privacy statement"].map(item => (
-            <span key={item} className="hover:text-white cursor-pointer transition-colors">{item}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  </footer>
-);
 
 const Section = ({ title, description, image, imageLeft = false, dark = false, buttonText = "read more" }: any) => (
   <section className={`${dark ? 'bg-randstad-navy text-white' : 'bg-white text-randstad-navy'} py-0 overflow-hidden`}>
@@ -180,10 +39,10 @@ const Banner = ({ text, buttonText }: any) => (
   </section>
 );
 
-export default function App() {
+export default function EmpFinance() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      
       
       <main className="flex-grow">
         {/* Breadcrumbs */}
@@ -324,7 +183,7 @@ export default function App() {
         <Banner text="contact us to start a conversation about your talent needs." buttonText="let's meet" />
       </main>
 
-      <Footer />
+    
 
       {/* Floating Action Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-40">

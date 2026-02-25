@@ -430,7 +430,7 @@ const sidebarLinks = [
   "jobs market outlook 2023: specialised IT, telecom and service-oriented sectors to drive hiring."
 ];
 
-export default function App() {
+export default function ResIndustryInsight() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Top Bar */}
@@ -439,39 +439,6 @@ export default function App() {
       </div>
 
       {/* Navigation */}
-      <header className="w-full bg-white py-4 px-4 md:px-8 lg:px-16 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-12">
-          {/* Logo */}
-          <div className="flex items-center">
-            <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 5.5C12.5 9.36599 9.36599 12.5 5.5 12.5C1.63401 12.5 -1.5 9.36599 -1.5 5.5C-1.5 1.63401 1.63401 -1.5 5.5 -1.5C9.36599 -1.5 12.5 1.63401 12.5 5.5Z" stroke="#2161AC" strokeWidth="3"/>
-              <text x="20" y="24" fontFamily="Inter" fontSize="24" fontWeight="600" fill="#2161AC">randstad</text>
-            </svg>
-          </div>
-
-          {/* Nav Links */}
-          <nav className="hidden lg:flex items-center gap-6">
-            <a href="#" className="flex items-center gap-1 text-[15px] font-medium text-[#141414] hover:text-randstad-blue">find a job <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 text-[15px] font-medium text-[#141414] hover:text-randstad-blue">for talent <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 text-[15px] font-medium text-[#141414] hover:text-randstad-blue">for employer <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 text-[15px] font-medium text-[#141414] hover:text-randstad-blue">resources <ChevronDown size={14} /></a>
-            <a href="#" className="flex items-center gap-1 text-[15px] font-medium text-[#141414] hover:text-randstad-blue">about us <ChevronDown size={14} /></a>
-          </nav>
-        </div>
-
-        {/* Right Nav */}
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-1 text-[15px] font-medium cursor-pointer hover:text-randstad-blue">
-            <Heart size={20} className="text-[#141414]" />
-            <span className="hidden sm:inline">0</span>
-          </div>
-          <div className="flex items-center gap-2 text-[15px] font-medium cursor-pointer hover:text-randstad-blue">
-            <User size={20} className="text-[#141414]" />
-            <span className="hidden sm:inline">my randstad</span>
-          </div>
-          <Search size={20} className="text-[#141414] cursor-pointer" />
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="bg-randstad-navy text-white py-16 px-4 md:px-8 lg:px-16 relative overflow-hidden">
@@ -573,94 +540,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#f9f8f4] pt-16 pb-8 px-4 md:px-8 lg:px-16 border-t border-gray-200">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-16">
-            {/* About Randstad */}
-            <div>
-              <h4 className="text-[16px] font-bold mb-6 text-[#141414]">about randstad</h4>
-              <ul className="space-y-4 text-[14px] text-[#141414]">
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">about us</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">our history</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">work at randstad</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">news and events</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">sustainability</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">investor relations</a></li>
-              </ul>
-            </div>
-
-            {/* For Talent */}
-            <div>
-              <h4 className="text-[16px] font-bold mb-6 text-[#141414]">for talent</h4>
-              <ul className="space-y-4 text-[14px] text-[#141414]">
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">find a job</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">browse jobs</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">my randstad</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">career advice</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">resume builder</a></li>
-              </ul>
-            </div>
-
-            {/* For Employer */}
-            <div>
-              <h4 className="text-[16px] font-bold mb-6 text-[#141414]">for employer</h4>
-              <ul className="space-y-4 text-[14px] text-[#141414]">
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">post a job</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">staffing services</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">recruitment process outsourcing</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">managed services</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">hr solutions</a></li>
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-[16px] font-bold mb-6 text-[#141414]">resources</h4>
-              <ul className="space-y-4 text-[14px] text-[#141414]">
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">salary checker</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">career hub</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">employer branding</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">workforce insights</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">white papers</a></li>
-              </ul>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-[16px] font-bold mb-6 text-[#141414]">quick links</h4>
-              <ul className="space-y-4 text-[14px] text-[#141414]">
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">contact us</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">office locator</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">sitemap</a></li>
-                <li><a href="#" className="hover:text-randstad-blue hover:underline">help center</a></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Social & Legal */}
-          <div className="pt-8 border-t border-gray-200 flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-8">
-              <svg width="120" height="28" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.5 5.5C12.5 9.36599 9.36599 12.5 5.5 12.5C1.63401 12.5 -1.5 9.36599 -1.5 5.5C-1.5 1.63401 1.63401 -1.5 5.5 -1.5C9.36599 -1.5 12.5 1.63401 12.5 5.5Z" stroke="#2161AC" strokeWidth="3"/>
-                <text x="20" y="24" fontFamily="Inter" fontSize="24" fontWeight="600" fill="#2161AC">randstad</text>
-              </svg>
-              <div className="flex gap-4">
-                <a href="#" className="text-[#141414] hover:text-randstad-blue"><Linkedin size={20} /></a>
-                <a href="#" className="text-[#141414] hover:text-randstad-blue"><Twitter size={20} /></a>
-                <a href="#" className="text-[#141414] hover:text-randstad-blue"><Facebook size={20} /></a>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-6 text-[12px] text-gray-500 uppercase tracking-wider font-medium">
-              <a href="#" className="hover:underline">privacy policy</a>
-              <a href="#" className="hover:underline">cookie policy</a>
-              <a href="#" className="hover:underline">terms & conditions</a>
-              <a href="#" className="hover:underline">accessibility</a>
-              <span>© Randstad 2025</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">

@@ -267,10 +267,10 @@ const Footer = () => {
   );
 };
 
-export default function App() {
+export default function OurSponserShip() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      
       <main className="flex-grow">
         <Hero />
         
@@ -297,7 +297,7 @@ export default function App() {
           bgColor="bg-randstad-cream"
         />
       </main>
-      <Footer />
+    
     </div>
   );
 }

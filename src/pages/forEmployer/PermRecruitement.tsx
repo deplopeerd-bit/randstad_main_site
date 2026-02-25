@@ -29,48 +29,6 @@ function NavLink({ label, hasDropdown, active }: { label: string; hasDropdown?: 
   );
 }
 
-function Navbar() {
-  return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="container-custom flex items-center justify-between h-20">
-        <div className="flex items-center gap-12">
-          {/* Logo */}
-          <div className="flex items-center">
-            <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 8.5C12.5 13.1944 8.69442 17 4 17C1.79086 17 0 15.2091 0 13C0 10.7909 1.79086 9 4 9C5.10457 9 6 8.10457 6 7C6 5.89543 5.10457 5 4 5C1.79086 5 0 3.20914 0 1C0 -1.20914 1.79086 -3 4 -3C8.69442 -3 12.5 0.805579 12.5 5.5V8.5Z" fill="#00a1e0"/>
-              <text x="20" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="#0d173c">randstad</text>
-            </svg>
-          </div>
-
-          {/* Nav Links */}
-          <div className="hidden lg:flex items-center gap-8">
-            <NavLink label="find a job" />
-            <NavLink label="for talent" hasDropdown />
-            <NavLink label="for employer" hasDropdown active />
-            <NavLink label="resources" hasDropdown />
-            <NavLink label="about us" hasDropdown />
-          </div>
-        </div>
-
-        <div className="flex items-center gap-6">
-          <button className="text-gray-500 hover:text-randstad-blue transition-colors">
-            <Heart size={20} />
-          </button>
-          <button className="flex items-center gap-2 text-sm font-medium hover:text-randstad-blue transition-colors">
-            <User size={20} />
-            <span className="hidden sm:inline">my randstad</span>
-          </button>
-          <button className="text-gray-500 hover:text-randstad-blue transition-colors">
-            <Search size={20} />
-          </button>
-          <div className="text-xs text-gray-400 border-l pl-4 hidden md:block">
-            <a href="#" className="hover:underline">contact us</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
 
 // --- Hero Component ---
 
@@ -379,93 +337,14 @@ function SocialIcon({ icon }: { icon: React.ReactNode }) {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="bg-randstad-navy text-white pt-20 pb-10">
-      <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
-          <FooterColumn title="find a job" links={[
-            "explore all jobs", "submit your cv", "join our team", "refer a friend"
-          ]} />
-          
-          <FooterColumn title="for talent" links={[
-            "specialisms", "testimonials", "career advice", "beware of job scams"
-          ]} />
 
-          <FooterColumn title="for employers" links={[
-            "submit a vacancy", "request a callback", "our services", "specialisms", "case studies", "testimonials"
-          ]} />
-
-          <FooterColumn title="workforce insights" links={[
-            "talent insights reports", "employer brand research reports", "salary trends reports", "ed&i reports", "workmonitor reports", "startup hiring trends", "talent pulse surveys"
-          ]} />
-
-          <FooterColumn title="jobs" links={[
-            "engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"
-          ]} />
-          
-          <FooterColumn title="resources" links={[
-            "case studies", "press room", "blogs"
-          ]} />
-        </div>
-
-        <div className="flex flex-wrap gap-6 mb-12">
-          <SocialIcon icon={<Linkedin size={20} />} />
-          <SocialIcon icon={<Twitter size={20} />} />
-          <SocialIcon icon={<Facebook size={20} />} />
-          <SocialIcon icon={<Youtube size={20} />} />
-          <SocialIcon icon={<Instagram size={20} />} />
-        </div>
-
-        <div className="border-t border-white/10 pt-12">
-          <p className="text-xs text-gray-400 mb-8 max-w-4xl leading-relaxed">
-            registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-          </p>
-          
-          <div className="flex items-center gap-4 mb-12">
-             <span className="text-xs font-bold">RANDSTAD,</span>
-             <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 5C15 10 10 15 5 15C2.5 15 0 12.5 0 10C0 7.5 2.5 5 5 5C6.5 5 7.5 4 7.5 2.5C7.5 1 6.5 0 5 0C2.5 0 0 -2.5 0 -5C0 -7.5 2.5 -10 5 -10C10 -10 15 -5 15 0V5Z" fill="#00a1e0"/>
-             </svg>
-             <span className="text-[10px] text-gray-400 tracking-widest uppercase">human forward and shaping the world of work are registered trademarks of © Randstad N.V.2023</span>
-          </div>
-
-          <div className="bg-white/5 p-8 mb-12">
-            <div className="mb-6">
-              <h4 className="text-sm font-bold mb-2">Security Advice:</h4>
-              <p className="text-xs text-gray-400 leading-relaxed">
-                Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-randstad-blue underline">Click here to know more</a>
-              </p>
-            </div>
-            <div>
-              <h4 className="text-sm font-bold mb-2">EEO Statement:</h4>
-              <p className="text-xs text-gray-400 leading-relaxed">
-                Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="text-randstad-blue underline">click here</a>
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">terms & conditions</a>
-            <a href="#" className="hover:text-white transition-colors">cookies</a>
-            <a href="#" className="hover:text-white transition-colors">misconduct reporting procedure</a>
-            <a href="#" className="hover:text-white transition-colors">accessibility</a>
-            <a href="#" className="hover:text-white transition-colors">be aware</a>
-            <a href="#" className="hover:text-white transition-colors">sitemap</a>
-            <a href="#" className="hover:text-white transition-colors">privacy statement</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 // --- Main App Component ---
 
-export default function App() {
+export default function EmpPerm() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      
       <Hero />
       
       <main>
@@ -503,7 +382,7 @@ export default function App() {
         <LocationFinder />
       </main>
 
-      <Footer />
+     
 
       {/* Floating Feedback button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">

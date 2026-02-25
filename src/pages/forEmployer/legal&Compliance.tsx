@@ -24,41 +24,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const Navbar = () => (
-  <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
-    <div className="bg-gray-50 border-b border-gray-100 py-1">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-end">
-        <a href="#" className="text-[12px] text-gray-600 hover:text-randstad-blue transition-colors">contact us</a>
-      </div>
-    </div>
-    <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
-      <div className="flex items-center gap-12">
-        <div className="flex items-center gap-2">
-          <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.5 0C6.5 0 0 6.5 0 14.5C0 22.5 6.5 29 14.5 29H24V24H14.5C9.3 24 5 19.7 5 14.5C5 9.3 9.3 5 14.5 5H24V0H14.5Z" fill="#2175d9"/>
-            <path d="M34 0V29H39V0H34Z" fill="#2175d9"/>
-            <text x="45" y="22" fontFamily="Inter" fontWeight="700" fontSize="22" fill="#2175d9">randstad</text>
-          </svg>
-        </div>
-        <div className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-700">
-          <button className="flex items-center gap-1 hover:text-randstad-blue transition-colors">find a job <ChevronDown size={16} /></button>
-          <button className="flex items-center gap-1 hover:text-randstad-blue transition-colors">for talent <ChevronDown size={16} /></button>
-          <button className="flex items-center gap-1 hover:text-randstad-blue transition-colors">for employer <ChevronDown size={16} /></button>
-          <button className="flex items-center gap-1 hover:text-randstad-blue transition-colors">resources <ChevronDown size={16} /></button>
-          <button className="flex items-center gap-1 hover:text-randstad-blue transition-colors">about us <ChevronDown size={16} /></button>
-        </div>
-      </div>
-      <div className="flex items-center gap-6 text-gray-700">
-        <button className="hover:text-randstad-blue transition-colors flex items-center gap-1 text-[14px]">
-          <Heart size={20} /> <span className="hidden sm:inline">0</span>
-        </button>
-        <button className="hover:text-randstad-blue transition-colors flex items-center gap-1 text-[14px]">
-          <User size={20} /> <span className="hidden sm:inline">my randstad</span>
-        </button>
-      </div>
-    </div>
-  </nav>
-);
+
 
 const Hero = () => (
   <section className="bg-randstad-navy text-white overflow-hidden relative min-h-[600px] flex items-center">
@@ -326,10 +292,10 @@ const FeedbackButton = () => (
   </div>
 );
 
-export default function App() {
+export default function EmpLegal() {
   return (
     <div className="min-h-screen bg-white relative">
-      <Navbar />
+
       <FeedbackButton />
       <CookieIcon />
       <Hero />
@@ -382,7 +348,7 @@ export default function App() {
         imageRight={true}
       />
 
-      <Footer />
+      
     </div>
   );
 }

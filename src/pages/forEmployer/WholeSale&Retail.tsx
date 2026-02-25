@@ -24,46 +24,7 @@ const XIcon = () => (
   </svg>
 );
 
-const Navbar = () => (
-  <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-      <div className="flex items-center justify-between h-20">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 flex flex-col justify-between py-1">
-              <div className="h-1.5 w-full bg-randstad-blue rounded-r-full"></div>
-              <div className="h-1.5 w-3/4 bg-randstad-blue rounded-r-full"></div>
-            </div>
-            <span className="text-2xl font-bold tracking-tighter text-randstad-blue">randstad</span>
-          </div>
-          <nav className="hidden lg:flex items-center gap-8">
-            {["find a job", "for talent", "for employer", "resources", "about us"].map((item) => (
-              <a key={item} href="#" className="text-[15px] font-medium hover:text-randstad-blue transition-colors flex items-center gap-1">
-                {item}
-                {item === "about us" || item === "resources" || item === "for talent" || item === "for employer" || item === "find a job" ? <ChevronRight className="w-4 h-4 rotate-90" /> : null}
-              </a>
-            ))}
-          </nav>
-        </div>
-        <div className="flex items-center gap-6">
-          <a href="#" className="text-[13px] font-medium hover:underline">contact us</a>
-          <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-50 rounded-full">
-              <div className="relative">
-                <Heart className="w-5 h-5" />
-                <span className="absolute -top-1 -right-1 bg-randstad-navy text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
-              </div>
-            </button>
-            <button className="flex items-center gap-2 px-4 py-2 hover:bg-gray-50 rounded-full">
-              <User className="w-5 h-5" />
-              <span className="text-[15px] font-medium">my randstad</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-);
+
 
 const Hero = () => (
   <section className="bg-randstad-navy text-white py-24 overflow-hidden relative">
@@ -221,127 +182,13 @@ const InsightsGrid = ({ title, items, showSeeAll = false }) => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-randstad-navy text-white pt-24 pb-12">
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-20">
-        <div>
-          <h4 className="text-xl font-semibold mb-8">find a job</h4>
-          <ul className="space-y-4 opacity-80 text-[15px]">
-            <li><a href="#" className="hover:underline">explore all jobs</a></li>
-            <li><a href="#" className="hover:underline">submit your cv</a></li>
-            <li><a href="#" className="hover:underline">join our team</a></li>
-            <li><a href="#" className="hover:underline">refer a friend</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-8">for talent</h4>
-          <ul className="space-y-4 opacity-80 text-[15px]">
-            <li><a href="#" className="hover:underline">specialisms</a></li>
-            <li><a href="#" className="hover:underline">testimonials</a></li>
-            <li><a href="#" className="hover:underline">career advice</a></li>
-            <li><a href="#" className="hover:underline">beware of job scams</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-8">for employers</h4>
-          <ul className="space-y-4 opacity-80 text-[15px]">
-            <li><a href="#" className="hover:underline">submit a vacancy</a></li>
-            <li><a href="#" className="hover:underline">request a callback</a></li>
-            <li><a href="#" className="hover:underline">our services</a></li>
-            <li><a href="#" className="hover:underline">specialisms</a></li>
-            <li><a href="#" className="hover:underline">case studies</a></li>
-            <li><a href="#" className="hover:underline">testimonials</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-8">workforce insights</h4>
-          <ul className="space-y-4 opacity-80 text-[15px]">
-            <li><a href="#" className="hover:underline">talent insights reports</a></li>
-            <li><a href="#" className="hover:underline">employer brand research reports</a></li>
-            <li><a href="#" className="hover:underline">salary trends reports</a></li>
-            <li><a href="#" className="hover:underline">ed&i reports</a></li>
-            <li><a href="#" className="hover:underline">workmonitor reports</a></li>
-            <li><a href="#" className="hover:underline">startup hiring trends</a></li>
-            <li><a href="#" className="hover:underline">talent pulse surveys</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-8">resources</h4>
-          <ul className="space-y-4 opacity-80 text-[15px]">
-            <li><a href="#" className="hover:underline">case studies</a></li>
-            <li><a href="#" className="hover:underline">press room</a></li>
-            <li><a href="#" className="hover:underline">blogs</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-8">jobs</h4>
-          <ul className="space-y-4 opacity-80 text-[15px]">
-            <li><a href="#" className="hover:underline">engineering jobs</a></li>
-            <li><a href="#" className="hover:underline">cxo jobs</a></li>
-            <li><a href="#" className="hover:underline">manufacturing jobs</a></li>
-            <li><a href="#" className="hover:underline">supply chain & logistics jobs</a></li>
-            <li><a href="#" className="hover:underline">education jobs</a></li>
-            <li><a href="#" className="hover:underline">finance & accounting jobs</a></li>
-            <li><a href="#" className="hover:underline">healthcare jobs</a></li>
-            <li><a href="#" className="hover:underline">hr & admin support jobs</a></li>
-            <li><a href="#" className="hover:underline">ites/gcc jobs</a></li>
-            <li><a href="#" className="hover:underline">legal & compliance jobs</a></li>
-            <li><a href="#" className="hover:underline">sales & marketing jobs</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div className="border-t border-white/10 pt-12 mb-12">
-        <div className="flex flex-wrap items-center justify-between gap-8">
-          <div className="flex items-center gap-6">
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Linkedin className="w-5 h-5" /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><XIcon /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Facebook className="w-5 h-5" /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Youtube className="w-5 h-5" /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram className="w-5 h-5" /></a>
-          </div>
-          <p className="text-[13px] opacity-60">
-            registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-          </p>
-        </div>
-      </div>
 
-      <div className="mb-12">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 flex flex-col justify-between py-1">
-              <div className="h-1 w-full bg-randstad-blue rounded-r-full"></div>
-              <div className="h-1 w-3/4 bg-randstad-blue rounded-r-full"></div>
-            </div>
-            <span className="text-xl font-bold tracking-tighter">randstad</span>
-          </div>
-          <span className="text-[13px] opacity-60">HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-        </div>
-        
-        <div className="space-y-6 text-[13px] opacity-80 leading-relaxed max-w-5xl">
-          <p>
-            Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a>
-          </p>
-          <p>
-            EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a>
-          </p>
-        </div>
-      </div>
 
-      <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-[13px] opacity-80">
-        {["terms & conditions", "cookies", "misconduct reporting procedure", "accessibility", "be aware", "sitemap", "privacy statement"].map(link => (
-          <a key={link} href="#" className="hover:underline">{link}</a>
-        ))}
-      </div>
-    </div>
-  </footer>
-);
-
-export default function App() {
+export default function EmpWholeSale() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      
       <Hero />
       
       <SectionWithImage 

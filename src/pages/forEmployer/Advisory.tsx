@@ -447,10 +447,10 @@ function Footer() {
 
 // --- Main App ---
 
-export default function App() {
+export default function EmpAdvisory() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      
       
       <main>
         <Hero />
@@ -527,7 +527,7 @@ export default function App() {
         <About />
       </main>
       
-      <Footer />
+      
 
       {/* Fixed UI Elements */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:block">

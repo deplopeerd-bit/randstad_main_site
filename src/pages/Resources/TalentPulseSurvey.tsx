@@ -67,7 +67,7 @@ const AccordionItem = ({ title }: { title: string; key?: React.Key }) => {
   );
 };
 
-export default function App() {
+export default function ResTalentPulse() {
   const navItems = [
     { name: 'find a job', hasDropdown: true },
     { name: 'for talent', hasDropdown: true },
@@ -110,45 +110,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-randstad-blue/30">
       {/* Header */}
-      <header className="sticky top-0 z-40 bg-white border-b border-[#f0f0f0]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-16">
-          <div className="flex justify-end pt-3 pb-1">
-            <a href="#" className="text-[12px] text-[#666666] hover:text-randstad-blue transition-colors">contact us</a>
-          </div>
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-14">
-              <a href="/" className="flex-shrink-0">
-                <RandstadLogo />
-              </a>
-              <nav className="hidden xl:flex items-center gap-9">
-                {navItems.map((item) => (
-                  <a 
-                    key={item.name} 
-                    href="#" 
-                    className="text-[15px] font-medium text-[#333333] hover:text-randstad-blue flex items-center gap-1 transition-colors"
-                  >
-                    {item.name}
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4 opacity-40 group-hover:opacity-100" />}
-                  </a>
-                ))}
-              </nav>
-            </div>
-            <div className="flex items-center gap-7 text-[#333333]">
-              <div className="flex items-center gap-1.5 cursor-pointer hover:text-randstad-blue transition-colors">
-                <Heart className="w-[22px] h-[22px] stroke-[1.5]" />
-                <span className="text-[15px] font-medium">0</span>
-              </div>
-              <div className="flex items-center gap-2.5 cursor-pointer hover:text-randstad-blue transition-colors">
-                <User className="w-[22px] h-[22px] stroke-[1.5]" />
-                <span className="text-[15px] font-medium">my randstad</span>
-              </div>
-              <button className="xl:hidden">
-                <Search className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+     
 
       {/* Hero Section */}
       <section className="bg-[#f8f9fa] pt-12 pb-20 overflow-hidden">
@@ -209,76 +171,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#051937] text-white pt-24 pb-16">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-x-8 gap-y-14 mb-24">
-            {Object.entries(footerLinks).map(([title, links]) => (
-              <div key={title}>
-                <h3 className="text-[18px] font-bold mb-8 text-white">{title}</h3>
-                <ul className="space-y-4">
-                  {links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-[15px] text-[#b3b3b3] hover:text-white transition-colors leading-snug inline-block">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="border-t border-white/10 pt-14">
-            <div className="flex flex-wrap gap-5 mb-14">
-              {[
-                { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn' },
-                { icon: <XIcon />, label: 'X' },
-                { icon: <Facebook className="w-5 h-5" />, label: 'Facebook' },
-                { icon: <Youtube className="w-5 h-5" />, label: 'YouTube' },
-                { icon: <Instagram className="w-5 h-5" />, label: 'Instagram' }
-              ].map((social) => (
-                <a 
-                  key={social.label}
-                  href="#" 
-                  aria-label={social.label}
-                  className="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-randstad-blue transition-all duration-300 hover:scale-110"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-
-            <div className="text-[13px] text-[#999999] space-y-7 max-w-6xl leading-relaxed">
-              <p>
-                registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-              </p>
-              
-              <div className="flex items-center flex-wrap gap-2">
-                <span className="font-bold text-white tracking-wide">RANDSTAD,</span>
-                <div className="w-8 h-4 bg-randstad-blue rounded-sm opacity-80"></div>
-                <span className="text-[#cccccc]">HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-              </div>
-              
-              <div className="space-y-5">
-                <p>
-                  <span className="font-bold text-white">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-white underline underline-offset-4 hover:text-randstad-blue transition-colors">Click here to know more</a>
-                </p>
-                <p>
-                  <span className="font-bold text-white">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="text-white underline underline-offset-4 hover:text-randstad-blue transition-colors">click here</a>
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-20 flex flex-wrap gap-x-10 gap-y-5 text-[13px] text-[#999999] font-medium">
-              {['terms & conditions', 'cookies', 'misconduct reporting procedure', 'accessibility', 'be aware', 'sitemap', 'privacy statement'].map((item) => (
-                <a key={item} href="#" className="hover:text-white transition-colors uppercase tracking-wider text-[11px]">
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
+     
 
       {/* Floating Feedback Button */}
       <button className="fixed right-0 top-1/2 -translate-y-1/2 bg-randstad-blue text-white py-5 px-2.5 rounded-l-md vertical-text flex items-center gap-2 shadow-2xl hover:bg-blue-600 transition-all duration-300 z-50 group">

@@ -47,7 +47,7 @@ const FooterColumn = ({ title, links }: { title: string, links: string[] }) => (
   </div>
 );
 
-export default function RequestAcall() {
+export default function EmpWorkForceAdv() {
   return (
     <div className="min-h-screen bg-white">
       {/* Top Utility Bar */}
@@ -58,30 +58,7 @@ export default function RequestAcall() {
       </div>
 
       {/* Main Navigation */}
-      <header className="bg-white sticky top-0 z-50 border-b border-gray-100">
-        <div className="container-custom flex items-center justify-between h-20">
-          <div className="flex items-center gap-12">
-            <RandstadLogo className="h-10" />
-            <nav className="hidden lg:flex items-center gap-6">
-              <NavItem label="find a job" />
-              <NavItem label="for talent" />
-              <NavItem label="for employer" />
-              <NavItem label="resources" />
-              <NavItem label="about us" />
-            </nav>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 cursor-pointer hover:text-randstad-blue">
-              <Heart size={20} />
-              <span className="text-[15px] font-medium">0</span>
-            </div>
-            <div className="flex items-center gap-2 cursor-pointer hover:text-randstad-blue">
-              <User size={20} />
-              <span className="text-[15px] font-medium">my randstad</span>
-            </div>
-          </div>
-        </div>
-      </header>
+      
 
       {/* Breadcrumbs */}
       <div className="bg-white py-4">
@@ -310,75 +287,7 @@ export default function RequestAcall() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-randstad-navy pt-20 pb-10 text-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-20">
-            <FooterColumn 
-              title="find a job" 
-              links={["explore all jobs", "submit your cv", "join our team", "refer a friend"]} 
-            />
-            <FooterColumn 
-              title="for talents" 
-              links={["specialisms", "testimonials", "career advice", "beware of job scams"]} 
-            />
-            <FooterColumn 
-              title="for employers" 
-              links={["submit a vacancy", "request a callback", "our services", "specialisms", "case studies", "testimonials"]} 
-            />
-            <FooterColumn 
-              title="workforce insights" 
-              links={["talent insights reports", "employer brand research reports", "salary trends reports", "ed&i reports", "workmonitor reports", "startup hiring trends", "talent pulse surveys"]} 
-            />
-            <FooterColumn 
-              title="resources" 
-              links={["case studies", "press room", "blogs"]} 
-            />
-            <FooterColumn 
-              title="jobs" 
-              links={["engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"]} 
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center justify-between gap-8 py-10 border-t border-white/10">
-            <div className="flex items-center gap-6">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><XIcon /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Youtube size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram size={20} /></a>
-            </div>
-            <div className="text-[12px] text-white/60">
-              registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-8 py-10 border-t border-white/10">
-            <div className="flex items-center gap-4">
-              <RandstadLogo className="h-8 brightness-0 invert" />
-              <span className="text-[12px] font-medium tracking-widest opacity-60">HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V. 2023</span>
-            </div>
-            
-            <div className="space-y-4 text-[13px] text-white/70 leading-relaxed">
-              <p>
-                <span className="font-bold text-white">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-randstad-cyan hover:underline">Click here to know more</a>
-              </p>
-              <p>
-                <span className="font-bold text-white">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-randstad-cyan hover:underline">click here</a>
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-6 pt-10 border-t border-white/10 text-[12px] text-white/60">
-            <a href="#" className="hover:text-white">terms & conditions</a>
-            <a href="#" className="hover:text-white">cookies</a>
-            <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-            <a href="#" className="hover:text-white">accessibility</a>
-            <a href="#" className="hover:text-white">be aware</a>
-            <a href="#" className="hover:text-white">sitemap</a>
-            <a href="#" className="hover:text-white">privacy statement</a>
-          </div>
-        </div>
-      </footer>
+     
 
       {/* Sticky Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[100] hidden md:block">

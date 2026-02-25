@@ -387,10 +387,10 @@ const Footer = () => {
 
 // --- Main App ---
 
-export default function App() {
+export default function EmptalentServices() {
   return (
     <div className="min-h-screen bg-white selection:bg-brand-cyan selection:text-white">
-      <Header />
+      
       <main>
         <Hero />
         <ExpertsSection />
@@ -402,7 +402,7 @@ export default function App() {
         <RitsSection />
         <PartnerBanner />
       </main>
-      <Footer />
+      
     </div>
   );
 }

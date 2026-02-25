@@ -12,45 +12,7 @@ import { ArrowRight, ChevronDown, Facebook, Heart, Instagram, Linkedin, MessageS
  */
 
 
-const Header = () => {
-  return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="container-custom py-4 flex items-center justify-between">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-randstad-blue rounded-sm flex items-center justify-center">
-               <span className="text-white font-bold text-xl">r</span>
-            </div>
-            <span className="text-randstad-blue font-bold text-2xl tracking-tighter">randstad</span>
-          </div>
-          
-          <nav className="hidden lg:flex items-center gap-8">
-            {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-              <div key={item} className="flex items-center gap-1 cursor-pointer group">
-                <span className="text-navy font-medium text-sm lowercase">{item}</span>
-                <ChevronDown size={14} className="text-navy opacity-50 group-hover:opacity-100" />
-              </div>
-            ))}
-          </nav>
-        </div>
 
-        <div className="flex items-center gap-6">
-          <a href="#" className="text-navy text-xs font-medium border-b border-navy pb-0.5">contact us</a>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1 cursor-pointer">
-              <Heart size={20} className="text-navy" strokeWidth={1.5} />
-              <span className="text-navy text-sm font-medium">0</span>
-            </div>
-            <div className="flex items-center gap-2 cursor-pointer">
-              <User size={20} className="text-navy" strokeWidth={1.5} />
-              <span className="text-navy text-sm font-medium">my randstad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-};
 
 const Hero = () => {
   return (
@@ -301,77 +263,13 @@ const Footer = () => {
     { title: "jobs", items: ["engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"] }
   ];
 
-  return (
-    <footer className="bg-navy text-white pt-24 pb-12">
-      <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-24">
-          {columns.map((col, idx) => (
-            <div key={idx}>
-              <h4 className="font-bold mb-6 lowercase">{col.title}</h4>
-              <ul className="space-y-3 opacity-70 text-sm lowercase">
-                {col.items.map((item, i) => (
-                  <li key={i} className="hover:opacity-100 cursor-pointer transition-opacity">{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className="border-t border-white/10 pt-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-6">
-            <Linkedin size={20} className="opacity-60 hover:opacity-100 cursor-pointer" />
-            <Twitter size={20} className="opacity-60 hover:opacity-100 cursor-pointer" />
-            <Facebook size={20} className="opacity-60 hover:opacity-100 cursor-pointer" />
-            <Youtube size={20} className="opacity-60 hover:opacity-100 cursor-pointer" />
-            <Instagram size={20} className="opacity-60 hover:opacity-100 cursor-pointer" />
-          </div>
-          <div className="text-[10px] opacity-40 text-center md:text-right max-w-xl">
-            registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
-          <div className="flex items-center gap-2">
-            <span className="text-randstad-blue font-bold text-xl tracking-tighter">randstad</span>
-            <div className="w-1 h-4 bg-randstad-blue"></div>
-            <span className="text-[10px] opacity-60 uppercase tracking-widest">human forward</span>
-          </div>
-          <div className="text-[10px] opacity-40">
-            RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023
-          </div>
-        </div>
-
-        <div className="space-y-6 text-xs opacity-60 mb-12">
-          <p>Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a></p>
-          <p>EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a></p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-xs opacity-60 lowercase">
-          {['terms & conditions', 'cookies', 'misconduct reporting procedure', 'accessibility', 'be aware', 'sitemap', 'privacy statement'].map(item => (
-            <a key={item} href="#" className="hover:underline">{item}</a>
-          ))}
-        </div>
-      </div>
-
-      {/* Floating Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-        <div className="w-14 h-14 bg-randstad-blue rounded-full flex items-center justify-center text-white shadow-xl cursor-pointer hover:scale-110 transition-transform">
-          <MessageSquare size={24} />
-        </div>
-      </div>
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">
-        <div className="bg-randstad-blue text-white py-4 px-2 rounded-l-md cursor-pointer hover:pr-4 transition-all flex flex-col items-center gap-2">
-          <span className="[writing-mode:vertical-lr] rotate-180 text-xs font-bold tracking-widest uppercase">feedback</span>
-        </div>
-      </div>
-    </footer>
-  );
 };
 
-export default function HrSupport() {
+export default function EmpHrSupport() {
   return (
     <div className="min-h-screen">
-      <Header />
+     
       <Hero />
       
       <ContentSection 

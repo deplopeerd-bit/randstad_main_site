@@ -370,10 +370,10 @@ const Footer = () => (
   </footer>
 );
 
-export default function App() {
+export default function EmpPayroll() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+     
       <main>
         <Hero />
         <TrustPartner />
@@ -383,7 +383,7 @@ export default function App() {
         <Newsletter />
         <DownloadBanner />
       </main>
-      <Footer />
+
       
       {/* Floating Feedback Button Replica */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">

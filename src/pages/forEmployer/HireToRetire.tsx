@@ -458,10 +458,10 @@ const Footer = () => (
   </footer>
 );
 
-export default function App() {
+export default function EmpHiretoRetire() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      
       <main className="flex-grow">
         <Hero />
         <TextSection />
@@ -473,7 +473,7 @@ export default function App() {
         <DownloadBanner />
         <LocationSection />
       </main>
-      <Footer />
+    
       
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:block">

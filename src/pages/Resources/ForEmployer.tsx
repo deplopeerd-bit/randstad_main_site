@@ -409,10 +409,10 @@ const Footer = () => (
 
 // --- Main App ---
 
-export default function App() {
+export default function ResForEmployer() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+  
       <main className="flex-grow">
         <Hero />
         <ReadMore />
@@ -420,7 +420,7 @@ export default function App() {
         <TestimonialCards />
         <Upskilling />
       </main>
-      <Footer />
+      
       
       {/* Cookie/Accessibility floating button */}
       <div className="fixed bottom-6 left-6 z-50">

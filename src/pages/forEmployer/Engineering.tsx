@@ -17,69 +17,7 @@ import {
   X
 } from 'lucide-react';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <nav className="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-8">
-            <div className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-[#0055a4] flex items-center">
-                <span className="mr-1">ר</span>randstad
-              </span>
-            </div>
-            <div className="hidden lg:flex space-x-6">
-              {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-                <button key={item} className="text-gray-600 hover:text-black text-sm font-medium flex items-center">
-                  {item} <ChevronDown className="ml-1 w-4 h-4" />
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="hidden lg:flex items-center space-x-6">
-            <button className="text-gray-600 hover:text-black text-sm font-medium">contact us</button>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center text-gray-600">
-                <span className="text-sm mr-1">0</span>
-                <Search className="w-5 h-5" />
-              </div>
-              <div className="flex items-center text-gray-600">
-                <User className="w-5 h-5 mr-1" />
-                <span className="text-sm">my randstad</span>
-              </div>
-            </div>
-          </div>
-          <div className="lg:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600">
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6"
-          >
-            {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-              <button key={item} className="block w-full text-left py-3 text-gray-600 hover:text-black text-base font-medium border-b border-gray-50">
-                {item}
-              </button>
-            ))}
-            <button className="block w-full text-left py-3 text-gray-600 hover:text-black text-base font-medium">contact us</button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-};
 
 const Hero = () => (
   <section className="pt-32 pb-20 bg-[#0a1a3c] text-white overflow-hidden relative">
@@ -294,109 +232,12 @@ const ExpertiseAccordion = () => {
   );
 };
 
-const Footer = () => (
-  <footer className="bg-[#0a1a3c] text-white pt-20 pb-10">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-        <div>
-          <h3 className="text-lg font-medium mb-6">find a job</h3>
-          <ul className="space-y-3 opacity-60 text-sm">
-            <li>explore all jobs</li>
-            <li>submit your cv</li>
-            <li>join our team</li>
-            <li>refer a friend</li>
-          </ul>
-          <h3 className="text-lg font-medium mt-10 mb-6">for talents</h3>
-          <ul className="space-y-3 opacity-60 text-sm">
-            <li>specialisms</li>
-            <li>testimonials</li>
-            <li>career advice</li>
-            <li>beware of job scams</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-lg font-medium mb-6">for employers</h3>
-          <ul className="space-y-3 opacity-60 text-sm">
-            <li>submit a vacancy</li>
-            <li>request a callback</li>
-            <li>our services</li>
-            <li>specialisms</li>
-            <li>case studies</li>
-            <li>testimonials</li>
-          </ul>
-          <h3 className="text-lg font-medium mt-10 mb-6">resources</h3>
-          <ul className="space-y-3 opacity-60 text-sm">
-            <li>case studies</li>
-            <li>press room</li>
-            <li>blogs</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-lg font-medium mb-6">workforce insights</h3>
-          <ul className="space-y-3 opacity-60 text-sm">
-            <li>talent insights reports</li>
-            <li>employer brand research reports</li>
-            <li>salary trends reports</li>
-            <li>ed&i reports</li>
-            <li>workmonitor reports</li>
-            <li>startup hiring trends</li>
-            <li>talent pulse surveys</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-lg font-medium mb-6">jobs</h3>
-          <ul className="space-y-3 opacity-60 text-sm">
-            <li>engineering jobs</li>
-            <li>cxo jobs</li>
-            <li>manufacturing jobs</li>
-            <li>supply chain & logistics jobs</li>
-            <li>education jobs</li>
-            <li>finance & accounting jobs</li>
-            <li>healthcare jobs</li>
-            <li>hr & admin support jobs</li>
-            <li>ites/gcc jobs</li>
-            <li>legal & compliance jobs</li>
-            <li>sales & marketing jobs</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex space-x-6">
-          <Linkedin className="w-5 h-5 opacity-60 hover:opacity-100 cursor-pointer" />
-          <Twitter className="w-5 h-5 opacity-60 hover:opacity-100 cursor-pointer" />
-          <Facebook className="w-5 h-5 opacity-60 hover:opacity-100 cursor-pointer" />
-          <Youtube className="w-5 h-5 opacity-60 hover:opacity-100 cursor-pointer" />
-          <Instagram className="w-5 h-5 opacity-60 hover:opacity-100 cursor-pointer" />
-        </div>
-        <p className="text-xs opacity-40 text-center md:text-left">
-          registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-        </p>
-      </div>
-      
-      <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-6 text-[10px] uppercase tracking-widest opacity-40">
-        <span>terms & conditions</span>
-        <span>cookies</span>
-        <span>misconduct reporting procedure</span>
-        <span>accessibility</span>
-        <span>be aware</span>
-        <span>sitemap</span>
-        <span>privacy statement</span>
-      </div>
-      
-      <div className="mt-10 pt-10 border-t border-white/10 text-center">
-        <p className="text-[10px] opacity-40">
-          RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023
-        </p>
-      </div>
-    </div>
-  </footer>
-);
 
-export default function LandingPage() {
+
+export default function EmployeeEngg() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#0070f3] selection:text-white">
-      <Navbar />
+     
       <Hero />
       
       <FeatureSection 
@@ -529,7 +370,7 @@ export default function LandingPage() {
         </div>
       </section>
       
-      <Footer />
+     
       
       {/* Floating Chat Button */}
       <button className="fixed bottom-6 right-6 w-14 h-14 bg-[#0070f3] text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform z-50">

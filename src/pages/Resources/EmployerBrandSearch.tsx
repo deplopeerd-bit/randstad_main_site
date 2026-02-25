@@ -20,45 +20,6 @@ import {
   ChevronRight
 } from 'lucide-react';
 
-const Navbar = () => {
-  return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="flex justify-end py-2">
-          <a href="#" className="text-[11px] text-gray-500 hover:text-randstad-blue uppercase tracking-wider font-medium">contact us</a>
-        </div>
-        <div className="flex items-center justify-between h-16 pb-2">
-          <div className="flex items-center gap-12">
-            <div className="flex items-center">
-              <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.5 8.5C12.5 10.433 10.933 12 9 12C7.067 12 5.5 10.433 5.5 8.5C5.5 6.567 7.067 5 9 5C10.933 5 12.5 6.567 12.5 8.5Z" fill="#2175D9"/>
-                <path d="M18 14C18 17.3137 15.3137 20 12 20C8.68629 20 6 17.3137 6 14C6 10.6863 8.68629 8 12 8C15.3137 8 18 10.6863 18 14Z" fill="#051937" fillOpacity="0.2"/>
-                <text x="25" y="22" fontFamily="Inter" fontWeight="700" fontSize="22" fill="#051937">randstad</text>
-              </svg>
-            </div>
-            <div className="hidden lg:flex items-center gap-6">
-              {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-                <button key={item} className="flex items-center gap-1 text-[14px] font-medium text-gray-700 hover:text-randstad-blue transition-colors">
-                  {item} <ChevronDown size={14} />
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="flex items-center gap-6">
-            <button className="text-gray-700 hover:text-randstad-blue transition-colors flex items-center gap-2">
-              <Heart size={20} />
-              <span className="text-[14px] font-medium">0</span>
-            </button>
-            <button className="text-gray-700 hover:text-randstad-blue transition-colors flex items-center gap-2">
-              <User size={20} />
-              <span className="text-[14px] font-medium">my randstad</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -351,96 +312,12 @@ const NewsletterSection = () => {
   );
 };
 
-const Footer = () => {
-  const footerLinks = [
-    {
-      title: 'find a job',
-      links: ['explore all jobs', 'submit your cv', 'join our team', 'refer a friend']
-    },
-    {
-      title: 'for talents',
-      links: ['specialisms', 'testimonials', 'career advice', 'beware of job scams']
-    },
-    {
-      title: 'for employers',
-      links: ['submit a vacancy', 'request a callback', 'our services', 'specialisms', 'case studies', 'testimonials']
-    },
-    {
-      title: 'resources',
-      links: ['case studies', 'press room', 'blogs']
-    },
-    {
-      title: 'workforce insights',
-      links: ['talent insights reports', 'employer brand research reports', 'salary trends reports', 'ed&i reports', 'workmonitor reports', 'startup hiring trends', 'talent pulse surveys']
-    },
-    {
-      title: 'jobs',
-      links: ['engineering jobs', 'cxo jobs', 'manufacturing jobs', 'supply chain & logistics jobs', 'education jobs', 'finance & accounting jobs', 'healthcare jobs', 'hr & admin support jobs', 'ites/gcc jobs', 'legal & compliance jobs', 'sales & marketing jobs']
-    }
-  ];
 
-  return (
-    <footer className="bg-randstad-navy text-white pt-20 pb-12">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-12 mb-20">
-          {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-[16px] font-bold mb-6">{section.title}</h4>
-              <ul className="space-y-4">
-                {section.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-[14px] text-gray-400 hover:text-white transition-colors">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className="border-t border-white/10 pt-12 mb-12">
-          <div className="flex flex-wrap items-center gap-6 mb-8">
-            {[Linkedin, Twitter, Facebook, Youtube, Instagram].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-randstad-blue transition-colors">
-                <Icon size={18} />
-              </a>
-            ))}
-          </div>
-          <p className="text-[12px] text-gray-500 mb-8">
-            registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-          </p>
-          <div className="flex items-center gap-4 mb-12">
-            <span className="text-[12px] text-gray-500 uppercase tracking-widest">RANDSTAD,</span>
-            <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 5C15 6.10457 14.1046 7 13 7C11.8954 7 11 6.10457 11 5C11 3.89543 11.8954 3 13 3C14.1046 3 15 3.89543 15 5Z" fill="#2175D9"/>
-              <path d="M18 10C18 12.7614 15.7614 15 13 15C10.2386 15 8 12.7614 8 10C8 7.23858 10.2386 5 13 5C15.7614 5 18 7.23858 18 10Z" fill="white" fillOpacity="0.2"/>
-            </svg>
-            <span className="text-[12px] text-gray-500 uppercase tracking-widest">, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-          </div>
-
-          <div className="space-y-6 text-[14px] text-gray-400 leading-relaxed max-w-6xl">
-            <p>
-              <span className="text-white font-medium">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-randstad-blue hover:underline">Click here to know more</a>
-            </p>
-            <p>
-              <span className="text-white font-medium">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-randstad-blue hover:underline">click here</a>
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] text-gray-500">
-          {['terms & conditions', 'cookies', 'misconduct reporting procedure', 'accessibility', 'be aware', 'sitemap', 'privacy statement'].map((item) => (
-            <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
-          ))}
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default function App() {
+export default function ResEmployerBrand() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+     
       <main>
         <Hero />
         <CelebrateSection />
@@ -451,7 +328,7 @@ export default function App() {
         <BestOfBestSection />
         <NewsletterSection />
       </main>
-      <Footer />
+    
       
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">

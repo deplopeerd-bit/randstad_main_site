@@ -16,50 +16,7 @@ import {
   Globe
 } from "lucide-react";
 
-const Navbar = () => {
-  return (
-    <nav className="bg-brand-navy text-white py-4 border-b border-white/10 sticky top-0 z-50">
-      <div className="container-custom flex items-center justify-between">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-2">
-            <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 10C15 10 10 10 10 15V25C10 30 15 30 15 30H25C25 30 30 30 30 25V15C30 10 25 10 25 10H15Z" stroke="white" strokeWidth="2"/>
-              <path d="M10 20H30" stroke="white" strokeWidth="2"/>
-              <text x="40" y="25" fill="white" fontSize="18" fontWeight="700" fontFamily="Inter">randstad</text>
-              <text x="40" y="35" fill="white" fontSize="10" fontWeight="400" fontFamily="Inter">digital</text>
-            </svg>
-          </div>
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium opacity-80">
-            <a href="#" className="hover:opacity-100 transition-opacity">expertise</a>
-            <a href="#" className="hover:opacity-100 transition-opacity border-b-2 border-brand-blue pb-1">approach</a>
-            <a href="#" className="hover:opacity-100 transition-opacity">industries</a>
-            <a href="#" className="hover:opacity-100 transition-opacity">about</a>
-            <a href="#" className="hover:opacity-100 transition-opacity">insights</a>
-            <a href="#" className="hover:opacity-100 transition-opacity">careers</a>
-          </div>
-        </div>
-        <div className="flex items-center gap-6 text-xs font-medium">
-          <div className="hidden md:flex items-center gap-4 opacity-60">
-            <span>contact us</span>
-            <span className="font-bold">EN</span>
-            <span>FR</span>
-            <span>DE</span>
-          </div>
-          <Search size={18} className="opacity-60 cursor-pointer" />
-        </div>
-      </div>
-      <div className="bg-brand-navy/50 py-2 mt-2">
-        <div className="container-custom flex gap-8 text-[11px] uppercase tracking-wider opacity-60">
-          <a href="#">talent services</a>
-          <a href="#">global talent centers</a>
-          <a href="#" className="text-white opacity-100 font-bold">managed solutions</a>
-          <a href="#">talent sourcing platform</a>
-          <a href="#">randstad digital academy</a>
-        </div>
-      </div>
-    </nav>
-  );
-};
+
 
 const Hero = () => {
   return (
@@ -362,10 +319,10 @@ const Footer = () => {
   );
 };
 
-export default function App() {
+export default function EmpmanageSolution() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+     
       <main className="flex-grow">
         <Hero />
         <AchievementSection />
@@ -374,7 +331,7 @@ export default function App() {
         <TimeToValueSection />
         <PartnerSection />
       </main>
-      <Footer />
+     
     </div>
   );
 }

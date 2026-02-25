@@ -615,10 +615,10 @@ const Footer = () => {
   );
 };
 
-export default function App() {
+export default function AboutEdId() {
   return (
     <div className="min-h-screen font-sans selection:bg-[#2b73d9] selection:text-white">
-      <Navbar />
+     
       <main>
         <Hero />
         <PromiseSection />
@@ -632,7 +632,6 @@ export default function App() {
         <CommitmentSection />
         <ContactSection />
       </main>
-      <Footer />
     </div>
   );
 }

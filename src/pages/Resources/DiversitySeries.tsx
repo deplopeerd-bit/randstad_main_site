@@ -114,7 +114,7 @@ const LinkRow = ({ label, dark = false }: { label: string; dark?: boolean }) => 
   </div>
 );
 
-export default function App() {
+export default function ResDiversity() {
   return (
     <div className="min-h-screen font-sans text-[#333] selection:bg-blue-100">
       {/* Top Utility Bar */}
@@ -125,37 +125,7 @@ export default function App() {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-        <div className="max-w-[1440px] mx-auto px-10 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            <div className="py-4">
-              <img 
-                src="https://www.randstad.in/images/randstad-logo.svg" 
-                alt="Randstad" 
-                className="h-8"
-              />
-            </div>
-            <nav className="hidden lg:flex items-center gap-8">
-              <NavItem label="find a job" hasDropdown />
-              <NavItem label="for talent" hasDropdown />
-              <NavItem label="for employer" hasDropdown />
-              <NavItem label="resources" hasDropdown />
-              <NavItem label="about us" hasDropdown />
-            </nav>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1 cursor-pointer py-4">
-              <Heart size={20} className="text-[#333]" />
-              <span className="text-[15px] font-normal">0</span>
-            </div>
-            <div className="flex items-center gap-2 cursor-pointer py-4">
-              <User size={20} className="text-[#333]" />
-              <span className="text-[15px] font-normal">my randstad</span>
-            </div>
-            <Search size={20} className="cursor-pointer text-[#333]" />
-          </div>
-        </div>
-      </header>
+     
 
       {/* Breadcrumbs */}
       <div className="bg-white py-4">
@@ -436,89 +406,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0d173c] text-white pt-24 pb-10">
-        <div className="max-w-[1440px] mx-auto px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-            <div className="flex flex-col gap-12">
-              <FooterLinkGroup 
-                title="find a job" 
-                links={["explore all jobs", "submit your cv", "join our team", "refer a friend"]} 
-              />
-              <FooterLinkGroup 
-                title="for talents" 
-                links={["specialisms", "testimonials", "career advice", "beware of job scams"]} 
-              />
-            </div>
-            <div className="flex flex-col gap-12">
-              <FooterLinkGroup 
-                title="for employers" 
-                links={["submit a vacancy", "request a callback", "our services", "specialisms", "case studies", "testimonials"]} 
-              />
-              <FooterLinkGroup 
-                title="resources" 
-                links={["case studies", "press room", "blogs"]} 
-              />
-            </div>
-            <FooterLinkGroup 
-              title="workforce insights" 
-              links={["talent insights reports", "employer brand research reports", "salary trends reports", "ed&i reports", "workmonitor reports", "startup hiring trends", "talent pulse surveys"]} 
-            />
-            <FooterLinkGroup 
-              title="jobs" 
-              links={["engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"]} 
-            />
-          </div>
-
-          <div className="border-t border-white/10 pt-10 mb-10">
-            <div className="flex flex-wrap items-center gap-6 mb-10">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Youtube size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Instagram size={20} />
-              </a>
-            </div>
-
-            <p className="text-white/50 text-[12px] mb-8">
-              registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-            </p>
-
-            <div className="flex items-center gap-4 mb-12">
-              <span className="text-[14px] font-bold">RANDSTAD,</span>
-              <img src="https://www.randstad.in/images/randstad-logo-white.svg" alt="Randstad" className="h-4" />
-              <span className="text-white/70 text-[12px]">, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-            </div>
-
-            <div className="bg-white/5 p-8 rounded-lg mb-12">
-              <p className="text-[14px] leading-relaxed mb-6">
-                <span className="font-bold">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-blue-400 underline">Click here to know more</a>
-              </p>
-              <p className="text-[14px] leading-relaxed">
-                <span className="font-bold">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-blue-400 underline">click here</a>
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-x-8 gap-y-4 text-[14px] text-white/70">
-              <a href="#" className="hover:text-white transition-colors">terms & conditions</a>
-              <a href="#" className="hover:text-white transition-colors">cookies</a>
-              <a href="#" className="hover:text-white transition-colors">misconduct reporting procedure</a>
-              <a href="#" className="hover:text-white transition-colors">accessibility</a>
-              <a href="#" className="hover:text-white transition-colors">be aware</a>
-              <a href="#" className="hover:text-white transition-colors">sitemap</a>
-              <a href="#" className="hover:text-white transition-colors">privacy statement</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[60]">

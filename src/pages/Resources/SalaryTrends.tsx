@@ -280,7 +280,7 @@ const CookieIcon = () => (
   </div>
 );
 
-export default function App() {
+export default function ResSalary() {
   return (
     <div className="min-h-screen font-sans selection:bg-[#2478cc] selection:text-white">
       <style>{`
@@ -294,13 +294,13 @@ export default function App() {
         }
       `}</style>
       
-      <Navbar />
+      
       <main>
         <Hero />
         <InfoSection />
         <ReportsSection />
       </main>
-      <Footer />
+   
       
       <FeedbackButton />
       <CookieIcon />

@@ -18,52 +18,11 @@ import {
   Twitter
 } from "lucide-react";
 
-export default function App() {
+export default function EmpGlobalTalent() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-brand-navy text-white sticky top-0 z-50 border-b border-white/10">
-        <div className="container-custom py-4 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            <div className="flex items-center gap-2">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                <path d="M10 10C10 10 15 10 15 15C15 20 10 20 10 20" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                <path d="M30 10C30 10 25 10 25 15C25 20 30 20 30 20" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                <path d="M20 20V30" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-              </svg>
-              <div className="flex flex-col leading-none">
-                <span className="text-xl font-bold tracking-tight">randstad</span>
-                <span className="text-xs font-medium opacity-80">digital</span>
-              </div>
-            </div>
-            <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-              <a href="#" className="hover:text-brand-blue transition-colors">expertise</a>
-              <a href="#" className="text-brand-blue border-b-2 border-brand-blue pb-1">approach</a>
-              <a href="#" className="hover:text-brand-blue transition-colors">industries</a>
-              <a href="#" className="hover:text-brand-blue transition-colors">about</a>
-              <a href="#" className="hover:text-brand-blue transition-colors">insights</a>
-              <a href="#" className="hover:text-brand-blue transition-colors">careers</a>
-            </nav>
-          </div>
-          <div className="flex items-center gap-6 text-xs font-medium">
-            <a href="#" className="opacity-70 hover:opacity-100">contact us</a>
-            <div className="flex gap-2">
-              <span className="text-brand-blue">EN</span>
-              <span className="opacity-50">FR</span>
-              <span className="opacity-50">DE</span>
-            </div>
-          </div>
-        </div>
-        <div className="bg-brand-navy/50 border-t border-white/5">
-          <div className="container-custom py-3 flex items-center gap-8 text-xs font-medium overflow-x-auto whitespace-nowrap">
-            <a href="#" className="opacity-70 hover:opacity-100">talent services</a>
-            <a href="#" className="text-white border-b border-white">global talent centers</a>
-            <a href="#" className="opacity-70 hover:opacity-100">managed solutions</a>
-            <a href="#" className="opacity-70 hover:opacity-100">talent sourcing platform</a>
-            <a href="#" className="opacity-70 hover:opacity-100">randstad digital academy</a>
-          </div>
-        </div>
-      </header>
+     
 
       {/* Hero Section */}
       <section className="bg-brand-navy text-white pt-12 pb-24">
@@ -285,76 +244,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-darker text-white pt-24 pb-12">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
-            <div>
-              <h4 className="text-lg font-medium mb-8">careers</h4>
-              <ul className="space-y-4 text-sm opacity-70">
-                <li><a href="#" className="hover:text-brand-blue">working at randstad digital</a></li>
-                <li><a href="#" className="hover:text-brand-blue">current opportunities</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-medium mb-8">expertise</h4>
-              <ul className="space-y-4 text-sm opacity-70">
-                <li><a href="#" className="hover:text-brand-blue">customer experience</a></li>
-                <li><a href="#" className="hover:text-brand-blue">digital & product engineering</a></li>
-                <li><a href="#" className="hover:text-brand-blue">data & analytics</a></li>
-                <li><a href="#" className="hover:text-brand-blue">cloud & infrastructure</a></li>
-                <li><a href="#" className="hover:text-brand-blue">creative & marketing</a></li>
-                <li><a href="#" className="hover:text-brand-blue">consulting services</a></li>
-              </ul>
-              <h4 className="text-lg font-medium mt-12 mb-8">solutions</h4>
-              <ul className="space-y-4 text-sm opacity-70">
-                <li><a href="#" className="hover:text-brand-blue">ServiceNow</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-medium mb-8">about randstad digital</h4>
-              <ul className="space-y-4 text-sm opacity-70">
-                <li><a href="#" className="hover:text-brand-blue">experience</a></li>
-                <li><a href="#" className="hover:text-brand-blue">leadership</a></li>
-                <li><a href="#" className="hover:text-brand-blue">partnerships</a></li>
-                <li><a href="#" className="hover:text-brand-blue">locations</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-medium mb-8">contact us</h4>
-              <ul className="space-y-4 text-sm opacity-70">
-                <li><a href="#" className="hover:text-brand-blue">get in touch</a></li>
-                <li><a href="#" className="hover:text-brand-blue">about our team</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex gap-6 mb-12">
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
-              <Youtube size={20} />
-            </a>
-          </div>
-
-          <div className="border-t border-white/10 pt-12">
-            <p className="text-xs opacity-50 mb-8">
-              Randstad Digital B.V (91235944), Diemermere 25, 1112 TC, Diemen, The Netherlands.
-            </p>
-            <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs font-medium opacity-70">
-              <a href="#" className="hover:text-white">terms & conditions</a>
-              <a href="#" className="hover:text-white">cookie policy</a>
-              <button className="bg-brand-blue px-6 py-2 rounded-sm text-white hover:bg-brand-blue/80 transition-colors">customize</button>
-              <a href="#" className="hover:text-white">legal information</a>
-              <a href="#" className="hover:text-white">privacy policy</a>
-              <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+     
     </div>
   );
 }

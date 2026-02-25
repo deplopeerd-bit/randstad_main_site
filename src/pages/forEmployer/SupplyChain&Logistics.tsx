@@ -15,48 +15,11 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-const RandstadPage = () => {
+const ForEmployeeSupplyChain = () => {
   return (
     <div className="font-sans text-[#141414] bg-white">
       {/* Top Navigation Bar */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-8">
-              {/* Logo */}
-              <div className="flex-shrink-0 flex items-center">
-                <div className="text-[#2175d9] font-bold text-2xl flex items-center">
-                  <span className="mr-1 text-3xl">רר</span>
-                  <span>randstad</span>
-                </div>
-              </div>
-              
-              {/* Desktop Nav */}
-              <div className="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-                <button className="hover:text-[#2175d9] flex items-center">find a job <ChevronRight className="w-4 h-4 ml-1 rotate-90" /></button>
-                <button className="hover:text-[#2175d9] flex items-center">for talent <ChevronRight className="w-4 h-4 ml-1 rotate-90" /></button>
-                <button className="hover:text-[#2175d9] flex items-center">for employer <ChevronRight className="w-4 h-4 ml-1 rotate-90" /></button>
-                <button className="hover:text-[#2175d9] flex items-center">resources <ChevronRight className="w-4 h-4 ml-1 rotate-90" /></button>
-                <button className="hover:text-[#2175d9] flex items-center">about us <ChevronRight className="w-4 h-4 ml-1 rotate-90" /></button>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <button className="text-xs font-medium text-gray-500 hover:text-[#2175d9] underline underline-offset-4">contact us</button>
-              <div className="flex items-center space-x-4 text-gray-600">
-                <button className="hover:text-[#2175d9] flex items-center text-sm">
-                  <Heart className="w-5 h-5 mr-1" />
-                  <span>0</span>
-                </button>
-                <button className="hover:text-[#2175d9] flex items-center text-sm">
-                  <User className="w-5 h-5 mr-1" />
-                  <span>my randstad</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      
 
       {/* Breadcrumbs */}
       <div className="bg-[#0a1a33] text-white py-2 text-xs">
@@ -568,4 +531,4 @@ const RandstadPage = () => {
   );
 };
 
-export default RandstadPage;
+export default ForEmployeeSupplyChain;

@@ -4,45 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 
 // --- Components ---
 
-const Navbar = () => (
-  <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div className="container-custom py-4 flex items-center justify-between">
-      <div className="flex items-center gap-12">
-        <div className="flex items-center gap-2">
-          <svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.5 5C10.5 5 9 6.5 9 8.5V25H12.5V8.5C12.5 8.5 12.5 8.5 12.5 8.5C12.5 8.5 12.5 8.5 12.5 8.5V5Z" fill="#051937"/>
-            <path d="M17.5 5C15.5 5 14 6.5 14 8.5V25H17.5V8.5C17.5 8.5 17.5 8.5 17.5 8.5C17.5 8.5 17.5 8.5 17.5 8.5V5Z" fill="#21C2F2"/>
-            <text x="25" y="22" fontFamily="Inter" fontSize="20" fontWeight="600" fill="#051937">randstad</text>
-          </svg>
-        </div>
-        <div className="hidden lg:flex items-center gap-8">
-          <a href="#" className="nav-link flex items-center gap-1">find a job <ChevronDown size={14} /></a>
-          <a href="#" className="nav-link flex items-center gap-1">for talent <ChevronDown size={14} /></a>
-          <a href="#" className="nav-link flex items-center gap-1 font-medium">for employer <ChevronDown size={14} /></a>
-          <a href="#" className="nav-link flex items-center gap-1">resources <ChevronDown size={14} /></a>
-          <a href="#" className="nav-link flex items-center gap-1">about us <ChevronDown size={14} /></a>
-        </div>
-      </div>
-      <div className="flex items-center gap-6">
-        <div className="hidden md:flex items-center gap-4 text-randstad-navy">
-          <button className="hover:text-randstad-blue"><Search size={20} /></button>
-          <div className="flex items-center gap-1 text-[14px]">
-            <Heart size={20} /> <span>0</span>
-          </div>
-          <button className="flex items-center gap-2 hover:text-randstad-blue">
-            <User size={20} /> <span className="text-[14px]">my randstad</span>
-          </button>
-        </div>
-        <div className="lg:hidden">
-          <button className="p-2"><div className="w-6 h-0.5 bg-randstad-navy mb-1.5"></div><div className="w-6 h-0.5 bg-randstad-navy mb-1.5"></div><div className="w-6 h-0.5 bg-randstad-navy"></div></button>
-        </div>
-      </div>
-    </div>
-    <div className="container-custom py-2 flex justify-end">
-      <a href="#" className="text-[12px] text-randstad-navy hover:underline">contact us</a>
-    </div>
-  </nav>
-);
+
 
 const Hero = () => (
   <section className="bg-randstad-navy text-white overflow-hidden relative min-h-[600px] flex items-center">
@@ -407,121 +369,14 @@ const NewsletterSection = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-randstad-navy text-white pt-24 pb-12">
-    <div className="container-custom">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-24">
-        <div>
-          <h4 className="text-[18px] font-medium mb-8">find a job</h4>
-          <ul className="space-y-4">
-            <li><a href="#" className="footer-link">explore all jobs</a></li>
-            <li><a href="#" className="footer-link">submit your cv</a></li>
-            <li><a href="#" className="footer-link">join our team</a></li>
-            <li><a href="#" className="footer-link">refer a friend</a></li>
-          </ul>
-          <h4 className="text-[18px] font-medium mt-12 mb-8">for talents</h4>
-          <ul className="space-y-4">
-            <li><a href="#" className="footer-link">specialisms</a></li>
-            <li><a href="#" className="footer-link">testimonials</a></li>
-            <li><a href="#" className="footer-link">career advice</a></li>
-            <li><a href="#" className="footer-link">beware of job scams</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-[18px] font-medium mb-8">for employers</h4>
-          <ul className="space-y-4">
-            <li><a href="#" className="footer-link">submit a vacancy</a></li>
-            <li><a href="#" className="footer-link">request a callback</a></li>
-            <li><a href="#" className="footer-link">our services</a></li>
-            <li><a href="#" className="footer-link">specialisms</a></li>
-            <li><a href="#" className="footer-link">case studies</a></li>
-            <li><a href="#" className="footer-link">testimonials</a></li>
-          </ul>
-          <h4 className="text-[18px] font-medium mt-12 mb-8">resources</h4>
-          <ul className="space-y-4">
-            <li><a href="#" className="footer-link">case studies</a></li>
-            <li><a href="#" className="footer-link">press room</a></li>
-            <li><a href="#" className="footer-link">blogs</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-[18px] font-medium mb-8">workforce insights</h4>
-          <ul className="space-y-4">
-            <li><a href="#" className="footer-link">talent insights reports</a></li>
-            <li><a href="#" className="footer-link">employer brand research reports</a></li>
-            <li><a href="#" className="footer-link">salary trends reports</a></li>
-            <li><a href="#" className="footer-link">ed&i reports</a></li>
-            <li><a href="#" className="footer-link">workmonitor reports</a></li>
-            <li><a href="#" className="footer-link">startup hiring trends</a></li>
-            <li><a href="#" className="footer-link">talent pulse surveys</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-[18px] font-medium mb-8">jobs</h4>
-          <ul className="space-y-4">
-            <li><a href="#" className="footer-link">engineering jobs</a></li>
-            <li><a href="#" className="footer-link">cxo jobs</a></li>
-            <li><a href="#" className="footer-link">manufacturing jobs</a></li>
-            <li><a href="#" className="footer-link">supply chain & logistics jobs</a></li>
-            <li><a href="#" className="footer-link">education jobs</a></li>
-            <li><a href="#" className="footer-link">finance & accounting jobs</a></li>
-            <li><a href="#" className="footer-link">healthcare jobs</a></li>
-            <li><a href="#" className="footer-link">hr & admin support jobs</a></li>
-            <li><a href="#" className="footer-link">ites/gcc jobs</a></li>
-            <li><a href="#" className="footer-link">legal & compliance jobs</a></li>
-            <li><a href="#" className="footer-link">sales & marketing jobs</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div className="border-t border-white/10 pt-12 mb-12 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-randstad-blue transition-colors"><Linkedin size={24} /></a>
-          <a href="#" className="hover:text-randstad-blue transition-colors"><Twitter size={24} /></a>
-          <a href="#" className="hover:text-randstad-blue transition-colors"><Facebook size={24} /></a>
-          <a href="#" className="hover:text-randstad-blue transition-colors"><Youtube size={24} /></a>
-          <a href="#" className="hover:text-randstad-blue transition-colors"><Instagram size={24} /></a>
-        </div>
-        <div className="text-[12px] opacity-60 text-center md:text-right">
-          registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-        <div className="flex items-center gap-2">
-          <span className="text-[12px] font-bold">RANDSTAD,</span>
-          <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 2C3 2 1.5 3.5 1.5 5.5V18H5V5.5C5 5.5 5 5.5 5 5.5C5 5.5 5 5.5 5 5.5V2Z" fill="#21C2F2"/>
-            <path d="M10 2C8 2 6.5 3.5 6.5 5.5V18H10V5.5C10 5.5 10 5.5 10 5.5C10 5.5 10 5.5 10 5.5V2Z" fill="#21C2F2"/>
-          </svg>
-          <span className="text-[10px] opacity-60">HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-        </div>
-      </div>
-
-      <div className="text-[12px] opacity-80 space-y-4 mb-12">
-        <p>Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a></p>
-        <p>EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a></p>
-      </div>
-
-      <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-[12px] opacity-60">
-        <a href="#" className="hover:underline">terms & conditions</a>
-        <a href="#" className="hover:underline">cookies</a>
-        <a href="#" className="hover:underline">misconduct reporting procedure</a>
-        <a href="#" className="hover:underline">accessibility</a>
-        <a href="#" className="hover:underline">be aware</a>
-        <a href="#" className="hover:underline">sitemap</a>
-        <a href="#" className="hover:underline">privacy statement</a>
-      </div>
-    </div>
-  </footer>
-);
 
 // --- Main App ---
 
-export default function App() {
+export default function EmpExecutiveSearch() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      
       <main className="flex-grow">
         <Hero />
         <IntroSection />
@@ -547,7 +402,7 @@ export default function App() {
         <CallToAction />
         <NewsletterSection />
       </main>
-      <Footer />
+     
       
       {/* Feedback button fixed on right */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">

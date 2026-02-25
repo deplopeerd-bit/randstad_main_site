@@ -17,39 +17,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const Header = () => (
-  <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div className="container-custom py-4 flex items-center justify-between">
-      <div className="flex items-center gap-12">
-        <div className="flex items-center gap-2">
-          <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.5 10.5C12.5 14.6421 9.14214 18 5 18C0.857864 18 -2.5 14.6421 -2.5 10.5C-2.5 6.35786 0.857864 3 5 3C9.14214 3 12.5 6.35786 12.5 10.5Z" fill="#2175D9"/>
-            <path d="M25 10.5C25 14.6421 21.6421 18 17.5 18C13.3579 18 10 14.6421 10 10.5C10 6.35786 13.3579 3 17.5 3C21.6421 3 25 6.35786 25 10.5Z" fill="#00C1F3"/>
-            <text x="35" y="22" fill="#05192D" style={{ font: 'bold 20px Inter' }}>randstad</text>
-          </svg>
-        </div>
-        <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-600">
-          <a href="#" className="hover:text-randstad-blue transition-colors">find a job</a>
-          <a href="#" className="hover:text-randstad-blue transition-colors">for talent</a>
-          <a href="#" className="hover:text-randstad-blue transition-colors">for employer</a>
-          <a href="#" className="hover:text-randstad-blue transition-colors">resources</a>
-          <a href="#" className="hover:text-randstad-blue transition-colors">about us</a>
-        </nav>
-      </div>
-      <div className="flex items-center gap-6">
-        <button className="text-gray-600 hover:text-randstad-blue"><Search size={20} /></button>
-        <button className="text-gray-600 hover:text-randstad-blue flex items-center gap-1">
-          <Heart size={20} />
-          <span className="text-xs font-bold bg-gray-100 px-1.5 py-0.5 rounded-full">0</span>
-        </button>
-        <button className="text-gray-600 hover:text-randstad-blue flex items-center gap-2">
-          <User size={20} />
-          <span className="text-[15px] font-medium">my randstad</span>
-        </button>
-      </div>
-    </div>
-  </header>
-);
+
 
 const Hero = () => (
   <section className="bg-randstad-navy text-white py-20 overflow-hidden">
@@ -363,10 +331,10 @@ const Footer = () => (
   </footer>
 );
 
-export default function App() {
+export default function EmpManagedServices() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+     
       <main className="flex-grow">
         <Hero />
         <TalentAcquisition />
@@ -377,7 +345,7 @@ export default function App() {
         <WorkforceInsights />
         <PrepareFuture />
       </main>
-      <Footer />
+      
       
       {/* Feedback button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">

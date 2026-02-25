@@ -7,52 +7,10 @@ import { ChevronDown, Facebook, Heart, Instagram, Linkedin, Search, Twitter, Use
 
 
 
-export default function App() {
+export default function EmpTalentTransition() {
 
 
- const Header = () => {
-  return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="container-custom h-20 flex items-center justify-between">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-2">
-            <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 8C12.5 3.58172 16.0817 0 20.5 0H24.5V8H12.5Z" fill="#0070ad"/>
-              <path d="M12.5 24V32H20.5C24.9183 32 28.5 28.4183 28.5 24H12.5Z" fill="#0070ad"/>
-              <path d="M0 8H12.5V24H0V8Z" fill="#0070ad"/>
-              <text x="35" y="24" fontFamily="Inter" fontWeight="600" fontSize="24" fill="#0070ad">randstad</text>
-            </svg>
-          </div>
-          <nav className="hidden lg:flex items-center gap-8">
-            <a href="#" className="text-[15px] font-medium flex items-center gap-1 text-gray-700 hover:text-randstad-blue">find a job <ChevronDown size={16} /></a>
-            <a href="#" className="text-[15px] font-medium flex items-center gap-1 text-gray-700 hover:text-randstad-blue">for talent <ChevronDown size={16} /></a>
-            <a href="#" className="text-[15px] font-medium flex items-center gap-1 text-gray-700 hover:text-randstad-blue">for employer <ChevronDown size={16} /></a>
-            <a href="#" className="text-[15px] font-medium flex items-center gap-1 text-gray-700 hover:text-randstad-blue">resources <ChevronDown size={16} /></a>
-            <a href="#" className="text-[15px] font-medium flex items-center gap-1 text-gray-700 hover:text-randstad-blue">about us <ChevronDown size={16} /></a>
-          </nav>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-4 text-gray-600">
-            <Search size={20} className="cursor-pointer" />
-            <div className="flex items-center gap-1 cursor-pointer">
-              <Heart size={20} />
-              <span className="text-sm font-medium">0</span>
-            </div>
-            <div className="flex items-center gap-1 cursor-pointer">
-              <User size={20} />
-              <span className="text-sm font-medium">my randstad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-white py-2 border-t border-gray-50">
-        <div className="container-custom flex justify-end">
-          <a href="#" className="text-[11px] uppercase tracking-wider text-gray-500 hover:text-randstad-blue">contact us</a>
-        </div>
-      </div>
-    </header>
-  );
-};
+
 
  const Hero = () => {
   return (
@@ -285,60 +243,7 @@ const Footer = () => {
     }
   ];
 
-  return (
-    <footer className="bg-randstad-navy text-white pt-24 pb-12">
-      <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 mb-24">
-          {columns.map((col) => (
-            <div key={col.title}>
-              <h4 className="text-lg font-semibold mb-8">{col.title}</h4>
-              <ul className="space-y-4">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-[15px]">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 py-12 border-t border-white/10">
-          <div className="flex items-center gap-6">
-            <Linkedin size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            <Facebook size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            <Youtube size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            <Instagram size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-          </div>
-        </div>
-
-        <div className="text-[11px] text-gray-500 space-y-4 mb-12">
-          <p>registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-          <p>RANDSTAD, <span className="text-randstad-blue">HUMAN FORWARD</span> and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</p>
-        </div>
-
-        <div className="bg-white/5 p-8 rounded-lg mb-12">
-          <p className="text-sm text-gray-300 mb-4">
-            Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-randstad-blue underline">Click here to know more</a>
-          </p>
-          <p className="text-sm text-gray-300">
-            EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="text-randstad-blue underline">click here</a>
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] text-gray-400">
-          <a href="#" className="hover:text-white">terms & conditions</a>
-          <a href="#" className="hover:text-white">cookies</a>
-          <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-          <a href="#" className="hover:text-white">accessibility</a>
-          <a href="#" className="hover:text-white">be aware</a>
-          <a href="#" className="hover:text-white">sitemap</a>
-          <a href="#" className="hover:text-white">privacy statement</a>
-        </div>
-      </div>
-    </footer>
-  );
 };
 
 
@@ -346,7 +251,7 @@ const Footer = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+    
       <main>
         <Hero />
         

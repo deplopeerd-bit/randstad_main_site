@@ -50,64 +50,6 @@ interface FAQItem {
 
 // --- Components ---
 
-const Navbar = () => {
-  const navItems: NavItem[] = [
-    { label: 'find a job', hasDropdown: true },
-    { label: 'for talent', hasDropdown: true },
-    { label: 'for employer', hasDropdown: true },
-    { label: 'resources', hasDropdown: true },
-    { label: 'about us', hasDropdown: true },
-  ];
-
-  return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="flex items-center">
-              <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.5 10.5C11.5 10.5 10.5 8.5 8 8.5C5.5 8.5 4.5 10.5 4.5 10.5V24H0V10.5C0 10.5 1.5 4 8 4C14.5 4 16 10.5 16 10.5V24H11.5V10.5Z" fill="#2167AD"/>
-                <path d="M28.5 10.5C28.5 10.5 27.5 8.5 25 8.5C22.5 8.5 21.5 10.5 21.5 10.5V24H17V10.5C17 10.5 18.5 4 25 4C31.5 4 33 10.5 33 10.5V24H28.5V10.5Z" fill="#2167AD"/>
-                <path d="M45.5 10.5C45.5 10.5 44.5 8.5 42 8.5C39.5 8.5 38.5 10.5 38.5 10.5V24H34V10.5C34 10.5 35.5 4 42 4C48.5 4 50 10.5 50 10.5V24H45.5V10.5Z" fill="#2167AD"/>
-                <text x="55" y="22" className="text-2xl font-bold fill-[#2167AD] lowercase" style={{ fontFamily: 'Inter, sans-serif' }}>randstad</text>
-              </svg>
-            </div>
-          </div>
-
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
-              <div key={item.label} className="flex items-center gap-1 cursor-pointer group">
-                <span className="text-[15px] font-medium text-randstad-navy group-hover:text-randstad-blue transition-colors lowercase">
-                  {item.label}
-                </span>
-                {item.hasDropdown && <ChevronDown size={14} className="text-gray-400" />}
-              </div>
-            ))}
-          </div>
-
-          {/* Right Icons */}
-          <div className="flex items-center gap-6">
-            <div className="hidden sm:flex items-center gap-4 border-r border-gray-200 pr-6">
-              <a href="#" className="text-[13px] text-randstad-navy hover:underline lowercase">contact us</a>
-            </div>
-            <div className="flex items-center gap-5">
-              <div className="relative cursor-pointer">
-                <Heart size={20} className="text-randstad-navy" />
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-randstad-blue text-white text-[10px] flex items-center justify-center rounded-full">0</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer">
-                <User size={20} className="text-randstad-navy" />
-                <span className="hidden md:inline text-[14px] font-medium text-randstad-navy lowercase">my randstad</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -312,107 +254,11 @@ const TeamSection = ({ title, members }: { title: string; members: TeamMember[] 
   </section>
 );
 
-const Footer = () => {
-  const footerLinks = [
-    {
-      title: 'find a job',
-      links: ['explore all jobs', 'submit your cv', 'join our team', 'refer a friend']
-    },
-    {
-      title: 'for employers',
-      links: ['submit a vacancy', 'request a callback', 'our services', 'specialisms', 'case studies', 'testimonials']
-    },
-    {
-      title: 'workforce insights',
-      links: ['talent insights reports', 'employer brand research reports', 'salary trends reports', 'ed&i reports', 'workmonitor reports', 'startup hiring trends', 'talent pulse surveys']
-    },
-    {
-      title: 'jobs',
-      links: ['engineering jobs', 'cxo jobs', 'manufacturing jobs', 'supply chain & logistics jobs', 'education jobs', 'finance & accounting jobs', 'healthcare jobs', 'hr & admin support jobs', 'ites/gcc jobs', 'legal & compliance jobs', 'sales & marketing jobs']
-    },
-    {
-      title: 'for talents',
-      links: ['specialisms', 'testimonials', 'career advice', 'beware of job scams']
-    },
-    {
-      title: 'resources',
-      links: ['case studies', 'press room', 'blogs']
-    }
-  ];
 
-  return (
-    <footer className="bg-randstad-navy text-white pt-20 pb-10">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 mb-20">
-          {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-lg font-bold mb-6 lowercase">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors lowercase">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-t border-gray-800 pt-12 mb-12">
-          <div className="flex flex-wrap items-center gap-6 mb-12">
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-randstad-blue transition-colors">
-              <Linkedin size={18} fill="white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-randstad-blue transition-colors">
-              <Twitter size={18} fill="white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-randstad-blue transition-colors">
-              <Facebook size={18} fill="white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-randstad-blue transition-colors">
-              <Youtube size={18} fill="white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-randstad-blue transition-colors">
-              <Instagram size={18} fill="white" />
-            </a>
-          </div>
-
-          <div className="space-y-6 text-[13px] text-gray-400 max-w-5xl">
-            <p>registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-white">RANDSTAD,</span>
-              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4C4 4 3 2 1 2C-1 2 -2 4 -2 4V14H-6V4C-6 4 -4.5 -2 2 -2C8.5 -2 10 4 10 4V14H6V4Z" fill="#2167AD"/>
-                <path d="M18 4C18 4 17 2 15 2C13 2 12 4 12 4V14H8V4C8 4 9.5 -2 16 -2C22.5 -2 24 4 24 4V14H20V4Z" fill="#2167AD"/>
-              </svg>
-              <span>HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-            </div>
-            <p className="leading-relaxed">
-              <span className="font-bold text-white">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a>
-            </p>
-            <p className="leading-relaxed">
-              <span className="font-bold text-white">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a>
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] text-gray-400 border-t border-gray-800 pt-8">
-          <a href="#" className="hover:text-white transition-colors lowercase">terms & conditions</a>
-          <a href="#" className="hover:text-white transition-colors lowercase">cookies</a>
-          <a href="#" className="hover:text-white transition-colors lowercase">misconduct reporting procedure</a>
-          <a href="#" className="hover:text-white transition-colors lowercase">accessibility</a>
-          <a href="#" className="hover:text-white transition-colors lowercase">be aware</a>
-          <a href="#" className="hover:text-white transition-colors lowercase">sitemap</a>
-          <a href="#" className="hover:text-white transition-colors lowercase">privacy statement</a>
-        </div>
-      </div>
-    </footer>
-  );
-};
 
 // --- Main App ---
 
-export default function App() {
+export default function EmpPharma() {
   const caseStudies: CardProps[] = [
     { title: 'case study 1', image: 'https://picsum.photos/seed/cs1/800/1000' },
     { title: 'case study 2', image: 'https://picsum.photos/seed/cs2/800/1000' },
@@ -453,7 +299,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+     
       <Hero />
       
       <TwoColumnSection 
@@ -553,7 +399,7 @@ export default function App() {
         cards={absenteeismCards}
       />
 
-      <Footer />
+
 
       {/* Floating Action Buttons */}
       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">

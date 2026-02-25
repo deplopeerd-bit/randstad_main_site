@@ -15,48 +15,11 @@ import {
   Phone
 } from 'lucide-react';
 
-const ManufacturingPage: React.FC = () => {
+const ForTalentManufacturingPage: React.FC = () => {
   return (
     <div className="font-sans text-[#141414] bg-white selection:bg-blue-100">
       {/* Top Navigation Bar */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <div className="flex-shrink-0 flex items-center">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-600 rounded-sm flex items-center justify-center">
-                   <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-                </div>
-                <span className="text-2xl font-bold tracking-tight text-[#001c46]">randstad</span>
-              </div>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <NavLink label="find a job" hasChevron />
-              <NavLink label="for talent" hasChevron />
-              <NavLink label="for employer" hasChevron />
-              <NavLink label="resources" hasChevron />
-              <NavLink label="about us" hasChevron />
-            </div>
-
-            {/* Right Side Icons */}
-            <div className="flex items-center space-x-6">
-              <button className="text-gray-500 hover:text-blue-600 transition-colors">
-                <span className="text-sm font-medium underline underline-offset-4">contact us</span>
-              </button>
-              <div className="flex items-center space-x-4">
-                <Heart className="w-5 h-5 text-gray-400 cursor-pointer hover:text-red-500 transition-colors" />
-                <div className="flex items-center space-x-1 cursor-pointer group">
-                  <User className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                  <span className="text-sm font-medium text-gray-600 group-hover:text-blue-600 transition-colors">my randstad</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="bg-[#001c46] text-white overflow-hidden">
@@ -233,109 +196,7 @@ const ManufacturingPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#001c46] text-white pt-24 pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-            <div>
-              <h4 className="text-lg font-semibold mb-6">find a job</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><FooterLink>explore all jobs</FooterLink></li>
-                <li><FooterLink>submit your cv</FooterLink></li>
-                <li><FooterLink>join our team</FooterLink></li>
-                <li><FooterLink>refer a friend</FooterLink></li>
-              </ul>
-              <h4 className="text-lg font-semibold mt-10 mb-6">for talents</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><FooterLink>specialisms</FooterLink></li>
-                <li><FooterLink>testimonials</FooterLink></li>
-                <li><FooterLink>career advice</FooterLink></li>
-                <li><FooterLink>beware of job scams</FooterLink></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-6">for employers</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><FooterLink>submit a vacancy</FooterLink></li>
-                <li><FooterLink>request a callback</FooterLink></li>
-                <li><FooterLink>our services</FooterLink></li>
-                <li><FooterLink>specialisms</FooterLink></li>
-                <li><FooterLink>case studies</FooterLink></li>
-                <li><FooterLink>testimonials</FooterLink></li>
-              </ul>
-              <h4 className="text-lg font-semibold mt-10 mb-6">resources</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><FooterLink>case studies</FooterLink></li>
-                <li><FooterLink>press room</FooterLink></li>
-                <li><FooterLink>blogs</FooterLink></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-6">workforce insights</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><FooterLink>talent insights reports</FooterLink></li>
-                <li><FooterLink>employer brand research reports</FooterLink></li>
-                <li><FooterLink>salary trends reports</FooterLink></li>
-                <li><FooterLink>ed&i reports</FooterLink></li>
-                <li><FooterLink>workmonitor reports</FooterLink></li>
-                <li><FooterLink>startup hiring trends</FooterLink></li>
-                <li><FooterLink>talent pulse surveys</FooterLink></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-6">jobs</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><FooterLink>engineering jobs</FooterLink></li>
-                <li><FooterLink>cxo jobs</FooterLink></li>
-                <li><FooterLink>manufacturing jobs</FooterLink></li>
-                <li><FooterLink>supply chain & logistics jobs</FooterLink></li>
-                <li><FooterLink>education jobs</FooterLink></li>
-                <li><FooterLink>finance & accounting jobs</FooterLink></li>
-                <li><FooterLink>healthcare jobs</FooterLink></li>
-                <li><FooterLink>hr & admin support jobs</FooterLink></li>
-                <li><FooterLink>ites/gcc jobs</FooterLink></li>
-                <li><FooterLink>legal & compliance jobs</FooterLink></li>
-                <li><FooterLink>sales & marketing jobs</FooterLink></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-12">
-            <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
-              <div className="flex space-x-6 mb-8 lg:mb-0">
-                <SocialIcon icon={<Linkedin className="w-5 h-5" />} />
-                <SocialIcon icon={<Twitter className="w-5 h-5" />} />
-                <SocialIcon icon={<Facebook className="w-5 h-5" />} />
-                <SocialIcon icon={<Youtube className="w-5 h-5" />} />
-                <SocialIcon icon={<Instagram className="w-5 h-5" />} />
-              </div>
-              <div className="text-xs text-gray-500 text-center lg:text-right max-w-3xl">
-                registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-              </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row items-center justify-between">
-              <div className="flex items-center space-x-4 mb-8 lg:mb-0">
-                <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 bg-blue-600 rounded-sm flex items-center justify-center">
-                    <div className="w-3 h-3 border-2 border-white rounded-full"></div>
-                  </div>
-                  <span className="text-lg font-bold tracking-tight">randstad</span>
-                </div>
-                <span className="text-xs text-gray-500">HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V. 2023</span>
-              </div>
-              <div className="flex flex-wrap justify-center lg:justify-end gap-x-6 gap-y-2 text-xs text-gray-400">
-                <FooterLink>terms & conditions</FooterLink>
-                <FooterLink>cookies</FooterLink>
-                <FooterLink>misconduct reporting procedure</FooterLink>
-                <FooterLink>accessibility</FooterLink>
-                <FooterLink>be aware</FooterLink>
-                <FooterLink>sitemap</FooterLink>
-                <FooterLink>privacy statement</FooterLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Action Buttons */}
       <div className="fixed bottom-8 right-8 flex flex-col space-y-4 z-50">
@@ -446,4 +307,4 @@ const SocialIcon: React.FC<{ icon: React.ReactNode }> = ({ icon }) => (
   </a>
 );
 
-export default ManufacturingPage;
+export default ForTalentManufacturingPage;

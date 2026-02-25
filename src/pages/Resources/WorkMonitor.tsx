@@ -365,17 +365,17 @@ const Footer = () => {
   );
 };
 
-export default function App() {
+export default function ResWorkMonitor() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+     
       <main className="flex-grow">
         <Hero />
         <InfoSection />
         <ReportsSection />
         <NewsletterSection />
       </main>
-      <Footer />
+     
       
       {/* Feedback Button - Floating */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:block">

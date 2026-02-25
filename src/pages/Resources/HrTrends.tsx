@@ -399,10 +399,10 @@ const Footer = () => (
   </footer>
 );
 
-export default function App() {
+export default function ResHrTrends() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#333]">
-      <Navbar />
+    
       <Hero />
       
       <main className="max-w-[1440px] mx-auto px-6 lg:px-12 py-12">
@@ -443,7 +443,7 @@ export default function App() {
         </div>
       </main>
 
-      <Footer />
+      
 
       {/* Floating Elements */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:block">
