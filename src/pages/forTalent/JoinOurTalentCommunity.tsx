@@ -18,89 +18,7 @@ import {
 
 // --- Components ---
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <div className="text-blue-600 font-bold text-3xl tracking-tighter flex items-center">
-              <span className="mr-1">r</span>
-              <span>randstad</span>
-            </div>
-          </div>
-
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium">
-              find a job <ChevronDown className="ml-1 w-4 h-4" />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium">
-              for talent <ChevronDown className="ml-1 w-4 h-4" />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium">
-              for employer <ChevronDown className="ml-1 w-4 h-4" />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium">
-              resources <ChevronDown className="ml-1 w-4 h-4" />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium">
-              about us <ChevronDown className="ml-1 w-4 h-4" />
-            </a>
-          </div>
-
-          {/* Right Side Icons */}
-          <div className="hidden md:flex items-center space-x-6">
-            <a href="#" className="text-gray-400 hover:text-blue-600 text-xs font-medium uppercase tracking-wider">contact us</a>
-            <div className="flex items-center space-x-4">
-              <button className="text-gray-700 hover:text-blue-600">
-                <Heart className="w-5 h-5" />
-                <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">0</span>
-              </button>
-              <button className="flex items-center text-gray-700 hover:text-blue-600 text-sm font-medium">
-                <User className="w-5 h-5 mr-1" />
-                my randstad
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-700">
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Nav */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-4">
-              <a href="#" className="block text-gray-700 font-medium">find a job</a>
-              <a href="#" className="block text-gray-700 font-medium">for talent</a>
-              <a href="#" className="block text-gray-700 font-medium">for employer</a>
-              <a href="#" className="block text-gray-700 font-medium">resources</a>
-              <a href="#" className="block text-gray-700 font-medium">about us</a>
-              <hr className="border-gray-100" />
-              <a href="#" className="block text-gray-700 font-medium">contact us</a>
-              <a href="#" className="block text-gray-700 font-medium">my randstad</a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -308,111 +226,19 @@ const FAQSection = () => {
   );
 };
 
-const Footer = () => {
-  const footerLinks = [
-    {
-      title: "find a job",
-      links: ["explore all jobs", "submit your cv", "join our team", "refer a friend"]
-    },
-    {
-      title: "for employers",
-      links: ["submit a vacancy", "request a callback", "our services", "specialisms", "case studies", "testimonials"]
-    },
-    {
-      title: "workforce insights",
-      links: ["talent insights reports", "employer brand research reports", "salary trends reports", "ed&i reports", "workmonitor reports", "startup hiring trends", "talent pulse surveys"]
-    },
-    {
-      title: "jobs",
-      links: ["engineering jobs", "cxo jobs", "manufacturing jobs", "supply chain & logistics jobs", "education jobs", "finance & accounting jobs", "healthcare jobs", "hr & admin support jobs", "ites/gcc jobs", "legal & compliance jobs", "sales & marketing jobs"]
-    },
-    {
-      title: "for talents",
-      links: ["specialisms", "testimonials", "career advice", "beware of job scams"]
-    },
-    {
-      title: "resources",
-      links: ["case studies", "press room", "blogs"]
-    }
-  ];
 
-  return (
-    <footer className="bg-[#0a192f] text-white pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16">
-          {footerLinks.map((section, idx) => (
-            <div key={idx}>
-              <h3 className="text-lg font-medium mb-6">{section.title}</h3>
-              <ul className="space-y-3">
-                {section.links.map((link, lIdx) => (
-                  <li key={lIdx}>
-                    <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className="border-t border-gray-800 pt-10 mb-10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            {/* Social Icons */}
-            <div className="flex space-x-6">
-              <a href="#" className="bg-gray-800 p-2 rounded-md hover:bg-blue-600 transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" className="bg-gray-800 p-2 rounded-md hover:bg-blue-600 transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="bg-gray-800 p-2 rounded-md hover:bg-blue-600 transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="bg-gray-800 p-2 rounded-md hover:bg-blue-600 transition-colors"><Youtube className="w-5 h-5" /></a>
-              <a href="#" className="bg-gray-800 p-2 rounded-md hover:bg-blue-600 transition-colors"><Instagram className="w-5 h-5" /></a>
-            </div>
-
-            {/* Legal Text */}
-            <div className="text-xs text-gray-500 text-center md:text-right max-w-2xl">
-              registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-            </div>
-          </div>
-        </div>
-
-        <div className="text-xs text-gray-500 mb-10">
-          <div className="flex items-center mb-4">
-            <span className="text-blue-500 font-bold mr-2">r</span>
-            <span>RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-          </div>
-          
-          <div className="space-y-4">
-            <p>
-              Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-blue-400 hover:underline">Click here to know more</a>
-            </p>
-            <p>
-              EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-blue-400 hover:underline">click here</a>
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-xs text-gray-400 border-t border-gray-800 pt-8">
-          <a href="#" className="hover:text-white">terms & conditions</a>
-          <a href="#" className="hover:text-white">cookies</a>
-          <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-          <a href="#" className="hover:text-white">accessibility</a>
-          <a href="#" className="hover:text-white">be aware</a>
-          <a href="#" className="hover:text-white">sitemap</a>
-          <a href="#" className="hover:text-white">privacy statement</a>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-const RandstadPage = () => {
+const ForTalentJoinOurCommunity = () => {
   return (
     <div className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
-      <Navbar />
+   
       <main>
         <Hero />
         <CTASection />
         <BenefitsSection />
         <FAQSection />
       </main>
-      <Footer />
+    
       
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
@@ -431,4 +257,4 @@ const RandstadPage = () => {
   );
 };
 
-export default RandstadPage;
+export default ForTalentJoinOurCommunity;

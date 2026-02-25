@@ -19,12 +19,15 @@ import ForTalentItesGcc from "./pages/forTalent/Ites&Gcc";
 import ForTalentJobProfiles from "./pages/forTalent/JobProfiles";
 import ForTalentJobScamsPage from "./pages/forTalent/BewareofJobScam";
 import ForTalentJobSearchAdvice from "./pages/forTalent/JobSearchAdvice";
+import ForTalentJobSeekerToolkit from "./pages/forTalent/JobSeekerToolkit";
+import ForTalentJoinOurCommunity from "./pages/forTalent/JoinOurTalentCommunity";
 import ForTalentJoinTalentPool from "./pages/forTalent/JoinTalentPool";
 import ForTalentLegalAndCompliance from "./pages/forTalent/Legal&Compliance";
 import ForTalentPharmaHelath from "./pages/forTalent/PharmaHealthCare&LifeSciences";
 import ForTalentSalesAndTradeMarketing from "./pages/forTalent/Sales&TradeMarketing";
 import ForTalentfaqs from "./pages/forTalent/faqs";
 import FortalentLatestJob from "./pages/forTalent/LatestJob";
+import FortalentRegisterYourInstitute from "./pages/forTalent/RegisterYourInstitute";
 import HrAdminSupport from "./pages/FindJob/HR";
 import ItesGcc from "./pages/FindJob/ItesGcc";
 import JoinOurTeam from "./pages/FindJob/JoinOurTeam";
@@ -34,6 +37,7 @@ import Manufacturing from "./pages/FindJob/Manufacturing";
 import PermanentRoles from "./pages/FindJob/PermanentRoles";
 import RandstadClone from "./pages/FindJob/CxoRoles";
 import RandstadPage from "./pages/FindJob/CurrentJobOpening";
+import ResumePage from "./pages/forTalent/ResumeTips";
 import SalesAndMarketing from "./pages/FindJob/SalesAndMarketing";
 import SupplyChainAndLogistic from "./pages/forTalent/SupplyChain&Logistic";
 import SupplyChainLogistic from "./pages/FindJob/SupplyChainLogistics";
@@ -141,6 +145,10 @@ function AppContent() {
 <Route path={`${forTalent}/job-profiles`} element={<ForTalentJobProfiles />} />
 
 <Route path={`${forTalent}/job-search-advice`} element={<ForTalentJobSearchAdvice />} />
+<Route path={`${forTalent}/job-seeker-toolkit`} element={<ForTalentJobSeekerToolkit />} />
+<Route path={`${forTalent}/resume-tips`} element={<ResumePage />} />
+<Route path={`${forTalent}/join-our-talent-community`} element={< ForTalentJoinOurCommunity/>} />
+<Route path={`${forTalent}/register-your-institute`} element={< FortalentRegisterYourInstitute/>} />
 
         </Routes>
       </main>
