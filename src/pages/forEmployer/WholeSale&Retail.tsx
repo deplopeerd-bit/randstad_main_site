@@ -284,7 +284,6 @@ export default function EmpWholeSale() {
         ]}
       />
 
-      <Footer />
 
       {/* Floating Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">
