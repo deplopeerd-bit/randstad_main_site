@@ -1,3 +1,4 @@
+import randstad_logo from "../assets/randstad_logo.png";
 import { ChevronDown, Heart, Menu, User, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -178,12 +179,7 @@ export const MENU_DATA = {
   "about us": [
     {
       title: "",
-      links: [
-        "our history",
-        "ed&i",
-        "our sponsorships",
-        "sustainability",
-      ],
+      links: ["our history", "ed&i", "our sponsorships", "sustainability"],
     },
     {
       title: "offices",
@@ -202,18 +198,20 @@ export const MENU_DATA = {
 
 // Helper to format the category for the URL
 export const formatCategory = (category: string) => {
-  return category.toLowerCase().replace(/\s+/g, '');
+  return category.toLowerCase().replace(/\s+/g, "");
 };
 
 // Helper to format the link for the URL
 export const formatLink = (link: string) => {
-  return link.toLowerCase().replace(/\s+/g, '-');
+  return link.toLowerCase().replace(/\s+/g, "-");
 };
 
 export function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+  const [expandedMobileSection, setExpandedMobileSection] = useState<
+    string | null
+  >(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -235,11 +233,13 @@ export function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-[#00214c] flex items-center gap-1">
-                <span className="text-[#2175e3]">r</span>randstad
-              </span>
+              <img
+                src={randstad_logo}
+                alt="Randstad Logo"
+                className="h-42 w-auto object-contain"
+              />
             </Link>
-            
+
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
               {Object.keys(MENU_DATA).map((item) => (
@@ -250,27 +250,37 @@ export function Header() {
                     activeMenu === item ? "text-[#2175e3]" : "text-gray-600"
                   }`}
                 >
-                  {item} <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === item ? "rotate-180" : ""}`} />
+                  {item}{" "}
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-300 ${activeMenu === item ? "rotate-180" : ""}`}
+                  />
                 </button>
               ))}
             </nav>
           </div>
 
           <div className="flex items-center gap-4 md:gap-6">
-            <Link to="/contact" className="hidden sm:block text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-[#2175e3]">
+            <Link
+              to="/contact"
+              className="hidden sm:block text-xs font-medium text-gray-500 uppercase tracking-wider hover:text-[#2175e3]"
+            >
               contact us
             </Link>
             <div className="flex items-center gap-4 border-l pl-4 md:pl-6 border-gray-200">
               <button className="text-gray-600 hover:text-[#2175e3]">
                 <Heart size={20} />
               </button>
-              <Link to="/login" className="hidden sm:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#2175e3]">
+              <Link
+                to="/login"
+                className="hidden sm:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#2175e3]"
+              >
                 <User size={20} />
                 <span>my randstad</span>
               </Link>
-              
+
               {/* Mobile Menu Button */}
-              <button 
+              <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="md:hidden text-gray-600 hover:text-[#2175e3] p-2"
               >
@@ -300,36 +310,41 @@ export function Header() {
               className="hidden md:block absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 overflow-hidden"
             >
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-                <button 
+                <button
                   onClick={() => setActiveMenu(null)}
                   className="absolute top-8 right-8 text-gray-400 hover:text-[#2175e3] transition-colors"
                 >
                   <X size={24} />
                 </button>
-                
+
                 {/* Mega Menu Content - Aligned to Left */}
                 <div className="flex flex-row gap-16 justify-start">
-                  {MENU_DATA[activeMenu as keyof typeof MENU_DATA].map((section, idx) => (
-                    <div key={idx} className="flex flex-col gap-4 min-w-[160px]">
-                      {section.title && (
-                        <h3 className="text-[#2175e3] text-sm font-light border-b border-gray-100 pb-2">
-                          {section.title}
-                        </h3>
-                      )}
-                      <ul className="flex flex-col gap-3">
-                        {section.links.map((link, lIdx) => (
-                          <li key={lIdx}>
-                            <Link
-                              to={`/${formatCategory(activeMenu)}/${formatLink(link)}`}
-                              className="text-sm text-gray-600 hover:text-[#2175e3] transition-colors font-light"
-                            >
-                              {link}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                  {MENU_DATA[activeMenu as keyof typeof MENU_DATA].map(
+                    (section, idx) => (
+                      <div
+                        key={idx}
+                        className="flex flex-col gap-4 min-w-[160px]"
+                      >
+                        {section.title && (
+                          <h3 className="text-[#2175e3] text-sm font-light border-b border-gray-100 pb-2">
+                            {section.title}
+                          </h3>
+                        )}
+                        <ul className="flex flex-col gap-3">
+                          {section.links.map((link, lIdx) => (
+                            <li key={lIdx}>
+                              <Link
+                                to={`/${formatCategory(activeMenu)}/${formatLink(link)}`}
+                                className="text-sm text-gray-600 hover:text-[#2175e3] transition-colors font-light"
+                              >
+                                {link}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ),
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -351,13 +366,17 @@ export function Header() {
               {Object.keys(MENU_DATA).map((item) => (
                 <div key={item} className="border-b border-gray-50">
                   <button
-                    onClick={() => setExpandedMobileSection(expandedMobileSection === item ? null : item)}
+                    onClick={() =>
+                      setExpandedMobileSection(
+                        expandedMobileSection === item ? null : item,
+                      )
+                    }
                     className="w-full flex justify-between items-center py-4 text-gray-700 font-medium"
                   >
                     <span className="capitalize">{item}</span>
-                    <ChevronDown 
-                      size={18} 
-                      className={`transition-transform duration-300 ${expandedMobileSection === item ? "rotate-180" : ""}`} 
+                    <ChevronDown
+                      size={18}
+                      className={`transition-transform duration-300 ${expandedMobileSection === item ? "rotate-180" : ""}`}
                     />
                   </button>
                   <AnimatePresence>
@@ -368,35 +387,43 @@ export function Header() {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden bg-gray-50/50 px-4 pb-4"
                       >
-                        {MENU_DATA[item as keyof typeof MENU_DATA].map((section, sIdx) => (
-                          <div key={sIdx} className="mt-4">
-                            <h4 className="text-[#2175e3] text-xs font-semibold uppercase tracking-wider mb-2">
-                              {section.title}
-                            </h4>
-                            <ul className="flex flex-col gap-2">
-                              {section.links.map((link, lIdx) => (
-                                <li key={lIdx}>
-                                  <Link
-                                    to={`/${formatCategory(item)}/${formatLink(link)}`}
-                                    className="text-sm text-gray-600 block py-1"
-                                  >
-                                    {link}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                        {MENU_DATA[item as keyof typeof MENU_DATA].map(
+                          (section, sIdx) => (
+                            <div key={sIdx} className="mt-4">
+                              <h4 className="text-[#2175e3] text-xs font-semibold uppercase tracking-wider mb-2">
+                                {section.title}
+                              </h4>
+                              <ul className="flex flex-col gap-2">
+                                {section.links.map((link, lIdx) => (
+                                  <li key={lIdx}>
+                                    <Link
+                                      to={`/${formatCategory(item)}/${formatLink(link)}`}
+                                      className="text-sm text-gray-600 block py-1"
+                                    >
+                                      {link}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ),
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
               ))}
               <div className="mt-6 flex flex-col gap-4">
-                <Link to="/contact" className="text-sm font-medium text-gray-600 py-2 border-b border-gray-50">
+                <Link
+                  to="/contact"
+                  className="text-sm font-medium text-gray-600 py-2 border-b border-gray-50"
+                >
                   Contact Us
                 </Link>
-                <Link to="/login" className="flex items-center gap-2 text-sm font-medium text-[#2175e3] py-2">
+                <Link
+                  to="/login"
+                  className="flex items-center gap-2 text-sm font-medium text-[#2175e3] py-2"
+                >
                   <User size={20} />
                   <span>My Randstad</span>
                 </Link>
