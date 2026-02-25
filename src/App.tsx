@@ -1,5 +1,11 @@
 import AboutBengaluru from "./pages/aboutUs/Bengaluru";
+import AboutChennai from "./pages/aboutUs/Chennai";
+import AboutDelhi from "./pages/aboutUs/Delhi";
 import AboutEdId from "./pages/aboutUs/ed&i";
+import AboutHyderabad from "./pages/aboutUs/Hyderabad";
+import AboutKolkata from "./pages/aboutUs/Kolkata";
+import AboutMumbai from "./pages/aboutUs/Mumbai";
+import AboutRandViewAll from "./pages/aboutUs/ViewAll";
 import AboutSustain from "./pages/aboutUs/Sustainability";
 import ApplicationForm from "./pages/FindJob/SubmitYourCv";
 import Banking from "./pages/FindJob/Banking";
@@ -250,6 +256,13 @@ function AppContent() {
 <Route path={`${forAbout}/our-sponsorships`} element={< OurSponserShip/>} />
 <Route path={`${forAbout}/sustainability`} element={< AboutSustain/>} />
 <Route path={`${forAbout}/bengaluru`} element={< AboutBengaluru/>} />
+<Route path={`${forAbout}/chennai`} element={< AboutChennai/>} />
+<Route path={`${forAbout}/hyderabad`} element={< AboutHyderabad/>} />
+<Route path={`${forAbout}/kolkata`} element={< AboutKolkata/>} />
+<Route path={`${forAbout}/mumbai`} element={< AboutMumbai/>} />
+<Route path={`${forAbout}/new-delhi`} element={< AboutDelhi/>} />
+<Route path={`${forAbout}/view-all`} element={< AboutRandViewAll/>} />
+
 
         </Routes>
       </main>

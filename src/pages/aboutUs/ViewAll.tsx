@@ -114,54 +114,13 @@ const offices = [
   }
 ];
 
-export default function App() {
+export default function AboutRandViewAll() {
   const [view, setView] = useState<'list' | 'map'>('list');
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
       {/* Top Navigation Bar */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <svg viewBox="0 0 100 100" className="w-full h-full text-randstad-blue fill-current">
-                  <path d="M20,20 Q50,20 50,50 Q50,80 80,80" fill="none" stroke="currentColor" strokeWidth="12" />
-                  <path d="M20,80 Q50,80 50,50 Q50,20 80,20" fill="none" stroke="currentColor" strokeWidth="12" />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold tracking-tight text-randstad-navy">randstad</span>
-            </div>
-
-            {/* Main Nav */}
-            <nav className="hidden lg:flex items-center gap-8">
-              {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-                <a key={item} href="#" className="text-[15px] font-medium text-randstad-navy hover:text-randstad-blue transition-colors flex items-center gap-1">
-                  {item}
-                  <ChevronDown className="w-4 h-4 opacity-50" />
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <div className="hidden sm:flex items-center gap-6 text-[13px] font-medium text-randstad-navy">
-              <a href="#" className="hover:text-randstad-blue">contact us</a>
-              <div className="flex items-center gap-4">
-                <button className="flex items-center gap-1 hover:text-randstad-blue">
-                  <Heart className="w-5 h-5" />
-                  <span>0</span>
-                </button>
-                <button className="flex items-center gap-1 hover:text-randstad-blue">
-                  <User className="w-5 h-5" />
-                  <span>my randstad</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      
 
       {/* Hero Section */}
       <section className="bg-randstad-navy text-white pt-12 pb-20 px-6 lg:px-12">
@@ -296,126 +255,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-randstad-navy text-white pt-20 pb-12 px-6 lg:px-12">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-20">
-            {/* Column 1 */}
-            <div className="space-y-8">
-              <div>
-                <h4 className="text-lg font-bold mb-6">find a job</h4>
-                <ul className="space-y-4 text-[15px] opacity-70">
-                  <li><a href="#" className="hover:underline">explore all jobs</a></li>
-                  <li><a href="#" className="hover:underline">submit your cv</a></li>
-                  <li><a href="#" className="hover:underline">join our team</a></li>
-                  <li><a href="#" className="hover:underline">refer a friend</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold mb-6">for talents</h4>
-                <ul className="space-y-4 text-[15px] opacity-70">
-                  <li><a href="#" className="hover:underline">specialisms</a></li>
-                  <li><a href="#" className="hover:underline">testimonials</a></li>
-                  <li><a href="#" className="hover:underline">career advice</a></li>
-                  <li><a href="#" className="hover:underline">beware of job scams</a></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Column 2 */}
-            <div className="space-y-8">
-              <div>
-                <h4 className="text-lg font-bold mb-6">for employers</h4>
-                <ul className="space-y-4 text-[15px] opacity-70">
-                  <li><a href="#" className="hover:underline">submit a vacancy</a></li>
-                  <li><a href="#" className="hover:underline">request a callback</a></li>
-                  <li><a href="#" className="hover:underline">our services</a></li>
-                  <li><a href="#" className="hover:underline">specialisms</a></li>
-                  <li><a href="#" className="hover:underline">case studies</a></li>
-                  <li><a href="#" className="hover:underline">testimonials</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold mb-6">resources</h4>
-                <ul className="space-y-4 text-[15px] opacity-70">
-                  <li><a href="#" className="hover:underline">case studies</a></li>
-                  <li><a href="#" className="hover:underline">press room</a></li>
-                  <li><a href="#" className="hover:underline">blogs</a></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Column 3 */}
-            <div>
-              <h4 className="text-lg font-bold mb-6">workforce insights</h4>
-              <ul className="space-y-4 text-[15px] opacity-70">
-                <li><a href="#" className="hover:underline">talent insights reports</a></li>
-                <li><a href="#" className="hover:underline">employer brand research reports</a></li>
-                <li><a href="#" className="hover:underline">salary trends reports</a></li>
-                <li><a href="#" className="hover:underline">ed&i reports</a></li>
-                <li><a href="#" className="hover:underline">workmonitor reports</a></li>
-                <li><a href="#" className="hover:underline">startup hiring trends</a></li>
-                <li><a href="#" className="hover:underline">talent pulse surveys</a></li>
-              </ul>
-            </div>
-
-            {/* Column 4 */}
-            <div>
-              <h4 className="text-lg font-bold mb-6">jobs</h4>
-              <ul className="space-y-4 text-[15px] opacity-70">
-                <li><a href="#" className="hover:underline">engineering jobs</a></li>
-                <li><a href="#" className="hover:underline">cxo jobs</a></li>
-                <li><a href="#" className="hover:underline">manufacturing jobs</a></li>
-                <li><a href="#" className="hover:underline">supply chain & logistics jobs</a></li>
-                <li><a href="#" className="hover:underline">education jobs</a></li>
-                <li><a href="#" className="hover:underline">finance & accounting jobs</a></li>
-                <li><a href="#" className="hover:underline">healthcare jobs</a></li>
-                <li><a href="#" className="hover:underline">hr & admin support jobs</a></li>
-                <li><a href="#" className="hover:underline">ites/gcc jobs</a></li>
-                <li><a href="#" className="hover:underline">legal & compliance jobs</a></li>
-                <li><a href="#" className="hover:underline">sales & marketing jobs</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-12">
-            <div className="flex flex-col gap-12">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-6">
-                  <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-
-              <div className="space-y-8 text-[13px] opacity-60 max-w-5xl leading-relaxed">
-                <p>registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-                
-                <div className="flex items-center gap-2">
-                  <span className="font-bold">RANDSTAD,</span>
-                  <div className="w-6 h-6 text-randstad-blue fill-current">
-                    <svg viewBox="0 0 100 100">
-                      <path d="M20,20 Q50,20 50,50 Q50,80 80,80" fill="none" stroke="currentColor" strokeWidth="12" />
-                      <path d="M20,80 Q50,80 50,50 Q50,20 80,20" fill="none" stroke="currentColor" strokeWidth="12" />
-                    </svg>
-                  </div>
-                  <span>, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-                </div>
-
-                <div className="space-y-4">
-                  <p><span className="font-bold">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a></p>
-                  <p><span className="font-bold">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a></p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] opacity-70 font-medium">
-                {['terms & conditions', 'cookies', 'misconduct reporting procedure', 'accessibility', 'be aware', 'sitemap', 'privacy statement'].map((item) => (
-                  <a key={item} href="#" className="hover:underline">{item}</a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Floating Feedback Button */}
       <button className="fixed right-0 top-1/2 -translate-y-1/2 bg-randstad-blue text-white px-4 py-12 rounded-l-md font-bold text-xs [writing-mode:vertical-rl] rotate-180 flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors shadow-lg z-40">
