@@ -21,51 +21,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
-          <div className="flex items-center gap-8">
-            <div className="flex items-center">
-              <span className="text-blue-600 font-bold text-2xl flex items-center">
-                <span className="mr-1">רר</span> randstad
-              </span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-                <button key={item} className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm font-medium transition-colors">
-                  {item} <ChevronDown size={14} />
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="hidden md:flex items-center space-x-6">
-            <button className="text-gray-400 hover:text-blue-600 transition-colors">
-              <Heart size={20} />
-            </button>
-            <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium">
-              <User size={20} />
-              my randstad
-            </button>
-            <button className="text-xs text-gray-400 hover:underline">contact us</button>
-          </div>
-          <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 p-4 space-y-4">
-          {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-            <button key={item} className="block w-full text-left text-gray-600 py-2 text-sm font-medium">
-              {item}
-            </button>
-          ))}
-        </div>
-      )}
-    </nav>
+    <></>
   );
 };
 
@@ -275,111 +231,8 @@ const BranchFinder = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-[#0a1a3c] text-white pt-24 pb-12">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-24">
-        <div>
-          <h4 className="font-bold mb-8">find a job</h4>
-          <ul className="space-y-4 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white">explore all jobs</a></li>
-            <li><a href="#" className="hover:text-white">submit your cv</a></li>
-            <li><a href="#" className="hover:text-white">join our team</a></li>
-            <li><a href="#" className="hover:text-white">refer a friend</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-8">for talent</h4>
-          <ul className="space-y-4 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white">specialisms</a></li>
-            <li><a href="#" className="hover:text-white">testimonials</a></li>
-            <li><a href="#" className="hover:text-white">career advice</a></li>
-            <li><a href="#" className="hover:text-white">beware of job scams</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-8">for employers</h4>
-          <ul className="space-y-4 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white">submit a vacancy</a></li>
-            <li><a href="#" className="hover:text-white">request a callback</a></li>
-            <li><a href="#" className="hover:text-white">our services</a></li>
-            <li><a href="#" className="hover:text-white">specialisms</a></li>
-            <li><a href="#" className="hover:text-white">case studies</a></li>
-            <li><a href="#" className="hover:text-white">testimonials</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-8">workforce insights</h4>
-          <ul className="space-y-4 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white">talent insights reports</a></li>
-            <li><a href="#" className="hover:text-white">employer brand research reports</a></li>
-            <li><a href="#" className="hover:text-white">salary trends reports</a></li>
-            <li><a href="#" className="hover:text-white">ed&i reports</a></li>
-            <li><a href="#" className="hover:text-white">workmonitor reports</a></li>
-            <li><a href="#" className="hover:text-white">startup hiring trends</a></li>
-            <li><a href="#" className="hover:text-white">talent pulse surveys</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-8">jobs</h4>
-          <ul className="space-y-4 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white">engineering jobs</a></li>
-            <li><a href="#" className="hover:text-white">cxo jobs</a></li>
-            <li><a href="#" className="hover:text-white">manufacturing jobs</a></li>
-            <li><a href="#" className="hover:text-white">supply chain & logistics jobs</a></li>
-            <li><a href="#" className="hover:text-white">education jobs</a></li>
-            <li><a href="#" className="hover:text-white">finance & accounting jobs</a></li>
-            <li><a href="#" className="hover:text-white">healthcare jobs</a></li>
-            <li><a href="#" className="hover:text-white">hr & admin support jobs</a></li>
-            <li><a href="#" className="hover:text-white">ites/gcc jobs</a></li>
-            <li><a href="#" className="hover:text-white">legal & compliance jobs</a></li>
-            <li><a href="#" className="hover:text-white">sales & marketing jobs</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div className="border-t border-gray-800 pt-12 mb-12 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex space-x-6">
-          <Linkedin size={20} className="text-gray-400 hover:text-white cursor-pointer" />
-          <Twitter size={20} className="text-gray-400 hover:text-white cursor-pointer" />
-          <Facebook size={20} className="text-gray-400 hover:text-white cursor-pointer" />
-          <Youtube size={20} className="text-gray-400 hover:text-white cursor-pointer" />
-          <Instagram size={20} className="text-gray-400 hover:text-white cursor-pointer" />
-        </div>
-        <div className="text-xs text-gray-500 text-center md:text-left">
-          registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-2 mb-4">
-             <span className="text-blue-400 font-bold text-xl">רר randstad,</span>
-             <span className="text-xs text-gray-400 uppercase tracking-widest">human forward and shaping the world of work</span>
-          </div>
-          <p className="text-xs text-gray-500 mb-6">
-            Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="text-blue-400 hover:underline">Click here to know more</a>
-          </p>
-          <p className="text-xs text-gray-500">
-            EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="text-blue-400 hover:underline">click here</a>
-          </p>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-800 pt-8 flex flex-wrap gap-6 text-xs text-gray-400">
-        <a href="#" className="hover:text-white">terms & conditions</a>
-        <a href="#" className="hover:text-white">cookies</a>
-        <a href="#" className="hover:text-white">misconduct reporting procedure</a>
-        <a href="#" className="hover:text-white">accessibility</a>
-        <a href="#" className="hover:text-white">be aware</a>
-        <a href="#" className="hover:text-white">sitemap</a>
-        <a href="#" className="hover:text-white">privacy statement</a>
-      </div>
-    </div>
-  </footer>
-);
-
-export default function RandstadPage() {
+export default function TalentManufacturing() {
   return (
     <div className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
@@ -410,7 +263,6 @@ export default function RandstadPage() {
       <LatestUpdates />
       <FAQ />
       <BranchFinder />
-      <Footer />
       
       {/* Sticky Feedback Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">

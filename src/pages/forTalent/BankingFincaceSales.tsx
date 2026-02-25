@@ -16,39 +16,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const Navbar = () => (
-  <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between h-20 items-center">
-        <div className="flex items-center gap-8">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600 flex items-center">
-              <span className="text-blue-500 mr-1">r</span>randstad
-            </span>
-          </div>
-          <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
-            <a href="#" className="hover:text-blue-600 flex items-center gap-1">find a job <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-blue-600 flex items-center gap-1">for talent <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-blue-600 flex items-center gap-1">for employer <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-blue-600 flex items-center gap-1">resources <ChevronDown size={14} /></a>
-            <a href="#" className="hover:text-blue-600 flex items-center gap-1">about us <ChevronDown size={14} /></a>
-          </div>
-        </div>
-        <div className="flex items-center space-x-6 text-sm">
-          <a href="#" className="text-gray-500 hover:text-blue-600">contact us</a>
-          <div className="flex items-center gap-4">
-            <button className="text-gray-600 hover:text-blue-600 flex items-center gap-1">
-              <Heart size={20} /> <span className="hidden sm:inline">0</span>
-            </button>
-            <button className="text-gray-600 hover:text-blue-600 flex items-center gap-1">
-              <User size={20} /> <span className="hidden sm:inline">my randstad</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-);
 
 const Hero = () => (
   <section className="bg-[#0a1a3a] text-white py-20 relative overflow-hidden">
@@ -318,111 +285,11 @@ const BranchLocator = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-[#0a1a3a] text-white pt-20 pb-10">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mb-20">
-        <div>
-          <h4 className="font-bold mb-6">find a job</h4>
-          <ul className="space-y-4 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100">explore all jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">submit your cv</a></li>
-            <li><a href="#" className="hover:opacity-100">join our team</a></li>
-            <li><a href="#" className="hover:opacity-100">refer a friend</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-6">for talents</h4>
-          <ul className="space-y-4 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100">specialisms</a></li>
-            <li><a href="#" className="hover:opacity-100">testimonials</a></li>
-            <li><a href="#" className="hover:opacity-100">career advice</a></li>
-            <li><a href="#" className="hover:opacity-100">beware of job scams</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-6">for employers</h4>
-          <ul className="space-y-4 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100">submit a vacancy</a></li>
-            <li><a href="#" className="hover:opacity-100">request a callback</a></li>
-            <li><a href="#" className="hover:opacity-100">our services</a></li>
-            <li><a href="#" className="hover:opacity-100">specialisms</a></li>
-            <li><a href="#" className="hover:opacity-100">case studies</a></li>
-            <li><a href="#" className="hover:opacity-100">testimonials</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-6">resources</h4>
-          <ul className="space-y-4 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100">case studies</a></li>
-            <li><a href="#" className="hover:opacity-100">press room</a></li>
-            <li><a href="#" className="hover:opacity-100">blogs</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-6">workforce insights</h4>
-          <ul className="space-y-4 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100">talent insights reports</a></li>
-            <li><a href="#" className="hover:opacity-100">employer brand research reports</a></li>
-            <li><a href="#" className="hover:opacity-100">salary trends reports</a></li>
-            <li><a href="#" className="hover:opacity-100">ed&i reports</a></li>
-            <li><a href="#" className="hover:opacity-100">workmonitor reports</a></li>
-            <li><a href="#" className="hover:opacity-100">startup hiring trends</a></li>
-            <li><a href="#" className="hover:opacity-100">talent pulse surveys</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-6">jobs</h4>
-          <ul className="space-y-4 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100">engineering jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">cxo jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">manufacturing jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">supply chain & logistics jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">education jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">finance & accounting jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">healthcare jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">hr & admin support jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">ites/gcc jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">legal & compliance jobs</a></li>
-            <li><a href="#" className="hover:opacity-100">sales & marketing jobs</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex gap-6">
-          <a href="#" className="opacity-70 hover:opacity-100"><Linkedin size={24} /></a>
-          <a href="#" className="opacity-70 hover:opacity-100"><Twitter size={24} /></a>
-          <a href="#" className="opacity-70 hover:opacity-100"><Facebook size={24} /></a>
-          <a href="#" className="opacity-70 hover:opacity-100"><Youtube size={24} /></a>
-          <a href="#" className="opacity-70 hover:opacity-100"><Instagram size={24} /></a>
-        </div>
-        <div className="text-xs opacity-50 text-center md:text-right max-w-2xl">
-          registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097,/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-        </div>
-      </div>
-
-      <div className="mt-12 flex flex-wrap justify-center gap-6 text-xs opacity-50">
-        <a href="#" className="hover:underline">terms & conditions</a>
-        <a href="#" className="hover:underline">cookies</a>
-        <a href="#" className="hover:underline">misconduct reporting procedure</a>
-        <a href="#" className="hover:underline">accessibility</a>
-        <a href="#" className="hover:underline">be aware</a>
-        <a href="#" className="hover:underline">sitemap</a>
-        <a href="#" className="hover:underline">privacy statement</a>
-      </div>
-
-      <div className="mt-10 text-center text-[10px] opacity-30">
-        RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023
-      </div>
-    </div>
-  </footer>
-);
-
-export default function RandstadPage() {
+export default function ForTalentBankingFinanceAndSalesJob() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#0a1a3a]">
-      <Navbar />
+      
       <Hero />
       <WhatsAppBanner />
       <RecruitingRoles />
@@ -456,7 +323,6 @@ export default function RandstadPage() {
       <JoinTalentPool />
       <FAQs />
       <BranchLocator />
-      <Footer />
     </div>
   );
 }

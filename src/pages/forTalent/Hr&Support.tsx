@@ -17,7 +17,7 @@ import {
   X
 } from 'lucide-react';
 
-const RandstadPage: React.FC = () => {
+const ForTalentHrAndSupport: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
@@ -83,79 +83,7 @@ const RandstadPage: React.FC = () => {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <svg viewBox="0 0 40 40" className="w-full h-full text-[#213970]">
-                  <path fill="currentColor" d="M10 10h20v4H10zM10 18h20v4H10zM10 26h20v4H10z" className="opacity-20" />
-                  <path fill="currentColor" d="M5 5v30h30V5H5zm28 28H7V7h26v26z" />
-                  <path fill="currentColor" d="M12 12h16v4H12zM12 24h16v4H12z" />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold tracking-tighter text-[#213970]">randstad</span>
-            </div>
-
-            {/* Desktop Nav */}
-            <nav className="hidden xl:flex items-center gap-8">
-              {navItems.map((item) => (
-                <button key={item.label} className="flex items-center gap-1 text-sm font-medium hover:text-[#213970] transition-colors group">
-                  {item.label}
-                  {item.hasDropdown && <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />}
-                </button>
-              ))}
-            </nav>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <div className="hidden lg:flex items-center gap-6">
-              <button className="hover:text-[#213970] transition-colors"><Heart size={20} /></button>
-              <button className="flex items-center gap-2 hover:text-[#213970] transition-colors">
-                <User size={20} />
-                <span className="text-sm font-medium">my randstad</span>
-              </button>
-            </div>
-            <button 
-              className="xl:hidden p-2 hover:bg-gray-100 rounded-full transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-20 left-0 w-full bg-white border-b border-gray-200 xl:hidden p-6 shadow-xl"
-            >
-              <nav className="flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <button key={item.label} className="flex items-center justify-between text-lg font-medium py-2 border-b border-gray-50">
-                    {item.label}
-                    <ChevronDown size={20} />
-                  </button>
-                ))}
-                <div className="flex flex-col gap-4 mt-4">
-                  <button className="flex items-center gap-3 text-lg font-medium py-2">
-                    <Heart size={20} /> favorites
-                  </button>
-                  <button className="flex items-center gap-3 text-lg font-medium py-2">
-                    <User size={20} /> my randstad
-                  </button>
-                </div>
-              </nav>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
-
+      
       <main>
         {/* Breadcrumbs */}
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-4">
@@ -406,50 +334,7 @@ const RandstadPage: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#0D1B3E] text-white pt-24 pb-12">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-12 mb-24">
-            {Object.entries(footerLinks).map(([title, links]) => (
-              <div key={title}>
-                <h4 className="text-lg font-medium mb-8">{title}</h4>
-                <ul className="flex flex-col gap-4">
-                  {links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">{link}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 pt-12 border-t border-white/10">
-            <div className="flex items-center gap-6">
-              {[Linkedin, Twitter, Facebook, Youtube, Instagram].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <Icon size={20} />
-                </a>
-              ))}
-            </div>
-            <div className="flex flex-wrap justify-center gap-8 text-xs text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">terms & conditions</a>
-              <a href="#" className="hover:text-white transition-colors">cookies</a>
-              <a href="#" className="hover:text-white transition-colors">misconduct reporting procedure</a>
-              <a href="#" className="hover:text-white transition-colors">accessibility</a>
-              <a href="#" className="hover:text-white transition-colors">be aware</a>
-              <a href="#" className="hover:text-white transition-colors">sitemap</a>
-              <a href="#" className="hover:text-white transition-colors">privacy statement</a>
-            </div>
-          </div>
-
-          <div className="mt-12 text-[10px] text-gray-500 leading-relaxed max-w-4xl">
-            <p className="mb-4">registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097, Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006</p>
-            <p className="mb-8">RANDSTAD, HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V. 2023</p>
-            <p className="mb-4">Security Advice: Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a></p>
-            <p>EEO Statement: Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world's most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India's work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a></p>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Cookie Consent Floating Button */}
       <button className="fixed bottom-6 left-6 w-12 h-12 bg-[#213970] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50">
@@ -470,4 +355,4 @@ const RandstadPage: React.FC = () => {
   );
 };
 
-export default RandstadPage;
+export default ForTalentHrAndSupport;

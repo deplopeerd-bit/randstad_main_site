@@ -1,3 +1,4 @@
+import YellowBanner from "@/src/components/YellowBanner";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -145,40 +146,7 @@ export default function ContractRoles() {
       </main>
 
       {/* ================= Alert Banner ================= */}
-      <section className="bg-[#ffc800] px-4 md:px-8 py-16 overflow-hidden relative">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-
-          <div className="md:w-1/2 space-y-6">
-            <h2 className="text-5xl font-light text-[#001a3d]">
-              let similar jobs come to you
-            </h2>
-
-            <p className="text-xl text-[#001a3d]">
-              we will notify you when similar jobs are posted.
-            </p>
-
-            <button className="bg-[#001a3d] text-white font-bold px-8 py-4 rounded-sm hover:bg-[#002a5d] transition-colors">
-              set a saved search & alert
-            </button>
-          </div>
-
-          <div className="md:w-1/2 flex justify-center mt-12 md:mt-0">
-            <div className="relative">
-              <div className="bg-[#2175d9] w-64 h-48 rounded-lg flex items-center justify-center shadow-xl">
-                <Mail className="text-white w-24 h-24" />
-              </div>
-
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ repeat: Infinity, duration: 2 }}
-                className="absolute -top-10 left-1/2 -translate-x-1/2 text-[#001a3d]"
-              >
-                <ChevronDown className="w-16 h-16" />
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <YellowBanner/>
 
       {/* ================= Floating Buttons ================= */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">

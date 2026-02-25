@@ -1,11 +1,15 @@
 import ApplicationForm from "./pages/FindJob/SubmitYourCv";
 import Banking from "./pages/FindJob/Banking";
-import BankingFinanceAndSalesJob  from "./pages/FindJob/BankingFinanceAndSalesJob";
+import BankingFinanceAndSalesJob from "./pages/FindJob/BankingFinanceAndSalesJob";
 import ContractRoles from "./pages/FindJob/ContractRoles";
 import Education from "./pages/FindJob/Education";
 import Engineering from "./pages/FindJob/Engineering";
+import EngineeringJobs from "./pages/forTalent/Engineering";
 import FinanceAccounting from "./pages/FindJob/Finance&Accounting";
 import FinancialProductAndSaleJob from "./pages/FindJob/FinancialProduct&SaleJob";
+import ForTalentBankingFinanceAndSalesJob from "./pages/forTalent/BankingFincaceSales";
+import ForTalentFinanceAndAccounting from "./pages/forTalent/FinanceAndAccounting";
+import ForTalentHrAndSupport from "./pages/forTalent/Hr&Support";
 import HrAdminSupport from "./pages/FindJob/HR";
 import ItesGcc from "./pages/FindJob/ItesGcc";
 import JoinOurTeam from "./pages/FindJob/JoinOurTeam";
@@ -15,51 +19,107 @@ import PermanentRoles from "./pages/FindJob/PermanentRoles";
 import RandstadClone from "./pages/FindJob/CxoRoles";
 import RandstadPage from "./pages/FindJob/CurrentJobOpening";
 import SalesAndMarketing from "./pages/FindJob/SalesAndMarketing";
+import SupplyChainAndLogistic from "./pages/forTalent/SupplyChain&Logistic";
 import SupplyChainLogistic from "./pages/FindJob/SupplyChainLogistics";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TalentManufacturing from "./pages/forTalent/Manufacturing";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Footer } from "./components/Layout";
 import { FallbackPage } from "./pages/FindJob/FallBackPage";
 import { Healthcare } from "./pages/FindJob/HealthCare";
 
+const findAJobUrl = "/findajob";
+const forTalent = "/fortalent";
+
+/* -------------------- */
+/*  TITLE CONTROLLER    */
+/* -------------------- */
+
+function AppContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+
+    if (path === "/") {
+      document.title = "Home | Randstad";
+      return;
+    }
+
+    // Remove /findajob/
+    let cleaned = path.replace(`${findAJobUrl}/`, "");
+
+    // Convert URL format to readable title
+    cleaned = cleaned
+      .replace(/-/g, " ")
+      .replace(/&/g, "and")
+      .replace(/\//g, " ");
+
+    // Capitalize first letter
+    const formatted =
+      cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+
+    document.title = formatted
+      ? `${formatted} | Randstad`
+      : "Randstad";
+  }, [location]);
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path={`${findAJobUrl}/submit-your-cv`} element={<ApplicationForm />} />
+          <Route path={`${findAJobUrl}/contract-roles`} element={<ContractRoles />} />
+          <Route path={`${findAJobUrl}/current-job-openings`} element={<RandstadPage />} />
+          <Route path={`${findAJobUrl}/cxo-roles`} element={<RandstadClone />} />
+          <Route path={`${findAJobUrl}/engineering`} element={<Engineering />} />
+          <Route path={`${findAJobUrl}/manufacturing`} element={<Manufacturing />} />
+          <Route path={`${findAJobUrl}/supply-chain-&-logistics`} element={<SupplyChainLogistic />} />
+          <Route path={`${findAJobUrl}/banking-sales`} element={<Banking />} />
+          <Route path={`${findAJobUrl}/finance-&-accounting`} element={<FinanceAccounting />} />
+          <Route path={`${findAJobUrl}/join-our-team`} element={<JoinOurTeam />} />
+          <Route path={`${findAJobUrl}/permanent-roles`} element={<PermanentRoles />} />
+          <Route path={`${findAJobUrl}/education`} element={<Education />} />
+          <Route path={`${findAJobUrl}/hr-&-admin-support`} element={<HrAdminSupport />} />
+          <Route path={`${findAJobUrl}/ites/gcc`} element={<ItesGcc />} />
+          <Route path={`${findAJobUrl}/sales-&-marketing`} element={<SalesAndMarketing />} />
+          <Route path={`${findAJobUrl}/legal-&-compliance`} element={<LegalAndCompilance />} />
+          <Route path={`${findAJobUrl}/banking-finance-and-sales-jobs`} element={<BankingFinanceAndSalesJob />} />
+          <Route path={`${findAJobUrl}/financial-product-sales-jobs`} element={<FinancialProductAndSaleJob />} />
+          <Route path={`${findAJobUrl}/job-fairs`} element={<ApplicationForm />} />
+          <Route path={`${findAJobUrl}/healthcare`} element={<Healthcare />} />
+          <Route path={`${findAJobUrl}/my-randstad`} element={<FallbackPage />} />
+          <Route path={`${findAJobUrl}/refer-a-friend`} element={<FallbackPage />} />
+
+<Route path={`${forTalent}/engineering`} element={<EngineeringJobs />} />
+<Route path={`${forTalent}/manufacturing`} element={<TalentManufacturing />} />
+ <Route path={`${forTalent}/supply-chain-&-logistics`} element={<SupplyChainAndLogistic />} />
+ <Route path={`${forTalent}/banking-finance-sales`} element={< ForTalentBankingFinanceAndSalesJob/>} />
+<Route path={`${forTalent}/finance-&-accounting`} element={<ForTalentFinanceAndAccounting />} />
+<Route path={`${forTalent}/hr-&-support`} element={<ForTalentHrAndSupport />} />
+
+        </Routes>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* -------------------- */
+/*  MAIN EXPORT         */
+/* -------------------- */
+
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/submit-your-cv" element={<ApplicationForm />} />
-            <Route path="/contract-roles" element={<ContractRoles />} />
-            <Route path="/current-job-openings" element={<RandstadPage />} />
-            <Route path="/cxo-roles" element={<RandstadClone />} />
-            <Route path="/engineering" element={<Engineering />} />
-            <Route path="/manufacturing" element={<Manufacturing />} />
-            <Route path="/supply-chain-&-logistics" element={<SupplyChainLogistic />} />
-            <Route path="/banking-sales" element={<Banking />} />
-            <Route path="/finance-&-accounting" element={<FinanceAccounting />} />
-            <Route path="/join-our-team" element={<JoinOurTeam />} />
-            <Route path="/permanent-roles" element={<PermanentRoles />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/hr-&-admin-support" element={<HrAdminSupport />} />
-            <Route path="/ites/gcc" element={<ItesGcc />} />
-<Route path="/sales-&-marketing" element={<SalesAndMarketing />} />
-<Route path="/legal-&-compliance" element={<LegalAndCompilance />} />
-<Route path="/banking-finance-and-sales-jobs" element={<BankingFinanceAndSalesJob />} />
-<Route path="/financial-product-sales-jobs" element={<FinancialProductAndSaleJob />} />
-<Route path="/job-fairs" element={<ApplicationForm />} />
-
-<Route path="/healthcare" element={<Healthcare />} />
-<Route path="/my-randstad" element={<FallbackPage />} />
-<Route path="/refer-a-friend" element={<FallbackPage />} />
-          </Routes>
-        </main>
-
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }

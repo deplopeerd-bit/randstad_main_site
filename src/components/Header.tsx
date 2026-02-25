@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const MENU_DATA = {
+export const MENU_DATA = {
   "find a job": [
     {
       title: "job search",
@@ -177,20 +177,13 @@ const MENU_DATA = {
   ],
   "about us": [
     {
-      title: "our history",
-      links: [],
-    },
-    {
-      title: "ed&i",
-      links: [],
-    },
-    {
-      title: "our sponsorships",
-      links: [],
-    },
-    {
-      title: "sustainability",
-      links: [],
+      title: "",
+      links: [
+        "our history",
+        "ed&i",
+        "our sponsorships",
+        "sustainability",
+      ],
     },
     {
       title: "offices",
@@ -205,6 +198,16 @@ const MENU_DATA = {
       ],
     },
   ],
+};
+
+// Helper to format the category for the URL
+export const formatCategory = (category: string) => {
+  return category.toLowerCase().replace(/\s+/g, '');
+};
+
+// Helper to format the link for the URL
+export const formatLink = (link: string) => {
+  return link.toLowerCase().replace(/\s+/g, '-');
 };
 
 export function Header() {
@@ -304,17 +307,20 @@ export function Header() {
                   <X size={24} />
                 </button>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                {/* Mega Menu Content - Aligned to Left */}
+                <div className="flex flex-row gap-16 justify-start">
                   {MENU_DATA[activeMenu as keyof typeof MENU_DATA].map((section, idx) => (
-                    <div key={idx} className="flex flex-col gap-4">
-                      <h3 className="text-[#2175e3] text-sm font-light border-b border-gray-100 pb-2">
-                        {section.title}
-                      </h3>
+                    <div key={idx} className="flex flex-col gap-4 min-w-[160px]">
+                      {section.title && (
+                        <h3 className="text-[#2175e3] text-sm font-light border-b border-gray-100 pb-2">
+                          {section.title}
+                        </h3>
+                      )}
                       <ul className="flex flex-col gap-3">
                         {section.links.map((link, lIdx) => (
                           <li key={lIdx}>
                             <Link
-                              to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                              to={`/${formatCategory(activeMenu)}/${formatLink(link)}`}
                               className="text-sm text-gray-600 hover:text-[#2175e3] transition-colors font-light"
                             >
                               {link}
@@ -371,7 +377,7 @@ export function Header() {
                               {section.links.map((link, lIdx) => (
                                 <li key={lIdx}>
                                   <Link
-                                    to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                                    to={`/${formatCategory(item)}/${formatLink(link)}`}
                                     className="text-sm text-gray-600 block py-1"
                                   >
                                     {link}
