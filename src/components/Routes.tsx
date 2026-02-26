@@ -11,7 +11,9 @@ import AboutUs from "../navbarPages/aboutUs/AboutUs";
 import ApplicationForm from "../navbarPages/FindJob/SubmitYourCv";
 import Banking from "../navbarPages/FindJob/Banking";
 import BankingFinanceAndSalesJob from "../navbarPages/FindJob/BankingFinanceAndSalesJob";
+import CareerAdvice from "../footerPages/CareerAdvice";
 import CareerTestsPage from "../navbarPages/forTalent/CareerTest";
+import CaseStudies from "../footerPages/CaseStudies";
 import ContractRoles from "../navbarPages/FindJob/ContractRoles";
 import Education from "../navbarPages/FindJob/Education";
 import EmpAdvisory from "../navbarPages/forEmployer/Advisory";
@@ -43,6 +45,8 @@ import Engineering from "../navbarPages/FindJob/Engineering";
 import EngineeringJobs from "../navbarPages/forTalent/Engineering";
 import FinanceAccounting from "../navbarPages/FindJob/Finance&Accounting";
 import FinancialProductAndSaleJob from "../navbarPages/FindJob/FinancialProduct&SaleJob";
+import FooterBlogs from "../footerPages/Blogs";
+import FooterOurServices from "../footerPages/OurServices";
 import ForEmpBankingFinance from "../navbarPages/forEmployer/BankingFinanceSales";
 import ForEmployeeSupplyChain from "../navbarPages/forEmployer/SupplyChain&Logistics";
 import ForTalentBankingFinanceAndSalesJob from "../navbarPages/forTalent/BankingFincaceSales";
@@ -74,6 +78,7 @@ import LegalAndCompilance from "../navbarPages/FindJob/LegalAndCompilance";
 import Manufacturing from "../navbarPages/FindJob/Manufacturing";
 import OurSponserShip from "../navbarPages/aboutUs/OurSponserShip";
 import PermanentRoles from "../navbarPages/FindJob/PermanentRoles";
+import PressRoom from "../footerPages/PressRoom";
 import RandstadClone from "../navbarPages/FindJob/CxoRoles";
 import RandstadPage from "../navbarPages/FindJob/CurrentJobOpening";
 import React from "react";
@@ -95,7 +100,9 @@ import ResTalentPulse from "../navbarPages/Resources/TalentPulseSurvey";
 import ResWorkForce from "../navbarPages/Resources/WorkForceManagementArticles";
 import ResWorkMonitor from "../navbarPages/Resources/WorkMonitor";
 import ResumePage from "../navbarPages/forTalent/ResumeTips";
+import SalaryTrendsReport from "../footerPages/SalaryTrendsReports";
 import SalesAndMarketing from "../navbarPages/FindJob/SalesAndMarketing";
+import Specialism from "../footerPages/Specialism";
 import SupplyChainAndLogistic from "../navbarPages/forTalent/SupplyChain&Logistic";
 import SupplyChainLogistic from "../navbarPages/FindJob/SupplyChainLogistics";
 import TalentManufacturing from "../navbarPages/forTalent/Manufacturing";
@@ -146,11 +153,9 @@ export default function RoutesMapping() {
           <Route path={`${findAJobUrl}/healthcare`} element={<Healthcare />} />
           <Route path={`${findAJobUrl}/my-randstad`} element={<FallbackPage />} />
           <Route path={`${findAJobUrl}/refer-a-friend`} element={<FallbackPage />} />
-<Route path={`${findAJobUrl}/cxo-jobs`} element={<RandstadClone />} />
-          <Route path={`${findAJobUrl}/manufacturing-jobs`} element={<Manufacturing />} />
 
-<Route path={`${forTalent}/engineering`} element={<EngineeringJobs />} />
-<Route path={`${forTalent}/testimonials`} element={< Testimonial/>} />
+
+
 
 <Route path={`${forTalent}/manufacturing`} element={<TalentManufacturing />} />
  <Route path={`${forTalent}/supply-chain-&-logistics`} element={<SupplyChainAndLogistic />} />
@@ -215,7 +220,7 @@ export default function RoutesMapping() {
 <Route path={`${forEmployer}/temp-recruitment`} element={<EmpTempR />} />
 <Route path={`${forEmployer}/workforce-advisory`} element={< EmpWorkForceAdv/>} />
 <Route path={`${forEmployer}/request-a-callback`} element={< RequestCallBack/>} />
-<Route path={`${forEmployer}/employer-brand-research-reports`} element={< EmployerBrandResearchReport/>} />
+
 
 
 
@@ -246,6 +251,26 @@ export default function RoutesMapping() {
 <Route path={`${forAbout}/new-delhi`} element={< AboutDelhi/>} />
 <Route path={`${forAbout}/view-all`} element={< AboutRandViewAll/>} />
 <Route path={`${forAbout}/our-history`} element={< AboutUs/>} />
+
+
+<Route path={`${forTalent}/career-advice`} element={<CareerAdvice />} />
+<Route path={`${forTalent}/specialisms`} element={<Specialism />} />
+<Route path={`${forEmployer}/specialisms`} element={<Specialism />} />
+<Route path={`${forTalent}/engineering`} element={<EngineeringJobs />} />
+<Route path={`${forTalent}/testimonials`} element={< Testimonial/>} />
+<Route path={`${findAJobUrl}/cxo-jobs`} element={<RandstadClone />} />
+<Route path={`${findAJobUrl}/manufacturing-jobs`} element={<Manufacturing />} />
+<Route path={`${forEmployer}/employer-brand-research-reports`} element={< EmployerBrandResearchReport/>} />
+<Route path={`${forEmployer}/our-services`} element={< FooterOurServices/>} />
+<Route path={`${forEmployer}/request-a-callback`} element={< RequestCallBack/>} />
+
+<Route path={`${forResources}/salary-trends-reports`} element={<SalaryTrendsReport />} />
+<Route path={`${forEmployer}/case-studies`} element={< CaseStudies/>} />
+<Route path={`${forResources}/case-studies`} element={< CaseStudies/>} />
+<Route path={`${forResources}/press-room`} element={<PressRoom />} />
+<Route path={`${forResources}/blogs`} element={<FooterBlogs />} />
+
+
         </Routes>
       </main>
 

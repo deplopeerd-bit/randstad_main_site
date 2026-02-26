@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">for employers</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><Link to="/foremployer/submit-a-vacancy" className="hover:text-white">submit a vacancy</Link></li>
+              <li><Link to="/foremployer/request-a-callback" className="hover:text-white">submit a vacancy</Link></li>
               <li><Link to="/foremployer/request-a-callback" className="hover:text-white">request a callback</Link></li>
               <li><Link to="/foremployer/our-services" className="hover:text-white">our services</Link></li>
               <li><Link to="/foremployer/specialisms" className="hover:text-white">specialisms</Link></li>
@@ -47,7 +47,7 @@ export function Footer() {
               <li><Link to="/resources/salary-trends-reports" className="hover:text-white">salary trends reports</Link></li>
               <li><Link to="/resources/ed&i" className="hover:text-white">ed&i reports</Link></li>
               <li><Link to="/resources/workmonitor" className="hover:text-white">workmonitor reports</Link></li>
-              <li><Link to="/resources/startup-hiring-trends" className="hover:text-white">startup hiring trends</Link></li>
+              <li><Link to="/resources/startup-hiring" className="hover:text-white">startup hiring trends</Link></li>
               <li><Link to="/resources/talent-pulse-surveys" className="hover:text-white">talent pulse surveys</Link></li>
             </ul>
           </div>
