@@ -1,4 +1,4 @@
-import randstad_logo from "../assets/randstad_logo.png";
+import randstad_logo from "../assets/logo/randstad_logo.png";
 import { ChevronDown, Heart, Menu, User, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";

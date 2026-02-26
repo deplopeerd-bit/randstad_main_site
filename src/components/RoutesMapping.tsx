@@ -110,11 +110,11 @@ import Testimonial from "../navbarPages/Resources/Testimonial";
 import WholesaleRetailPage from "../navbarPages/forTalent/WholeSale&Retail";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import { Header } from "../components/Header";
-import { Home } from "../components/Home";
-import { Footer } from "../components/Layout";
 import { FallbackPage } from "../navbarPages/FindJob/FallBackPage";
 import { Healthcare } from "../navbarPages/FindJob/HealthCare";
+import { Header } from "./Header";
+import { Home } from "./Home";
+import { Footer } from "./Layout";
 
 const findAJobUrl = "/findajob";
 const forTalent = "/fortalent";
@@ -251,7 +251,6 @@ export default function RoutesMapping() {
 <Route path={`${forAbout}/new-delhi`} element={< AboutDelhi/>} />
 <Route path={`${forAbout}/view-all`} element={< AboutRandViewAll/>} />
 <Route path={`${forAbout}/our-history`} element={< AboutUs/>} />
-
 
 <Route path={`${forTalent}/career-advice`} element={<CareerAdvice />} />
 <Route path={`${forTalent}/specialisms`} element={<Specialism />} />

@@ -1,4 +1,4 @@
-import RoutesMapping from "./components/Routes";
+import RoutesMapping from "./components/RoutesMapping";
 import { useEffect } from "react";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
 
