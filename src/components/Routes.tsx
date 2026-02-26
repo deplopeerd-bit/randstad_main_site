@@ -36,6 +36,7 @@ import EmpTempR from "../navbarPages/forEmployer/TempRecruitement";
 import EmpWholeSale from "../navbarPages/forEmployer/WholeSale&Retail";
 import EmpWorkForceAdv from "../navbarPages/forEmployer/WorkForceAdvisory";
 import EmployeeEngg from "../navbarPages/forEmployer/Engineering";
+import EmployerBrandResearchReport from "../footerPages/EmployerBrandResearchReport";
 import EmpmanageSolution from "../navbarPages/forEmployer/ManagedSolution";
 import EmptalentServices from "../navbarPages/forEmployer/TalentServices";
 import Engineering from "../navbarPages/FindJob/Engineering";
@@ -76,6 +77,7 @@ import PermanentRoles from "../navbarPages/FindJob/PermanentRoles";
 import RandstadClone from "../navbarPages/FindJob/CxoRoles";
 import RandstadPage from "../navbarPages/FindJob/CurrentJobOpening";
 import React from "react";
+import RequestCallBack from "../navbarPages/forEmployer/RequestCallBack";
 import ResDiversity from "../navbarPages/Resources/DiversitySeries";
 import ResEdi from "../navbarPages/Resources/ed&i";
 import ResEmpBranding from "../navbarPages/Resources/EmployerBranding";
@@ -97,6 +99,7 @@ import SalesAndMarketing from "../navbarPages/FindJob/SalesAndMarketing";
 import SupplyChainAndLogistic from "../navbarPages/forTalent/SupplyChain&Logistic";
 import SupplyChainLogistic from "../navbarPages/FindJob/SupplyChainLogistics";
 import TalentManufacturing from "../navbarPages/forTalent/Manufacturing";
+import Testimonial from "../navbarPages/Resources/Testimonial";
 import WholesaleRetailPage from "../navbarPages/forTalent/WholeSale&Retail";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
@@ -143,8 +146,12 @@ export default function RoutesMapping() {
           <Route path={`${findAJobUrl}/healthcare`} element={<Healthcare />} />
           <Route path={`${findAJobUrl}/my-randstad`} element={<FallbackPage />} />
           <Route path={`${findAJobUrl}/refer-a-friend`} element={<FallbackPage />} />
+<Route path={`${findAJobUrl}/cxo-jobs`} element={<RandstadClone />} />
+          <Route path={`${findAJobUrl}/manufacturing-jobs`} element={<Manufacturing />} />
 
 <Route path={`${forTalent}/engineering`} element={<EngineeringJobs />} />
+<Route path={`${forTalent}/testimonials`} element={< Testimonial/>} />
+
 <Route path={`${forTalent}/manufacturing`} element={<TalentManufacturing />} />
  <Route path={`${forTalent}/supply-chain-&-logistics`} element={<SupplyChainAndLogistic />} />
  <Route path={`${forTalent}/banking-finance-sales`} element={< ForTalentBankingFinanceAndSalesJob/>} />
@@ -181,6 +188,7 @@ export default function RoutesMapping() {
 <Route path={`${forEmployer}/manufacturing`} element={<ForTalentManufacturingPage />} />
 
 <Route path={`${forEmployer}/supply-chain-&-logistics`} element={< ForEmployeeSupplyChain/>} />
+<Route path={`${forEmployer}/testimonials`} element={< Testimonial/>} />
 
 <Route path={`${forEmployer}/banking-finance-sales`} element={<ForEmpBankingFinance />} />
 <Route path={`${forEmployer}/finance-&-accounting`} element={< EmpFinance/>} />
@@ -206,6 +214,11 @@ export default function RoutesMapping() {
 <Route path={`${forEmployer}/talent-export`} element={< EmpTalentExport/>} />
 <Route path={`${forEmployer}/temp-recruitment`} element={<EmpTempR />} />
 <Route path={`${forEmployer}/workforce-advisory`} element={< EmpWorkForceAdv/>} />
+<Route path={`${forEmployer}/request-a-callback`} element={< RequestCallBack/>} />
+<Route path={`${forEmployer}/employer-brand-research-reports`} element={< EmployerBrandResearchReport/>} />
+
+
+
 <Route path={`${forResources}/ed&i`} element={<ResEdi />} />
 <Route path={`${forResources}/employer-brand-research`} element={< ResEmployerBrand/>} />
 <Route path={`${forResources}/salary-trends`} element={< ResSalary/>} />

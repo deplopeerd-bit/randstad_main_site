@@ -20,44 +20,6 @@ import {
 
 // --- Components ---
 
-const Header = () => (
-  <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-      <div className="flex justify-end py-2">
-        <a href="#" className="text-[11px] text-gray-500 hover:text-randstad-blue uppercase tracking-wider font-medium">contact us</a>
-      </div>
-      <div className="flex items-center justify-between py-4">
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-2">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 10C10 10 15 10 15 15C15 20 10 20 10 20" stroke="#2175d9" strokeWidth="4" strokeLinecap="round"/>
-              <path d="M25 10C25 10 30 10 30 15C30 20 25 20 25 20" stroke="#2175d9" strokeWidth="4" strokeLinecap="round"/>
-              <path d="M10 30C10 30 20 30 20 20C20 10 30 10 30 10" stroke="#2175d9" strokeWidth="4" strokeLinecap="round"/>
-            </svg>
-            <span className="text-2xl font-bold text-randstad-navy tracking-tighter">randstad</span>
-          </div>
-          <nav className="hidden lg:flex items-center gap-8">
-            {['find a job', 'for talent', 'for employer', 'resources', 'about us'].map((item) => (
-              <a key={item} href="#" className="text-sm text-randstad-navy hover:text-randstad-blue flex items-center gap-1">
-                {item} <ChevronDown size={14} />
-              </a>
-            ))}
-          </nav>
-        </div>
-        <div className="flex items-center gap-6">
-          <button className="text-randstad-navy hover:text-randstad-blue flex items-center gap-2">
-            <Heart size={20} />
-            <span className="text-sm font-medium">0</span>
-          </button>
-          <button className="text-randstad-navy hover:text-randstad-blue flex items-center gap-2">
-            <User size={20} />
-            <span className="text-sm font-medium">my randstad</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-);
 
 const Hero = () => (
   <section className="bg-randstad-navy text-white py-20 lg:py-32 overflow-hidden relative">
@@ -301,118 +263,12 @@ const Upskilling = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-randstad-navy text-white pt-24 pb-12">
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-20">
-        <div>
-          <h4 className="text-lg font-bold mb-8">find a job</h4>
-          <ul className="space-y-4 opacity-70 text-sm">
-            <li><a href="#" className="hover:text-randstad-blue">explore all jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">submit your cv</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">join our team</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">refer a friend</a></li>
-          </ul>
-          <h4 className="text-lg font-bold mt-12 mb-8">for talents</h4>
-          <ul className="space-y-4 opacity-70 text-sm">
-            <li><a href="#" className="hover:text-randstad-blue">specialisms</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">testimonials</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">career advice</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">beware of job scams</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-8">for employers</h4>
-          <ul className="space-y-4 opacity-70 text-sm">
-            <li><a href="#" className="hover:text-randstad-blue">submit a vacancy</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">request a callback</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">our services</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">specialisms</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">case studies</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">testimonials</a></li>
-          </ul>
-          <h4 className="text-lg font-bold mt-12 mb-8">resources</h4>
-          <ul className="space-y-4 opacity-70 text-sm">
-            <li><a href="#" className="hover:text-randstad-blue">case studies</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">press room</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">blogs</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-8">workforce insights</h4>
-          <ul className="space-y-4 opacity-70 text-sm">
-            <li><a href="#" className="hover:text-randstad-blue">talent insights reports</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">employer brand research reports</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">salary trends reports</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">ed&i reports</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">workmonitor reports</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">startup hiring trends</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">talent pulse surveys</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-8">jobs</h4>
-          <ul className="space-y-4 opacity-70 text-sm">
-            <li><a href="#" className="hover:text-randstad-blue">engineering jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">cxo jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">manufacturing jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">supply chain & logistics jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">education jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">finance & accounting jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">healthcare jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">hr & admin support jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">ites/gcc jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">legal & compliance jobs</a></li>
-            <li><a href="#" className="hover:text-randstad-blue">sales & marketing jobs</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-white/10 pt-12 mb-12">
-        <div className="flex flex-wrap gap-6 mb-12">
-          {[Linkedin, Twitter, Facebook, Youtube, Instagram].map((Icon, i) => (
-            <a key={i} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-randstad-blue transition-colors">
-              <Icon size={20} />
-            </a>
-          ))}
-        </div>
-        <p className="text-[10px] opacity-50 mb-8 max-w-4xl">
-          registered office: Randstad India Private Limited, CIN U74210TN1992PTC023097/Randstad House, Old No. 5 & 5A, New No. 9, Pycrofts Garden Road, Nungambakkam, Chennai, TN - 600 006
-        </p>
-        <div className="flex items-center gap-4 mb-12">
-          <span className="text-xs font-bold tracking-widest opacity-80 uppercase">RANDSTAD,</span>
-          <div className="flex items-center gap-2">
-            <svg width="24" height="24" viewBox="0 0 40 40" fill="none" className="text-randstad-blue">
-              <path d="M10 30C10 30 20 30 20 20C20 10 30 10 30 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
-            </svg>
-            <span className="text-[10px] font-bold uppercase tracking-widest opacity-80">HUMAN FORWARD and SHAPING THE WORLD OF WORK are registered trademarks of © Randstad N.V.2023</span>
-          </div>
-        </div>
-        <div className="space-y-6 text-[11px] opacity-70 leading-relaxed max-w-6xl">
-          <p>
-            <span className="font-bold">Security Advice:</span> Randstad India does not charge any fee at any stage of its recruitment process from the candidate nor allows their employees to collect any fees from any candidates. <a href="#" className="underline">Click here to know more</a>
-          </p>
-          <p>
-            <span className="font-bold">EEO Statement:</span> Randstad India is an Equal Employment Opportunity Employer. All qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, appearance, national origin, age, marital status, veteran status, or disability status, or any other characteristics. Our global mission is to become the world’s most equitable and specialized talent company, and we actively embrace diversity and inclusion as the cornerstones of our success. To read more of Randstad India’s work in the space of equity, diversity and inclusion please <a href="#" className="underline">click here</a>
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap gap-x-8 gap-y-4 text-[11px] opacity-60 font-medium">
-        {['terms & conditions', 'cookies', 'misconduct reporting procedure', 'accessibility', 'be aware', 'sitemap', 'privacy statement'].map(item => (
-          <a key={item} href="#" className="hover:text-randstad-blue transition-colors">{item}</a>
-        ))}
-      </div>
-    </div>
-  </footer>
-);
 
 // --- Main App ---
 
-export default function App() {
+export default function Testimonial() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       <main className="flex-grow">
         <Hero />
         <ReadMore />
@@ -420,7 +276,6 @@ export default function App() {
         <TestimonialCards />
         <Upskilling />
       </main>
-      <Footer />
       
       {/* Cookie/Accessibility floating button */}
       <div className="fixed bottom-6 left-6 z-50">

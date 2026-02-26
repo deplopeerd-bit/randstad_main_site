@@ -42,11 +42,11 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">workforce insights</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><Link to="/resources/talent-insights-reports" className="hover:text-white">talent insights reports</Link></li>
-              <li><Link to="/resources/employer-brand-research-reports" className="hover:text-white">employer brand research reports</Link></li>
+              <li><Link to="/resources/talent-insights" className="hover:text-white">talent insights reports</Link></li>
+              <li><Link to="/foremployer/employer-brand-research-reports" className="hover:text-white">employer brand research reports</Link></li>
               <li><Link to="/resources/salary-trends-reports" className="hover:text-white">salary trends reports</Link></li>
-              <li><Link to="/resources/ed-i-reports" className="hover:text-white">ed&i reports</Link></li>
-              <li><Link to="/resources/workmonitor-reports" className="hover:text-white">workmonitor reports</Link></li>
+              <li><Link to="/resources/ed&i" className="hover:text-white">ed&i reports</Link></li>
+              <li><Link to="/resources/workmonitor" className="hover:text-white">workmonitor reports</Link></li>
               <li><Link to="/resources/startup-hiring-trends" className="hover:text-white">startup hiring trends</Link></li>
               <li><Link to="/resources/talent-pulse-surveys" className="hover:text-white">talent pulse surveys</Link></li>
             </ul>
@@ -54,17 +54,17 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">jobs</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><Link to="/findajob/engineering-jobs" className="hover:text-white">engineering jobs</Link></li>
-              <li><Link to="/findajob/cxo-jobs" className="hover:text-white">cxo jobs</Link></li>
-              <li><Link to="/findajob/manufacturing-jobs" className="hover:text-white">manufacturing jobs</Link></li>
-              <li><Link to="/findajob/supply-chain-logistics-jobs" className="hover:text-white">supply chain & logistics jobs</Link></li>
-              <li><Link to="/findajob/education-jobs" className="hover:text-white">education jobs</Link></li>
-              <li><Link to="/findajob/finance-accounting-jobs" className="hover:text-white">finance & accounting jobs</Link></li>
-              <li><Link to="/findajob/healthcare-jobs" className="hover:text-white">healthcare jobs</Link></li>
-              <li><Link to="/findajob/hr-admin-support-jobs" className="hover:text-white">hr & admin support jobs</Link></li>
-              <li><Link to="/findajob/ites-gcc-jobs" className="hover:text-white">ites/gcc jobs</Link></li>
-              <li><Link to="/findajob/legal-compliance-jobs" className="hover:text-white">legal & compliance jobs</Link></li>
-              <li><Link to="/findajob/sales-marketing-jobs" className="hover:text-white">sales & marketing jobs</Link></li>
+              <li><Link to="/findajob/engineering" className="hover:text-white">engineering jobs</Link></li>
+              <li><Link to="/findajob/cxo-roles" className="hover:text-white">cxo jobs</Link></li>
+              <li><Link to="/findajob/manufacturing" className="hover:text-white">manufacturing jobs</Link></li>
+              <li><Link to="/findajob/supply-chain-&-logistics" className="hover:text-white">supply chain & logistics jobs</Link></li>
+              <li><Link to="/findajob/education" className="hover:text-white">education jobs</Link></li>
+              <li><Link to="/findajob/finance-&-accounting" className="hover:text-white">finance & accounting jobs</Link></li>
+              <li><Link to="/findajob/healthcare" className="hover:text-white">healthcare jobs</Link></li>
+              <li><Link to="/findajob/hr-&-admin-support" className="hover:text-white">hr & admin support jobs</Link></li>
+              <li><Link to="/findajob/ites/gcc" className="hover:text-white">ites/gcc jobs</Link></li>
+              <li><Link to="/findajob/legal-&-compliance" className="hover:text-white">legal & compliance jobs</Link></li>
+              <li><Link to="/findajob/sales-&-marketing" className="hover:text-white">sales & marketing jobs</Link></li>
             </ul>
           </div>
         </div>
