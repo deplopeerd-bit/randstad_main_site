@@ -16,7 +16,7 @@ import { ArrowRight, ChevronDown, Facebook, Heart, Instagram, Linkedin, MessageS
 
 const Hero = () => {
   return (
-    <section className="bg-navy text-white section-padding overflow-hidden relative">
+    <section className="bg-randstad-navy text-white section-padding overflow-hidden relative">
       <div className="container-custom relative z-10">
         <div className="max-w-3xl">
           <nav className="flex items-center gap-2 text-xs opacity-60 mb-12 lowercase">
