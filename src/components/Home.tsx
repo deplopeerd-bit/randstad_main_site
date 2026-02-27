@@ -1,4 +1,14 @@
-import { Search, MapPin, ArrowRight, ChevronRight } from "lucide-react";
+import card1 from "../assets/Images/HomePage/Card-1.webp";
+import card10 from "../assets/Images/HomePage/Card-10.jpg";
+import card2 from "../assets/Images/HomePage/Card-2.webp";
+import card3 from "../assets/Images/HomePage/Card-3.webp";
+import card4 from "../assets/Images/HomePage/Card-4.webp";
+import card5 from "../assets/Images/HomePage/Card-5.jpg";
+import card6 from "../assets/Images/HomePage/Card-6.jpg";
+import card7 from "../assets/Images/HomePage/Card-7.jpg";
+import card8 from "../assets/Images/HomePage/Card-8.jpg";
+import card9 from "../assets/Images/HomePage/Card-9.jpg";
+import { ArrowRight, ChevronRight, MapPin, Search } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
@@ -105,7 +115,7 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group overflow-hidden rounded-lg aspect-[16/10]">
               <img 
-                src="https://picsum.photos/seed/talent/800/500" 
+                src={card1} 
                 alt="For job seekers" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -122,7 +132,7 @@ export function Home() {
             </div>
             <div className="relative group overflow-hidden rounded-lg aspect-[16/10]">
               <img 
-                src="https://picsum.photos/seed/clients/800/500" 
+                src={card2} 
                 alt="For clients" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -147,10 +157,10 @@ export function Home() {
           <h2 className="text-4xl font-light mb-16">discover how we deliver tailored talent solutions.</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { title: "operational talent solutions", img: "https://picsum.photos/seed/op/400/600" },
-              { title: "professional talent solutions", img: "https://picsum.photos/seed/prof/400/600" },
-              { title: "global talent solutions", img: "https://picsum.photos/seed/global/400/600" },
-              { title: "digital talent solutions", img: "https://picsum.photos/seed/digital/400/600" }
+              { title: "operational talent solutions", img: card3 },
+              { title: "professional talent solutions", img: card4 },
+              { title: "global talent solutions", img: card5 },
+              { title: "digital talent solutions", img: card6 }
             ].map((item, idx) => (
               <div key={idx} className="relative group overflow-hidden rounded-lg aspect-[3/4]">
                 <img 
@@ -175,10 +185,10 @@ export function Home() {
           <h2 className="text-4xl font-light mb-16">what's new.</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { title: "access our latest randstad india workmonitor 2024 report", img: "https://picsum.photos/seed/news1/400/600" },
-              { title: "case studies/impact stories", img: "https://picsum.photos/seed/news2/400/600" },
-              { title: "blogs", img: "https://picsum.photos/seed/news3/400/600" },
-              { title: "FAQs", img: "https://picsum.photos/seed/news4/400/600" }
+              { title: "access our latest randstad india workmonitor 2024 report", img: card7 },
+              { title: "case studies/impact stories", img: card8 },
+              { title: "blogs", img: card9 },
+              { title: "FAQs", img: card10 }
             ].map((item, idx) => (
               <div key={idx} className="relative group overflow-hidden rounded-lg aspect-[3/4]">
                 <img 
